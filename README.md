@@ -11,7 +11,7 @@ Each directory contains the following files:
 - A `*__objdump.txt` that contains the output of simple disassembly of the binary file, along with each block's corresponding source code.
 - `*.json` contains the graph information of the corresponding binary to start visualizing with (generated with [angr](https://github.com/angr/angr). 
 - `*.png` is the existing visual representation generated with [bingraphvis](https://github.com/spencerwuwu/bingraphvis)
-- `*_nocall.png`, if presented, is the same graph above but remove call and return edges for simplicity (by ignoring *Ijk_Call*, *Ijk_Ret*, *Ijk_FakeRet* when rendering)
+- `*_nocall.png`, if presented, is the same graph above but remove call and return edges for simplicity (by ignoring *Ijk_Call*, *Ijk_Ret* when rendering the png)
 - A `compile.sh` to compile the program (`png_paser` uses a Makefile)
 
 ## Format of the JSON file

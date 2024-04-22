@@ -40,7 +40,7 @@ def export_cfg_to_json(cfg, output_file):
         json.dump({'all_nodes': all_nodes, 'call_graph_edges': call_graph_edges}, f, indent=2)
 
 
-def dump_cfg(binary, cfg, cfg_type, no_call=False, no_png=True):
+def dump_cfg(binary, cfg, cfg_type, no_call=False, no_png=False):
     logger.info(f"Exporting info to {binary}__{cfg_type}.json")
     export_cfg_to_json(cfg, f'{binary}__{cfg_type}.json')
 
