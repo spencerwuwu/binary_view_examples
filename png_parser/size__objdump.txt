@@ -1,0 +1,3527 @@
+
+size:     file format elf64-x86-64
+architecture: i386:x86-64, flags 0x00000150:
+HAS_SYMS, DYNAMIC, D_PAGED
+start address 0x0000000000001130
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64 
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 d9 3f 00 00 	mov    0x3fd9(%rip),%rax        # 4fe8 <__gmon_start__@Base>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	call   *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	ret    
+
+Disassembly of section .plt:
+
+0000000000001020 <free@plt-0x10>:
+    1020:	ff 35 e2 3f 00 00    	push   0x3fe2(%rip)        # 5008 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	ff 25 e4 3f 00 00    	jmp    *0x3fe4(%rip)        # 5010 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001030 <free@plt>:
+    1030:	ff 25 e2 3f 00 00    	jmp    *0x3fe2(%rip)        # 5018 <free@GLIBC_2.2.5>
+    1036:	68 00 00 00 00       	push   $0x0
+    103b:	e9 e0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001040 <inflate@plt>:
+    1040:	ff 25 da 3f 00 00    	jmp    *0x3fda(%rip)        # 5020 <inflate@Base>
+    1046:	68 01 00 00 00       	push   $0x1
+    104b:	e9 d0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001050 <fread@plt>:
+    1050:	ff 25 d2 3f 00 00    	jmp    *0x3fd2(%rip)        # 5028 <fread@GLIBC_2.2.5>
+    1056:	68 02 00 00 00       	push   $0x2
+    105b:	e9 c0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001060 <fclose@plt>:
+    1060:	ff 25 ca 3f 00 00    	jmp    *0x3fca(%rip)        # 5030 <fclose@GLIBC_2.2.5>
+    1066:	68 03 00 00 00       	push   $0x3
+    106b:	e9 b0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001070 <printf@plt>:
+    1070:	ff 25 c2 3f 00 00    	jmp    *0x3fc2(%rip)        # 5038 <printf@GLIBC_2.2.5>
+    1076:	68 04 00 00 00       	push   $0x4
+    107b:	e9 a0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001080 <deflate@plt>:
+    1080:	ff 25 ba 3f 00 00    	jmp    *0x3fba(%rip)        # 5040 <deflate@Base>
+    1086:	68 05 00 00 00       	push   $0x5
+    108b:	e9 90 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001090 <deflateInit_@plt>:
+    1090:	ff 25 b2 3f 00 00    	jmp    *0x3fb2(%rip)        # 5048 <deflateInit_@Base>
+    1096:	68 06 00 00 00       	push   $0x6
+    109b:	e9 80 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010a0 <memcpy@plt>:
+    10a0:	ff 25 aa 3f 00 00    	jmp    *0x3faa(%rip)        # 5050 <memcpy@GLIBC_2.14>
+    10a6:	68 07 00 00 00       	push   $0x7
+    10ab:	e9 70 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010b0 <inflateEnd@plt>:
+    10b0:	ff 25 a2 3f 00 00    	jmp    *0x3fa2(%rip)        # 5058 <inflateEnd@Base>
+    10b6:	68 08 00 00 00       	push   $0x8
+    10bb:	e9 60 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010c0 <malloc@plt>:
+    10c0:	ff 25 9a 3f 00 00    	jmp    *0x3f9a(%rip)        # 5060 <malloc@GLIBC_2.2.5>
+    10c6:	68 09 00 00 00       	push   $0x9
+    10cb:	e9 50 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010d0 <deflateEnd@plt>:
+    10d0:	ff 25 92 3f 00 00    	jmp    *0x3f92(%rip)        # 5068 <deflateEnd@Base>
+    10d6:	68 0a 00 00 00       	push   $0xa
+    10db:	e9 40 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010e0 <realloc@plt>:
+    10e0:	ff 25 8a 3f 00 00    	jmp    *0x3f8a(%rip)        # 5070 <realloc@GLIBC_2.2.5>
+    10e6:	68 0b 00 00 00       	push   $0xb
+    10eb:	e9 30 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010f0 <inflateInit_@plt>:
+    10f0:	ff 25 82 3f 00 00    	jmp    *0x3f82(%rip)        # 5078 <inflateInit_@Base>
+    10f6:	68 0c 00 00 00       	push   $0xc
+    10fb:	e9 20 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001100 <fopen@plt>:
+    1100:	ff 25 7a 3f 00 00    	jmp    *0x3f7a(%rip)        # 5080 <fopen@GLIBC_2.2.5>
+    1106:	68 0d 00 00 00       	push   $0xd
+    110b:	e9 10 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001110 <fwrite@plt>:
+    1110:	ff 25 72 3f 00 00    	jmp    *0x3f72(%rip)        # 5088 <fwrite@GLIBC_2.2.5>
+    1116:	68 0e 00 00 00       	push   $0xe
+    111b:	e9 00 ff ff ff       	jmp    1020 <_init+0x20>
+
+Disassembly of section .plt.got:
+
+0000000000001120 <__cxa_finalize@plt>:
+    1120:	ff 25 d2 3e 00 00    	jmp    *0x3ed2(%rip)        # 4ff8 <__cxa_finalize@GLIBC_2.2.5>
+    1126:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+0000000000001130 <_start>:
+    1130:	f3 0f 1e fa          	endbr64 
+    1134:	31 ed                	xor    %ebp,%ebp
+    1136:	49 89 d1             	mov    %rdx,%r9
+    1139:	5e                   	pop    %rsi
+    113a:	48 89 e2             	mov    %rsp,%rdx
+    113d:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    1141:	50                   	push   %rax
+    1142:	54                   	push   %rsp
+    1143:	45 31 c0             	xor    %r8d,%r8d
+    1146:	31 c9                	xor    %ecx,%ecx
+    1148:	48 8d 3d d1 00 00 00 	lea    0xd1(%rip),%rdi        # 1220 <main>
+    114f:	ff 15 83 3e 00 00    	call   *0x3e83(%rip)        # 4fd8 <__libc_start_main@GLIBC_2.34>
+    1155:	f4                   	hlt    
+    1156:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    115d:	00 00 00 
+
+0000000000001160 <deregister_tm_clones>:
+    1160:	48 8d 3d 39 3f 00 00 	lea    0x3f39(%rip),%rdi        # 50a0 <__TMC_END__>
+    1167:	48 8d 05 32 3f 00 00 	lea    0x3f32(%rip),%rax        # 50a0 <__TMC_END__>
+    116e:	48 39 f8             	cmp    %rdi,%rax
+    1171:	74 15                	je     1188 <deregister_tm_clones+0x28>
+    1173:	48 8b 05 66 3e 00 00 	mov    0x3e66(%rip),%rax        # 4fe0 <_ITM_deregisterTMCloneTable@Base>
+    117a:	48 85 c0             	test   %rax,%rax
+    117d:	74 09                	je     1188 <deregister_tm_clones+0x28>
+    117f:	ff e0                	jmp    *%rax
+    1181:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1188:	c3                   	ret    
+    1189:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001190 <register_tm_clones>:
+    1190:	48 8d 3d 09 3f 00 00 	lea    0x3f09(%rip),%rdi        # 50a0 <__TMC_END__>
+    1197:	48 8d 35 02 3f 00 00 	lea    0x3f02(%rip),%rsi        # 50a0 <__TMC_END__>
+    119e:	48 29 fe             	sub    %rdi,%rsi
+    11a1:	48 89 f0             	mov    %rsi,%rax
+    11a4:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    11a8:	48 c1 f8 03          	sar    $0x3,%rax
+    11ac:	48 01 c6             	add    %rax,%rsi
+    11af:	48 d1 fe             	sar    %rsi
+    11b2:	74 14                	je     11c8 <register_tm_clones+0x38>
+    11b4:	48 8b 05 35 3e 00 00 	mov    0x3e35(%rip),%rax        # 4ff0 <_ITM_registerTMCloneTable@Base>
+    11bb:	48 85 c0             	test   %rax,%rax
+    11be:	74 08                	je     11c8 <register_tm_clones+0x38>
+    11c0:	ff e0                	jmp    *%rax
+    11c2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    11c8:	c3                   	ret    
+    11c9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000011d0 <__do_global_dtors_aux>:
+    11d0:	f3 0f 1e fa          	endbr64 
+    11d4:	80 3d c5 3e 00 00 00 	cmpb   $0x0,0x3ec5(%rip)        # 50a0 <__TMC_END__>
+    11db:	75 2b                	jne    1208 <__do_global_dtors_aux+0x38>
+    11dd:	55                   	push   %rbp
+    11de:	48 83 3d 12 3e 00 00 	cmpq   $0x0,0x3e12(%rip)        # 4ff8 <__cxa_finalize@GLIBC_2.2.5>
+    11e5:	00 
+    11e6:	48 89 e5             	mov    %rsp,%rbp
+    11e9:	74 0c                	je     11f7 <__do_global_dtors_aux+0x27>
+    11eb:	48 8b 3d a6 3e 00 00 	mov    0x3ea6(%rip),%rdi        # 5098 <__dso_handle>
+    11f2:	e8 29 ff ff ff       	call   1120 <__cxa_finalize@plt>
+    11f7:	e8 64 ff ff ff       	call   1160 <deregister_tm_clones>
+    11fc:	c6 05 9d 3e 00 00 01 	movb   $0x1,0x3e9d(%rip)        # 50a0 <__TMC_END__>
+    1203:	5d                   	pop    %rbp
+    1204:	c3                   	ret    
+    1205:	0f 1f 00             	nopl   (%rax)
+    1208:	c3                   	ret    
+    1209:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001210 <frame_dummy>:
+    1210:	f3 0f 1e fa          	endbr64 
+    1214:	e9 77 ff ff ff       	jmp    1190 <register_tm_clones>
+    1219:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001220 <main>:
+#include <stdio.h>
+#include "pngparser.h"
+
+int main(int argc, char *argv[])
+{
+    1220:	53                   	push   %rbx
+    1221:	48 83 ec 10          	sub    $0x10,%rsp
+    struct image *img = NULL;
+    1225:	48 c7 44 24 08 00 00 	movq   $0x0,0x8(%rsp)
+    122c:	00 00 
+    122e:	bb 01 00 00 00       	mov    $0x1,%ebx
+
+    if (argc != 2) {
+    1233:	83 ff 02             	cmp    $0x2,%edi
+    1236:	75 12                	jne    124a <main+0x2a>
+        return 1;
+    }
+
+    /* Name the arguments */
+
+    const char *input_name = argv[1];
+    1238:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+    123c:	48 8d 74 24 08       	lea    0x8(%rsp),%rsi
+    
+    if (load_png(input_name, &img)) {
+    1241:	e8 2a 08 00 00       	call   1a70 <load_png>
+    1246:	85 c0                	test   %eax,%eax
+    1248:	74 08                	je     1252 <main+0x32>
+
+    printf("Image dimensions: %hux%hu\n", img->size_x, img->size_y);
+    free(img->px);
+    free(img);
+    return 0;
+}
+    124a:	89 d8                	mov    %ebx,%eax
+    124c:	48 83 c4 10          	add    $0x10,%rsp
+    1250:	5b                   	pop    %rbx
+    1251:	c3                   	ret    
+    printf("Image dimensions: %hux%hu\n", img->size_x, img->size_y);
+    1252:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    1257:	0f b7 30             	movzwl (%rax),%esi
+    125a:	0f b7 50 02          	movzwl 0x2(%rax),%edx
+    125e:	48 8d 3d 9f 1d 00 00 	lea    0x1d9f(%rip),%rdi        # 3004 <_IO_stdin_used+0x4>
+    1265:	31 db                	xor    %ebx,%ebx
+    1267:	31 c0                	xor    %eax,%eax
+    1269:	e8 02 fe ff ff       	call   1070 <printf@plt>
+    free(img->px);
+    126e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    1273:	48 8b 78 08          	mov    0x8(%rax),%rdi
+    1277:	e8 b4 fd ff ff       	call   1030 <free@plt>
+    free(img);
+    127c:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+    1281:	e8 aa fd ff ff       	call   1030 <free@plt>
+}
+    1286:	89 d8                	mov    %ebx,%eax
+    1288:	48 83 c4 10          	add    $0x10,%rsp
+    128c:	5b                   	pop    %rbx
+    128d:	c3                   	ret    
+    128e:	66 90                	xchg   %ax,%ax
+
+0000000000001290 <change_endianness>:
+#define to_little_endian(x) (change_endianness(x))
+#define to_big_endian(x) (change_endianness(x))
+
+/** Changes the endianness of the data
+ */
+uint32_t change_endianness(uint32_t x) {
+    1290:	89 f8                	mov    %edi,%eax
+  int i;
+  uint32_t result = 0;
+
+  for (i = 0; i < 4; i++) {
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    1292:	0f c8                	bswap  %eax
+  }
+
+  return result;
+    1294:	c3                   	ret    
+    1295:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    129c:	00 00 00 00 
+
+00000000000012a0 <is_color_type_valid>:
+};
+
+/* The current implementation supports only some of the PNG color types
+ */
+int is_color_type_valid(uint8_t color_type) {
+  switch (color_type) {
+    12a0:	83 ff 03             	cmp    $0x3,%edi
+    12a3:	0f 94 c0             	sete   %al
+    12a6:	83 ff 06             	cmp    $0x6,%edi
+    12a9:	0f 94 c1             	sete   %cl
+    12ac:	08 c1                	or     %al,%cl
+    12ae:	0f b6 c1             	movzbl %cl,%eax
+  case PNG_IHDR_COLOR_RGB:
+  case PNG_IHDR_COLOR_GRAYSCALE_ALPHA:
+  default:
+    return 0;
+  }
+}
+    12b1:	c3                   	ret    
+    12b2:	66 66 66 66 66 2e 0f 	data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    12b9:	1f 84 00 00 00 00 00 
+
+00000000000012c0 <is_bit_depth_valid>:
+
+/* Currently, we support only some of the bidepths */
+int is_bit_depth_valid(uint8_t color_type, int8_t bitdepth) {
+  if (color_type == PNG_IHDR_COLOR_PALETTE && bitdepth == 8)
+    12c0:	83 ff 03             	cmp    $0x3,%edi
+    12c3:	0f 94 c0             	sete   %al
+    12c6:	40 80 fe 08          	cmp    $0x8,%sil
+    12ca:	0f 94 c1             	sete   %cl
+    12cd:	83 ff 06             	cmp    $0x6,%edi
+    12d0:	0f 94 c2             	sete   %dl
+    12d3:	08 c2                	or     %al,%dl
+    12d5:	20 ca                	and    %cl,%dl
+    12d7:	0f b6 c2             	movzbl %dl,%eax
+
+  if (color_type == PNG_IHDR_COLOR_RGB_ALPHA && bitdepth == 8)
+    return 1;
+
+  return 0;
+}
+    12da:	c3                   	ret    
+    12db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000012e0 <is_compression_valid>:
+
+/* The only supported method is deflate */
+int is_compression_valid(uint8_t compression) { return !compression; }
+    12e0:	31 c0                	xor    %eax,%eax
+    12e2:	85 ff                	test   %edi,%edi
+    12e4:	0f 94 c0             	sete   %al
+    12e7:	c3                   	ret    
+    12e8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    12ef:	00 
+
+00000000000012f0 <is_filter_valid>:
+/* We support only the default PNG filtering method
+ * Filtering is a step before compression.
+ * Compression may be better if we store differences between pixels
+ * instead of the actual pixel values.
+ */
+int is_filter_valid(uint8_t filter) { return !filter; }
+    12f0:	31 c0                	xor    %eax,%eax
+    12f2:	85 ff                	test   %edi,%edi
+    12f4:	0f 94 c0             	sete   %al
+    12f7:	c3                   	ret    
+    12f8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    12ff:	00 
+
+0000000000001300 <is_filter_type_valid>:
+
+/* The only filter type that we support is no filter at all */
+int is_filter_type_valid(uint8_t filter_type) { return !filter_type; }
+    1300:	31 c0                	xor    %eax,%eax
+    1302:	85 ff                	test   %edi,%edi
+    1304:	0f 94 c0             	sete   %al
+    1307:	c3                   	ret    
+    1308:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    130f:	00 
+
+0000000000001310 <is_interlace_valid>:
+ * Some other, barbaric standards (e.g. PNG) also provide storage sequences
+ * that give lower resolution approximations of the image while streaming the
+ * data
+ */
+int is_interlace_valid(uint8_t interlace) {
+  switch (interlace) {
+    1310:	31 c0                	xor    %eax,%eax
+    1312:	85 ff                	test   %edi,%edi
+    1314:	0f 94 c0             	sete   %al
+    return 0;
+
+  default:
+    return 0;
+  }
+}
+    1317:	c3                   	ret    
+    1318:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    131f:	00 
+
+0000000000001320 <is_png_ihdr_valid>:
+
+/* Check if the metadata header is valid */
+int is_png_ihdr_valid(struct png_header_ihdr *ihdr) {
+  if (!is_color_type_valid(ihdr->color_type))
+    1320:	0f b6 4f 09          	movzbl 0x9(%rdi),%ecx
+    1324:	31 c0                	xor    %eax,%eax
+    1326:	83 f9 06             	cmp    $0x6,%ecx
+    1329:	74 05                	je     1330 <is_png_ihdr_valid+0x10>
+    132b:	83 f9 03             	cmp    $0x3,%ecx
+    132e:	75 1c                	jne    134c <is_png_ihdr_valid+0x2c>
+  switch (color_type) {
+    1330:	80 f9 03             	cmp    $0x3,%cl
+    1333:	0f 95 c2             	setne  %dl
+    1336:	80 f9 06             	cmp    $0x6,%cl
+    1339:	0f 95 c1             	setne  %cl
+    return 0;
+
+  if (!is_bit_depth_valid(ihdr->color_type, ihdr->bit_depth))
+    133c:	84 ca                	test   %cl,%dl
+    133e:	75 0c                	jne    134c <is_png_ihdr_valid+0x2c>
+    1340:	80 7f 08 08          	cmpb   $0x8,0x8(%rdi)
+    1344:	75 06                	jne    134c <is_png_ihdr_valid+0x2c>
+int is_compression_valid(uint8_t compression) { return !compression; }
+    1346:	80 7f 0a 00          	cmpb   $0x0,0xa(%rdi)
+    return 0;
+
+  if (!is_compression_valid(ihdr->compression))
+    134a:	74 01                	je     134d <is_png_ihdr_valid+0x2d>
+
+  if (!is_interlace_valid(ihdr->interlace))
+    return 0;
+
+  return 1;
+}
+    134c:	c3                   	ret    
+int is_filter_valid(uint8_t filter) { return !filter; }
+    134d:	80 7f 0b 00          	cmpb   $0x0,0xb(%rdi)
+  if (!is_filter_valid(ihdr->filter))
+    1351:	75 f9                	jne    134c <is_png_ihdr_valid+0x2c>
+  switch (interlace) {
+    1353:	31 c0                	xor    %eax,%eax
+    1355:	80 7f 0c 00          	cmpb   $0x0,0xc(%rdi)
+    1359:	0f 94 c0             	sete   %al
+}
+    135c:	c3                   	ret    
+    135d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001360 <is_chunk_ihdr>:
+
+/* Check if we have the IHDR chunk */
+int is_chunk_ihdr(struct png_chunk *chunk) {
+  return !memcmp(&chunk->chunk_type, "IHDR", 4);
+    1360:	31 c0                	xor    %eax,%eax
+    1362:	81 7f 04 49 48 44 52 	cmpl   $0x52444849,0x4(%rdi)
+    1369:	0f 94 c0             	sete   %al
+    136c:	c3                   	ret    
+    136d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001370 <format_ihdr_chunk>:
+    1370:	81 7f 04 49 48 44 52 	cmpl   $0x52444849,0x4(%rdi)
+/* Convert a freshly read generic chunk to IHDR */
+png_chunk_ihdr *format_ihdr_chunk(struct png_chunk *chunk) {
+  png_chunk_ihdr *ihdr;
+  struct png_header_ihdr *ihdr_header;
+
+  if (!is_chunk_ihdr(chunk))
+    1377:	75 41                	jne    13ba <format_ihdr_chunk+0x4a>
+    return NULL;
+
+  if (chunk->length != sizeof(struct png_header_ihdr))
+    1379:	83 3f 0d             	cmpl   $0xd,(%rdi)
+    137c:	75 3c                	jne    13ba <format_ihdr_chunk+0x4a>
+    return NULL;
+
+  ihdr = (png_chunk_ihdr *)chunk;
+
+  if (!is_png_ihdr_valid(ihdr->chunk_data))
+    137e:	48 8b 4f 08          	mov    0x8(%rdi),%rcx
+  if (!is_color_type_valid(ihdr->color_type))
+    1382:	0f b6 41 09          	movzbl 0x9(%rcx),%eax
+    1386:	83 f8 06             	cmp    $0x6,%eax
+    1389:	74 05                	je     1390 <format_ihdr_chunk+0x20>
+    138b:	83 f8 03             	cmp    $0x3,%eax
+    138e:	75 2a                	jne    13ba <format_ihdr_chunk+0x4a>
+  switch (color_type) {
+    1390:	3c 03                	cmp    $0x3,%al
+    1392:	0f 95 c2             	setne  %dl
+    1395:	3c 06                	cmp    $0x6,%al
+    1397:	40 0f 95 c6          	setne  %sil
+    139b:	31 c0                	xor    %eax,%eax
+  if (!is_bit_depth_valid(ihdr->color_type, ihdr->bit_depth))
+    139d:	40 84 f2             	test   %sil,%dl
+    13a0:	75 1a                	jne    13bc <format_ihdr_chunk+0x4c>
+    13a2:	80 79 08 08          	cmpb   $0x8,0x8(%rcx)
+    13a6:	75 14                	jne    13bc <format_ihdr_chunk+0x4c>
+int is_compression_valid(uint8_t compression) { return !compression; }
+    13a8:	80 79 0a 00          	cmpb   $0x0,0xa(%rcx)
+  if (!is_compression_valid(ihdr->compression))
+    13ac:	75 0c                	jne    13ba <format_ihdr_chunk+0x4a>
+int is_filter_valid(uint8_t filter) { return !filter; }
+    13ae:	80 79 0b 00          	cmpb   $0x0,0xb(%rcx)
+  if (!is_filter_valid(ihdr->filter))
+    13b2:	75 06                	jne    13ba <format_ihdr_chunk+0x4a>
+  switch (interlace) {
+    13b4:	80 79 0c 00          	cmpb   $0x0,0xc(%rcx)
+  if (!is_png_ihdr_valid(ihdr->chunk_data))
+    13b8:	74 03                	je     13bd <format_ihdr_chunk+0x4d>
+    13ba:	31 c0                	xor    %eax,%eax
+  ihdr_header = (struct png_header_ihdr *)ihdr->chunk_data;
+  ihdr_header->height = to_little_endian(ihdr_header->height);
+  ihdr_header->width = to_little_endian(ihdr_header->width);
+
+  return ihdr;
+}
+    13bc:	c3                   	ret    
+  ihdr_header->width = to_little_endian(ihdr_header->width);
+    13bd:	8b 01                	mov    (%rcx),%eax
+  ihdr_header->height = to_little_endian(ihdr_header->height);
+    13bf:	8b 51 04             	mov    0x4(%rcx),%edx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    13c2:	0f ca                	bswap  %edx
+  ihdr_header->height = to_little_endian(ihdr_header->height);
+    13c4:	89 51 04             	mov    %edx,0x4(%rcx)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    13c7:	0f c8                	bswap  %eax
+  ihdr_header->width = to_little_endian(ihdr_header->width);
+    13c9:	89 01                	mov    %eax,(%rcx)
+    13cb:	48 89 f8             	mov    %rdi,%rax
+}
+    13ce:	c3                   	ret    
+    13cf:	90                   	nop
+
+00000000000013d0 <is_chunk_iend>:
+
+/* Check if this is the IEND chunk */
+int is_chunk_iend(struct png_chunk *chunk) {
+  return !memcmp(&chunk->chunk_type, "IEND", 4);
+    13d0:	31 c0                	xor    %eax,%eax
+    13d2:	81 7f 04 49 45 4e 44 	cmpl   $0x444e4549,0x4(%rdi)
+    13d9:	0f 94 c0             	sete   %al
+    13dc:	c3                   	ret    
+    13dd:	0f 1f 00             	nopl   (%rax)
+
+00000000000013e0 <format_iend_chunk>:
+    13e0:	81 7f 04 49 45 4e 44 	cmpl   $0x444e4549,0x4(%rdi)
+}
+
+/* Format a freshly read chunk as an IEND chunk */
+png_chunk_iend *format_iend_chunk(struct png_chunk *chunk) {
+  if (!is_chunk_iend(chunk)) {
+    13e7:	74 03                	je     13ec <format_iend_chunk+0xc>
+    13e9:	31 c0                	xor    %eax,%eax
+  if (chunk->chunk_data) {
+    return NULL;
+  }
+
+  return (png_chunk_iend *)chunk;
+}
+    13eb:	c3                   	ret    
+  if (chunk->length) {
+    13ec:	83 3f 00             	cmpl   $0x0,(%rdi)
+    13ef:	74 03                	je     13f4 <format_iend_chunk+0x14>
+    13f1:	31 c0                	xor    %eax,%eax
+}
+    13f3:	c3                   	ret    
+    13f4:	31 c0                	xor    %eax,%eax
+  if (chunk->chunk_data) {
+    13f6:	48 83 7f 08 00       	cmpq   $0x0,0x8(%rdi)
+    13fb:	48 0f 44 c7          	cmove  %rdi,%rax
+}
+    13ff:	c3                   	ret    
+
+0000000000001400 <read_png_filesig>:
+
+/* Read the signature of a file */
+int read_png_filesig(FILE *file, struct png_header_filesig *filesig) {
+    1400:	50                   	push   %rax
+    1401:	48 89 f0             	mov    %rsi,%rax
+    1404:	48 89 f9             	mov    %rdi,%rcx
+  return fread(filesig, sizeof(*filesig), 1, file) != 1;
+    1407:	be 08 00 00 00       	mov    $0x8,%esi
+    140c:	ba 01 00 00 00       	mov    $0x1,%edx
+    1411:	48 89 c7             	mov    %rax,%rdi
+    1414:	e8 37 fc ff ff       	call   1050 <fread@plt>
+    1419:	31 c9                	xor    %ecx,%ecx
+    141b:	48 83 f8 01          	cmp    $0x1,%rax
+    141f:	0f 95 c1             	setne  %cl
+    1422:	89 c8                	mov    %ecx,%eax
+    1424:	59                   	pop    %rcx
+    1425:	c3                   	ret    
+    1426:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    142d:	00 00 00 
+
+0000000000001430 <is_png_filesig_valid>:
+}
+
+/* Checks if the first bytes have the correct values */
+int is_png_filesig_valid(struct png_header_filesig *filesig) {
+    1430:	48 b9 89 50 4e 47 0d 	movabs $0xa1a0a0d474e5089,%rcx
+    1437:	0a 1a 0a 
+  return !memcmp(filesig, "\211PNG\r\n\032\n", 8);
+    143a:	31 c0                	xor    %eax,%eax
+    143c:	48 39 0f             	cmp    %rcx,(%rdi)
+    143f:	0f 94 c0             	sete   %al
+    1442:	c3                   	ret    
+    1443:	66 66 66 66 2e 0f 1f 	data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    144a:	84 00 00 00 00 00 
+
+0000000000001450 <is_png_chunk_valid>:
+
+/* CRC for a chunk. This prevents data corruption.
+ *
+ * EDIT THIS FUNCTION BEFORE FUZZING!
+ */
+int is_png_chunk_valid(struct png_chunk *chunk) {
+    1450:	41 56                	push   %r14
+    1452:	53                   	push   %rbx
+    1453:	50                   	push   %rax
+    1454:	48 89 fb             	mov    %rdi,%rbx
+  uint32_t crc_value =
+      crc((unsigned char *)&chunk->chunk_type, sizeof(int32_t));
+    1457:	48 83 c7 04          	add    $0x4,%rdi
+    145b:	be 04 00 00 00       	mov    $0x4,%esi
+    1460:	e8 1b 1a 00 00       	call   2e80 <crc>
+
+  if (chunk->length) {
+    1465:	8b 13                	mov    (%rbx),%edx
+    1467:	85 d2                	test   %edx,%edx
+    1469:	74 17                	je     1482 <is_png_chunk_valid+0x32>
+    crc_value = update_crc(crc_value ^ 0xffffffffL,
+    146b:	89 c7                	mov    %eax,%edi
+    146d:	41 be ff ff ff ff    	mov    $0xffffffff,%r14d
+    1473:	4c 31 f7             	xor    %r14,%rdi
+                           (unsigned char *)chunk->chunk_data, chunk->length) ^
+    1476:	48 8b 73 08          	mov    0x8(%rbx),%rsi
+    crc_value = update_crc(crc_value ^ 0xffffffffL,
+    147a:	e8 e1 17 00 00       	call   2c60 <update_crc>
+                           (unsigned char *)chunk->chunk_data, chunk->length) ^
+    147f:	4c 31 f0             	xor    %r14,%rax
+                0xffffffffL;
+  }
+
+  return chunk->crc == crc_value;
+    1482:	31 c9                	xor    %ecx,%ecx
+    1484:	39 43 10             	cmp    %eax,0x10(%rbx)
+    1487:	0f 94 c1             	sete   %cl
+    148a:	89 c8                	mov    %ecx,%eax
+    148c:	48 83 c4 08          	add    $0x8,%rsp
+    1490:	5b                   	pop    %rbx
+    1491:	41 5e                	pop    %r14
+    1493:	c3                   	ret    
+    1494:	66 66 66 2e 0f 1f 84 	data16 data16 cs nopw 0x0(%rax,%rax,1)
+    149b:	00 00 00 00 00 
+
+00000000000014a0 <read_png_chunk>:
+}
+
+/* Fill the chunk with the data from the file.*/
+int read_png_chunk(FILE *file, struct png_chunk *chunk) {
+    14a0:	55                   	push   %rbp
+    14a1:	41 57                	push   %r15
+    14a3:	41 56                	push   %r14
+    14a5:	53                   	push   %rbx
+    14a6:	50                   	push   %rax
+    14a7:	48 89 f3             	mov    %rsi,%rbx
+    14aa:	49 89 ff             	mov    %rdi,%r15
+  chunk->chunk_data = NULL;
+    14ad:	48 c7 46 08 00 00 00 	movq   $0x0,0x8(%rsi)
+    14b4:	00 
+
+  if (fread(chunk, sizeof(int32_t), 2, file) != 2) {
+    14b5:	be 04 00 00 00       	mov    $0x4,%esi
+    14ba:	ba 02 00 00 00       	mov    $0x2,%edx
+    14bf:	48 89 df             	mov    %rbx,%rdi
+    14c2:	4c 89 f9             	mov    %r15,%rcx
+    14c5:	e8 86 fb ff ff       	call   1050 <fread@plt>
+    14ca:	48 83 f8 02          	cmp    $0x2,%rax
+    14ce:	0f 85 96 00 00 00    	jne    156a <read_png_chunk+0xca>
+    goto error;
+  }
+
+  chunk->length = to_little_endian(chunk->length);
+    14d4:	8b 0b                	mov    (%rbx),%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    14d6:	89 c8                	mov    %ecx,%eax
+    14d8:	0f c8                	bswap  %eax
+  chunk->length = to_little_endian(chunk->length);
+    14da:	89 03                	mov    %eax,(%rbx)
+
+  if (chunk->length) {
+    14dc:	85 c9                	test   %ecx,%ecx
+    14de:	74 31                	je     1511 <read_png_chunk+0x71>
+    chunk->chunk_data = malloc(chunk->length);
+    14e0:	41 89 c6             	mov    %eax,%r14d
+    14e3:	4c 89 f7             	mov    %r14,%rdi
+    14e6:	e8 d5 fb ff ff       	call   10c0 <malloc@plt>
+    14eb:	48 89 43 08          	mov    %rax,0x8(%rbx)
+    if (!chunk->chunk_data)
+    14ef:	48 85 c0             	test   %rax,%rax
+    14f2:	0f 84 92 00 00 00    	je     158a <read_png_chunk+0xea>
+      goto error;
+
+    if (fread(chunk->chunk_data, chunk->length, 1, file) != 1) {
+    14f8:	ba 01 00 00 00       	mov    $0x1,%edx
+    14fd:	48 89 c7             	mov    %rax,%rdi
+    1500:	4c 89 f6             	mov    %r14,%rsi
+    1503:	4c 89 f9             	mov    %r15,%rcx
+    1506:	e8 45 fb ff ff       	call   1050 <fread@plt>
+    150b:	48 83 f8 01          	cmp    $0x1,%rax
+    150f:	75 59                	jne    156a <read_png_chunk+0xca>
+      goto error;
+    }
+  }
+
+  if (fread(&chunk->crc, sizeof(int32_t), 1, file) != 1) {
+    1511:	4c 8d 73 10          	lea    0x10(%rbx),%r14
+    1515:	be 04 00 00 00       	mov    $0x4,%esi
+    151a:	ba 01 00 00 00       	mov    $0x1,%edx
+    151f:	4c 89 f7             	mov    %r14,%rdi
+    1522:	4c 89 f9             	mov    %r15,%rcx
+    1525:	e8 26 fb ff ff       	call   1050 <fread@plt>
+    152a:	48 83 f8 01          	cmp    $0x1,%rax
+    152e:	75 3a                	jne    156a <read_png_chunk+0xca>
+    goto error;
+  }
+
+  chunk->crc = to_little_endian(chunk->crc);
+    1530:	8b 43 10             	mov    0x10(%rbx),%eax
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    1533:	0f c8                	bswap  %eax
+  chunk->crc = to_little_endian(chunk->crc);
+    1535:	89 43 10             	mov    %eax,0x10(%rbx)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(int32_t));
+    1538:	48 8d 7b 04          	lea    0x4(%rbx),%rdi
+    153c:	be 04 00 00 00       	mov    $0x4,%esi
+    1541:	e8 3a 19 00 00       	call   2e80 <crc>
+  if (chunk->length) {
+    1546:	8b 13                	mov    (%rbx),%edx
+    1548:	85 d2                	test   %edx,%edx
+    154a:	74 17                	je     1563 <read_png_chunk+0xc3>
+    crc_value = update_crc(crc_value ^ 0xffffffffL,
+    154c:	89 c7                	mov    %eax,%edi
+    154e:	41 bf ff ff ff ff    	mov    $0xffffffff,%r15d
+    1554:	4c 31 ff             	xor    %r15,%rdi
+                           (unsigned char *)chunk->chunk_data, chunk->length) ^
+    1557:	48 8b 73 08          	mov    0x8(%rbx),%rsi
+    crc_value = update_crc(crc_value ^ 0xffffffffL,
+    155b:	e8 00 17 00 00       	call   2c60 <update_crc>
+                           (unsigned char *)chunk->chunk_data, chunk->length) ^
+    1560:	4c 31 f8             	xor    %r15,%rax
+    1563:	31 ed                	xor    %ebp,%ebp
+  return chunk->crc == crc_value;
+    1565:	41 39 06             	cmp    %eax,(%r14)
+
+  if (!is_png_chunk_valid(chunk)) {
+    1568:	74 13                	je     157d <read_png_chunk+0xdd>
+  chunk->chunk_type = chunk->chunk_type;
+
+  return 0;
+
+error:
+  if (chunk->chunk_data)
+    156a:	48 8b 7b 08          	mov    0x8(%rbx),%rdi
+    156e:	bd 01 00 00 00       	mov    $0x1,%ebp
+    1573:	48 85 ff             	test   %rdi,%rdi
+    1576:	74 05                	je     157d <read_png_chunk+0xdd>
+    free(chunk->chunk_data);
+    1578:	e8 b3 fa ff ff       	call   1030 <free@plt>
+  return 1;
+}
+    157d:	89 e8                	mov    %ebp,%eax
+    157f:	48 83 c4 08          	add    $0x8,%rsp
+    1583:	5b                   	pop    %rbx
+    1584:	41 5e                	pop    %r14
+    1586:	41 5f                	pop    %r15
+    1588:	5d                   	pop    %rbp
+    1589:	c3                   	ret    
+    158a:	bd 01 00 00 00       	mov    $0x1,%ebp
+    158f:	eb ec                	jmp    157d <read_png_chunk+0xdd>
+    1591:	66 66 66 66 66 66 2e 	data16 data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    1598:	0f 1f 84 00 00 00 00 
+    159f:	00 
+
+00000000000015a0 <is_chunk_plte>:
+
+/* Does the chunk represent a palette of colors?*/
+int is_chunk_plte(struct png_chunk *chunk) {
+  return !memcmp(&chunk->chunk_type, "PLTE", 4);
+    15a0:	31 c0                	xor    %eax,%eax
+    15a2:	81 7f 04 50 4c 54 45 	cmpl   $0x45544c50,0x4(%rdi)
+    15a9:	0f 94 c0             	sete   %al
+    15ac:	c3                   	ret    
+    15ad:	0f 1f 00             	nopl   (%rax)
+
+00000000000015b0 <format_plte_chunk>:
+    15b0:	81 7f 04 50 4c 54 45 	cmpl   $0x45544c50,0x4(%rdi)
+}
+
+/* Reinterpret a chunk to the PLTE chunk, if possible */
+png_chunk_plte *format_plte_chunk(struct png_chunk *chunk) {
+  if (!is_chunk_plte(chunk))
+    15b7:	74 03                	je     15bc <format_plte_chunk+0xc>
+    15b9:	31 c0                	xor    %eax,%eax
+
+  if (chunk->length % 3)
+    return NULL;
+
+  return (png_chunk_plte *)chunk;
+}
+    15bb:	c3                   	ret    
+  if (chunk->length % 3)
+    15bc:	69 0f ab aa aa aa    	imul   $0xaaaaaaab,(%rdi),%ecx
+    15c2:	31 c0                	xor    %eax,%eax
+    15c4:	81 f9 56 55 55 55    	cmp    $0x55555556,%ecx
+    15ca:	48 0f 42 c7          	cmovb  %rdi,%rax
+}
+    15ce:	c3                   	ret    
+    15cf:	90                   	nop
+
+00000000000015d0 <is_chunk_idat>:
+
+/* Does the chunk represent image data? */
+int is_chunk_idat(struct png_chunk *chunk) {
+  return !memcmp(&chunk->chunk_type, "IDAT", 4);
+    15d0:	31 c0                	xor    %eax,%eax
+    15d2:	81 7f 04 49 44 41 54 	cmpl   $0x54414449,0x4(%rdi)
+    15d9:	0f 94 c0             	sete   %al
+    15dc:	c3                   	ret    
+    15dd:	0f 1f 00             	nopl   (%rax)
+
+00000000000015e0 <is_interlaced>:
+}
+
+/* Query the metadata for the interlacing type */
+int is_interlaced(png_chunk_ihdr *ihdr_chunk) {
+  struct png_header_ihdr *ihdr_header =
+      (struct png_header_ihdr *)ihdr_chunk->chunk_data;
+    15e0:	48 8b 47 08          	mov    0x8(%rdi),%rax
+  return ihdr_header->interlace;
+    15e4:	0f b6 40 0c          	movzbl 0xc(%rax),%eax
+    15e8:	c3                   	ret    
+    15e9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000015f0 <format_idat_chunk>:
+}
+
+/* Reinterpret a generic chunk as an IDAT chunk */
+png_chunk_idat *format_idat_chunk(struct png_chunk *chunk) {
+    15f0:	31 c0                	xor    %eax,%eax
+  return !memcmp(&chunk->chunk_type, "IDAT", 4);
+    15f2:	81 7f 04 49 44 41 54 	cmpl   $0x54414449,0x4(%rdi)
+    15f9:	48 0f 44 c7          	cmove  %rdi,%rax
+  if (!is_chunk_idat(chunk)) {
+    return NULL;
+  }
+
+  return (png_chunk_idat *)chunk;
+}
+    15fd:	c3                   	ret    
+    15fe:	66 90                	xchg   %ax,%ax
+
+0000000000001600 <decompress_png_data>:
+
+/* Take a deflate stream and decompress it. This is used to obtain image data
+ * from an IDAT train. */
+int decompress_png_data(uint8_t *compressed_data, uint32_t input_length,
+                        uint8_t **decompressed_data,
+                        uint32_t *decompressed_length) {
+    1600:	55                   	push   %rbp
+    1601:	41 57                	push   %r15
+    1603:	41 56                	push   %r14
+    1605:	41 55                	push   %r13
+    1607:	41 54                	push   %r12
+    1609:	53                   	push   %rbx
+    160a:	48 81 ec 98 40 00 00 	sub    $0x4098,%rsp
+    1611:	49 89 ce             	mov    %rcx,%r14
+    1614:	49 89 d4             	mov    %rdx,%r12
+    1617:	49 89 ff             	mov    %rdi,%r15
+  uint8_t *output_buffer = NULL;
+  uint32_t output_length = 0;
+
+  /* allocate inflate state */
+  strm.zalloc = Z_NULL;
+  strm.zfree = Z_NULL;
+    161a:	0f 57 c0             	xorps  %xmm0,%xmm0
+    161d:	0f 11 44 24 60       	movups %xmm0,0x60(%rsp)
+    1622:	48 c7 44 24 70 00 00 	movq   $0x0,0x70(%rsp)
+    1629:	00 00 
+  strm.opaque = Z_NULL;
+
+  strm.avail_in = input_length;
+    162b:	89 74 24 28          	mov    %esi,0x28(%rsp)
+  strm.next_in = Z_NULL;
+    162f:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+    1636:	00 00 
+  ret = inflateInit(&strm);
+    1638:	48 8d 35 fd 19 00 00 	lea    0x19fd(%rip),%rsi        # 303c <_IO_stdin_used+0x3c>
+    163f:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+    1644:	ba 70 00 00 00       	mov    $0x70,%edx
+    1649:	e8 a2 fa ff ff       	call   10f0 <inflateInit_@plt>
+    164e:	89 c3                	mov    %eax,%ebx
+  if (ret != Z_OK)
+    1650:	85 c0                	test   %eax,%eax
+    1652:	0f 85 ad 00 00 00    	jne    1705 <decompress_png_data+0x105>
+    1658:	4c 89 64 24 08       	mov    %r12,0x8(%rsp)
+    165d:	4c 89 74 24 10       	mov    %r14,0x10(%rsp)
+    return ret;
+
+  strm.next_in = compressed_data;
+    1662:	4c 89 7c 24 20       	mov    %r15,0x20(%rsp)
+    1667:	45 31 ff             	xor    %r15d,%r15d
+    166a:	48 8d ac 24 90 00 00 	lea    0x90(%rsp),%rbp
+    1671:	00 
+    1672:	45 31 ed             	xor    %r13d,%r13d
+    1675:	eb 47                	jmp    16be <decompress_png_data+0xbe>
+    1677:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    167e:	00 00 
+    1680:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    case Z_DATA_ERROR:
+    case Z_MEM_ERROR:
+      goto error;
+    }
+
+    have = PNG_OUTPUT_CHUNK_SIZE - strm.avail_out;
+    1685:	44 8b 64 24 40       	mov    0x40(%rsp),%r12d
+    168a:	41 be 00 40 00 00    	mov    $0x4000,%r14d
+    1690:	45 29 e6             	sub    %r12d,%r14d
+
+    output_buffer = realloc(output_buffer, output_length + have);
+    1693:	43 8d 1c 2e          	lea    (%r14,%r13,1),%ebx
+    1697:	4c 89 ff             	mov    %r15,%rdi
+    169a:	48 89 de             	mov    %rbx,%rsi
+    169d:	e8 3e fa ff ff       	call   10e0 <realloc@plt>
+
+    memcpy(output_buffer + output_length, out, have);
+    16a2:	44 89 ef             	mov    %r13d,%edi
+    16a5:	49 89 c7             	mov    %rax,%r15
+    16a8:	48 01 c7             	add    %rax,%rdi
+    16ab:	48 89 ee             	mov    %rbp,%rsi
+    16ae:	4c 89 f2             	mov    %r14,%rdx
+    16b1:	e8 ea f9 ff ff       	call   10a0 <memcpy@plt>
+    16b6:	41 89 dd             	mov    %ebx,%r13d
+
+    output_length += have;
+  } while (strm.avail_out == 0);
+    16b9:	45 85 e4             	test   %r12d,%r12d
+    16bc:	75 5b                	jne    1719 <decompress_png_data+0x119>
+    strm.avail_out = PNG_OUTPUT_CHUNK_SIZE;
+    16be:	c7 44 24 40 00 40 00 	movl   $0x4000,0x40(%rsp)
+    16c5:	00 
+    strm.next_out = out;
+    16c6:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+    ret = inflate(&strm, Z_NO_FLUSH);
+    16cb:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+    16d0:	31 f6                	xor    %esi,%esi
+    16d2:	e8 69 f9 ff ff       	call   1040 <inflate@plt>
+    switch (ret) {
+    16d7:	8d 50 04             	lea    0x4(%rax),%edx
+    16da:	83 fa 06             	cmp    $0x6,%edx
+    16dd:	77 a1                	ja     1680 <decompress_png_data+0x80>
+    16df:	b9 47 00 00 00       	mov    $0x47,%ecx
+    16e4:	0f a3 d1             	bt     %edx,%ecx
+    16e7:	73 97                	jae    1680 <decompress_png_data+0x80>
+    16e9:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+  *decompressed_data = output_buffer;
+  *decompressed_length = output_length;
+  return 0;
+
+error:
+  inflateEnd(&strm);
+    16ee:	e8 bd f9 ff ff       	call   10b0 <inflateEnd@plt>
+    16f3:	bb 01 00 00 00       	mov    $0x1,%ebx
+  if (output_buffer)
+    16f8:	4d 85 ff             	test   %r15,%r15
+    16fb:	74 08                	je     1705 <decompress_png_data+0x105>
+    free(output_buffer);
+    16fd:	4c 89 ff             	mov    %r15,%rdi
+    1700:	e8 2b f9 ff ff       	call   1030 <free@plt>
+  return 1;
+}
+    1705:	89 d8                	mov    %ebx,%eax
+    1707:	48 81 c4 98 40 00 00 	add    $0x4098,%rsp
+    170e:	5b                   	pop    %rbx
+    170f:	41 5c                	pop    %r12
+    1711:	41 5d                	pop    %r13
+    1713:	41 5e                	pop    %r14
+    1715:	41 5f                	pop    %r15
+    1717:	5d                   	pop    %rbp
+    1718:	c3                   	ret    
+  if (ret != Z_STREAM_END) {
+    1719:	83 7c 24 18 01       	cmpl   $0x1,0x18(%rsp)
+    171e:	75 c9                	jne    16e9 <decompress_png_data+0xe9>
+    1720:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+  (void)inflateEnd(&strm);
+    1725:	e8 86 f9 ff ff       	call   10b0 <inflateEnd@plt>
+    172a:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+  *decompressed_data = output_buffer;
+    172f:	4c 89 38             	mov    %r15,(%rax)
+    1732:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+  *decompressed_length = output_length;
+    1737:	89 18                	mov    %ebx,(%rax)
+    1739:	31 db                	xor    %ebx,%ebx
+    173b:	eb c8                	jmp    1705 <decompress_png_data+0x105>
+    173d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001740 <convert_color_palette_to_image>:
+/* Combine image metadata, palette and a decompressed image data buffer (with
+ * palette entries) into an image */
+struct image *convert_color_palette_to_image(png_chunk_ihdr *ihdr_chunk,
+                                             png_chunk_plte *plte_chunk,
+                                             uint8_t *inflated_buf,
+                                             uint32_t inflated_size) {
+    1740:	55                   	push   %rbp
+    1741:	41 57                	push   %r15
+    1743:	41 56                	push   %r14
+    1745:	41 55                	push   %r13
+    1747:	41 54                	push   %r12
+    1749:	53                   	push   %rbx
+    174a:	48 83 ec 18          	sub    $0x18,%rsp
+    174e:	49 89 d6             	mov    %rdx,%r14
+  struct png_header_ihdr *ihdr_header =
+      (struct png_header_ihdr *)ihdr_chunk->chunk_data;
+    1751:	48 8b 47 08          	mov    0x8(%rdi),%rax
+  uint32_t height = ihdr_header->height;
+  uint32_t width = ihdr_header->width;
+    1755:	44 8b 28             	mov    (%rax),%r13d
+  uint32_t height = ihdr_header->height;
+    1758:	44 8b 78 04          	mov    0x4(%rax),%r15d
+  uint32_t palette_idx = 0;
+
+  struct plte_entry *plte_entries = (struct plte_entry *)plte_chunk->chunk_data;
+    175c:	4c 8b 66 08          	mov    0x8(%rsi),%r12
+
+  struct image *img = malloc(sizeof(struct image));
+    1760:	bf 10 00 00 00       	mov    $0x10,%edi
+    1765:	e8 56 f9 ff ff       	call   10c0 <malloc@plt>
+    176a:	48 89 c3             	mov    %rax,%rbx
+  img->size_y = height;
+    176d:	66 44 89 78 02       	mov    %r15w,0x2(%rax)
+  img->size_x = width;
+    1772:	66 44 89 28          	mov    %r13w,(%rax)
+  img->px = malloc(sizeof(struct pixel) * img->size_x * img->size_y);
+    1776:	41 0f b7 c5          	movzwl %r13w,%eax
+    177a:	c1 e0 02             	shl    $0x2,%eax
+    177d:	41 0f b7 ff          	movzwl %r15w,%edi
+    1781:	48 0f af f8          	imul   %rax,%rdi
+    1785:	e8 36 f9 ff ff       	call   10c0 <malloc@plt>
+    178a:	48 89 43 08          	mov    %rax,0x8(%rbx)
+  uint32_t height = ihdr_header->height;
+    178e:	4d 85 ff             	test   %r15,%r15
+
+  for (uint32_t idy = 0; idy < height; idy++) {
+    1791:	0f 84 c4 00 00 00    	je     185b <convert_color_palette_to_image+0x11b>
+    1797:	48 89 5c 24 08       	mov    %rbx,0x8(%rsp)
+    179c:	41 8d 4d 01          	lea    0x1(%r13),%ecx
+    17a0:	45 85 ed             	test   %r13d,%r13d
+    if (inflated_buf[idy * (1 + width)]) {
+      free(img->px);
+      free(img);
+      return NULL;
+    }
+    for (uint32_t idx = 0; idx < width; idx++) {
+    17a3:	0f 84 82 00 00 00    	je     182b <convert_color_palette_to_image+0xeb>
+    17a9:	41 0f b7 d5          	movzwl %r13w,%edx
+    17ad:	89 54 24 14          	mov    %edx,0x14(%rsp)
+    17b1:	44 89 ee             	mov    %r13d,%esi
+    17b4:	31 ff                	xor    %edi,%edi
+    17b6:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+    17bc:	45 31 c9             	xor    %r9d,%r9d
+    17bf:	90                   	nop
+    if (inflated_buf[idy * (1 + width)]) {
+    17c0:	41 89 ca             	mov    %ecx,%r10d
+    17c3:	45 0f af d1          	imul   %r9d,%r10d
+    17c7:	43 80 3c 16 00       	cmpb   $0x0,(%r14,%r10,1)
+    17cc:	49 89 f2             	mov    %rsi,%r10
+    17cf:	45 89 c3             	mov    %r8d,%r11d
+    17d2:	89 fd                	mov    %edi,%ebp
+    17d4:	75 71                	jne    1847 <convert_color_palette_to_image+0x107>
+    17d6:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    17dd:	00 00 00 
+      palette_idx = inflated_buf[idy * (1 + width) + idx + 1];
+    17e0:	45 89 dd             	mov    %r11d,%r13d
+    17e3:	47 0f b6 2c 2e       	movzbl (%r14,%r13,1),%r13d
+      img->px[idy * img->size_x + idx].red = plte_entries[palette_idx].red;
+    17e8:	4f 8d 6c 6d 00       	lea    0x0(%r13,%r13,2),%r13
+    17ed:	43 0f b6 1c 2c       	movzbl (%r12,%r13,1),%ebx
+    17f2:	89 ea                	mov    %ebp,%edx
+    17f4:	88 1c 90             	mov    %bl,(%rax,%rdx,4)
+      img->px[idy * img->size_x + idx].green = plte_entries[palette_idx].green;
+    17f7:	43 0f b6 5c 2c 01    	movzbl 0x1(%r12,%r13,1),%ebx
+    17fd:	88 5c 90 01          	mov    %bl,0x1(%rax,%rdx,4)
+      img->px[idy * img->size_x + idx].blue = plte_entries[palette_idx].blue;
+    1801:	43 0f b6 5c 2c 02    	movzbl 0x2(%r12,%r13,1),%ebx
+    1807:	88 5c 90 02          	mov    %bl,0x2(%rax,%rdx,4)
+      img->px[idy * img->size_x + idx].alpha = 0xff;
+    180b:	c6 44 90 03 ff       	movb   $0xff,0x3(%rax,%rdx,4)
+    for (uint32_t idx = 0; idx < width; idx++) {
+    1810:	ff c5                	inc    %ebp
+    1812:	41 ff c3             	inc    %r11d
+    1815:	49 ff ca             	dec    %r10
+    1818:	75 c6                	jne    17e0 <convert_color_palette_to_image+0xa0>
+  for (uint32_t idy = 0; idy < height; idy++) {
+    181a:	49 ff c1             	inc    %r9
+    181d:	03 7c 24 14          	add    0x14(%rsp),%edi
+    1821:	41 01 c8             	add    %ecx,%r8d
+    1824:	4d 39 f9             	cmp    %r15,%r9
+    1827:	75 97                	jne    17c0 <convert_color_palette_to_image+0x80>
+    1829:	eb 15                	jmp    1840 <convert_color_palette_to_image+0x100>
+    182b:	31 d2                	xor    %edx,%edx
+    182d:	0f 1f 00             	nopl   (%rax)
+    if (inflated_buf[idy * (1 + width)]) {
+    1830:	89 d6                	mov    %edx,%esi
+    1832:	41 80 3c 36 00       	cmpb   $0x0,(%r14,%rsi,1)
+    1837:	75 0e                	jne    1847 <convert_color_palette_to_image+0x107>
+  for (uint32_t idy = 0; idy < height; idy++) {
+    1839:	01 ca                	add    %ecx,%edx
+    183b:	49 ff cf             	dec    %r15
+    183e:	75 f0                	jne    1830 <convert_color_palette_to_image+0xf0>
+    1840:	48 8b 5c 24 08       	mov    0x8(%rsp),%rbx
+    1845:	eb 14                	jmp    185b <convert_color_palette_to_image+0x11b>
+      free(img->px);
+    1847:	48 89 c7             	mov    %rax,%rdi
+    184a:	e8 e1 f7 ff ff       	call   1030 <free@plt>
+    184f:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+      free(img);
+    1854:	e8 d7 f7 ff ff       	call   1030 <free@plt>
+    1859:	31 db                	xor    %ebx,%ebx
+    }
+  }
+
+  return img;
+}
+    185b:	48 89 d8             	mov    %rbx,%rax
+    185e:	48 83 c4 18          	add    $0x18,%rsp
+    1862:	5b                   	pop    %rbx
+    1863:	41 5c                	pop    %r12
+    1865:	41 5d                	pop    %r13
+    1867:	41 5e                	pop    %r14
+    1869:	41 5f                	pop    %r15
+    186b:	5d                   	pop    %rbp
+    186c:	c3                   	ret    
+    186d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001870 <convert_rgb_alpha_to_image>:
+
+/* Combine image metadata and decompressed image data (RGBA) into an image */
+struct image *convert_rgb_alpha_to_image(png_chunk_ihdr *ihdr_chunk,
+                                         uint8_t *inflated_buf,
+                                         uint32_t inflated_size) {
+    1870:	55                   	push   %rbp
+    1871:	41 57                	push   %r15
+    1873:	41 56                	push   %r14
+    1875:	41 55                	push   %r13
+    1877:	41 54                	push   %r12
+    1879:	53                   	push   %rbx
+    187a:	48 83 ec 18          	sub    $0x18,%rsp
+    187e:	49 89 f6             	mov    %rsi,%r14
+  struct png_header_ihdr *ihdr_header =
+      (struct png_header_ihdr *)ihdr_chunk->chunk_data;
+    1881:	48 8b 47 08          	mov    0x8(%rdi),%rax
+  uint32_t height = ihdr_header->height;
+  uint32_t width = ihdr_header->width;
+    1885:	44 8b 20             	mov    (%rax),%r12d
+  uint32_t height = ihdr_header->height;
+    1888:	44 8b 78 04          	mov    0x4(%rax),%r15d
+
+  uint32_t pixel_idx = 0;
+  uint32_t r_idx, g_idx, b_idx, a_idx;
+
+  struct image *img = malloc(sizeof(struct image));
+    188c:	bf 10 00 00 00       	mov    $0x10,%edi
+    1891:	e8 2a f8 ff ff       	call   10c0 <malloc@plt>
+    1896:	48 89 c3             	mov    %rax,%rbx
+
+  if (!img) {
+    1899:	48 85 c0             	test   %rax,%rax
+    189c:	0f 84 10 01 00 00    	je     19b2 <convert_rgb_alpha_to_image+0x142>
+    goto error;
+  }
+
+  img->size_y = height;
+    18a2:	66 44 89 7b 02       	mov    %r15w,0x2(%rbx)
+  img->size_x = width;
+    18a7:	66 44 89 23          	mov    %r12w,(%rbx)
+  img->px = malloc(sizeof(struct pixel) * img->size_x * img->size_y);
+    18ab:	42 8d 2c a5 00 00 00 	lea    0x0(,%r12,4),%ebp
+    18b2:	00 
+    18b3:	89 e8                	mov    %ebp,%eax
+    18b5:	25 fc ff 03 00       	and    $0x3fffc,%eax
+    18ba:	41 0f b7 ff          	movzwl %r15w,%edi
+    18be:	48 0f af f8          	imul   %rax,%rdi
+    18c2:	e8 f9 f7 ff ff       	call   10c0 <malloc@plt>
+    18c7:	48 89 43 08          	mov    %rax,0x8(%rbx)
+
+  if (!img->px) {
+    18cb:	48 85 c0             	test   %rax,%rax
+    18ce:	0f 84 d6 00 00 00    	je     19aa <convert_rgb_alpha_to_image+0x13a>
+    goto error;
+  }
+
+  for (uint32_t idy = 0; idy < height; idy++) {
+    18d4:	4d 85 ff             	test   %r15,%r15
+    18d7:	0f 84 d5 00 00 00    	je     19b2 <convert_rgb_alpha_to_image+0x142>
+    18dd:	83 cd 01             	or     $0x1,%ebp
+    18e0:	45 85 e4             	test   %r12d,%r12d
+    // The filter byte at the start of every scanline needs to be 0
+    if (inflated_buf[idy * (1 + 4 * width)]) {
+      goto error;
+    }
+
+    for (uint32_t idx = 0; idx < width; idx++) {
+    18e3:	0f 84 9a 00 00 00    	je     1983 <convert_rgb_alpha_to_image+0x113>
+    18e9:	41 0f b7 cc          	movzwl %r12w,%ecx
+    18ed:	89 4c 24 0c          	mov    %ecx,0xc(%rsp)
+    18f1:	44 89 e1             	mov    %r12d,%ecx
+    18f4:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+    18f9:	31 f6                	xor    %esi,%esi
+    18fb:	bf 04 00 00 00       	mov    $0x4,%edi
+    1900:	45 31 c0             	xor    %r8d,%r8d
+    1903:	66 66 66 66 2e 0f 1f 	data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    190a:	84 00 00 00 00 00 
+    if (inflated_buf[idy * (1 + 4 * width)]) {
+    1910:	41 89 e9             	mov    %ebp,%r9d
+    1913:	45 0f af c8          	imul   %r8d,%r9d
+    1917:	43 80 3c 0e 00       	cmpb   $0x0,(%r14,%r9,1)
+    191c:	4c 8b 4c 24 10       	mov    0x10(%rsp),%r9
+    1921:	41 89 fa             	mov    %edi,%r10d
+    1924:	41 89 f3             	mov    %esi,%r11d
+    1927:	75 79                	jne    19a2 <convert_rgb_alpha_to_image+0x132>
+    1929:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+      pixel_idx = idy * (1 + 4 * width) + 1 + 4 * idx;
+
+      r_idx = pixel_idx;
+      g_idx = pixel_idx + 1;
+    1930:	45 8d 62 fd          	lea    -0x3(%r10),%r12d
+      b_idx = pixel_idx + 2;
+    1934:	45 8d 6a fe          	lea    -0x2(%r10),%r13d
+      a_idx = pixel_idx + 3;
+    1938:	41 8d 4a ff          	lea    -0x1(%r10),%ecx
+
+      img->px[idy * img->size_x + idx].red = inflated_buf[r_idx];
+    193c:	47 0f b6 24 26       	movzbl (%r14,%r12,1),%r12d
+    1941:	44 89 da             	mov    %r11d,%edx
+    1944:	44 88 24 90          	mov    %r12b,(%rax,%rdx,4)
+      img->px[idy * img->size_x + idx].green = inflated_buf[g_idx];
+    1948:	47 0f b6 24 2e       	movzbl (%r14,%r13,1),%r12d
+    194d:	44 88 64 90 01       	mov    %r12b,0x1(%rax,%rdx,4)
+      img->px[idy * img->size_x + idx].blue = inflated_buf[b_idx];
+    1952:	41 0f b6 0c 0e       	movzbl (%r14,%rcx,1),%ecx
+    1957:	88 4c 90 02          	mov    %cl,0x2(%rax,%rdx,4)
+      img->px[idy * img->size_x + idx].alpha = inflated_buf[a_idx];
+    195b:	44 89 d1             	mov    %r10d,%ecx
+    195e:	41 0f b6 0c 0e       	movzbl (%r14,%rcx,1),%ecx
+    1963:	88 4c 90 03          	mov    %cl,0x3(%rax,%rdx,4)
+    for (uint32_t idx = 0; idx < width; idx++) {
+    1967:	41 ff c3             	inc    %r11d
+    196a:	41 83 c2 04          	add    $0x4,%r10d
+    196e:	49 ff c9             	dec    %r9
+    1971:	75 bd                	jne    1930 <convert_rgb_alpha_to_image+0xc0>
+  for (uint32_t idy = 0; idy < height; idy++) {
+    1973:	49 ff c0             	inc    %r8
+    1976:	03 74 24 0c          	add    0xc(%rsp),%esi
+    197a:	01 ef                	add    %ebp,%edi
+    197c:	4d 39 f8             	cmp    %r15,%r8
+    197f:	75 8f                	jne    1910 <convert_rgb_alpha_to_image+0xa0>
+    1981:	eb 2f                	jmp    19b2 <convert_rgb_alpha_to_image+0x142>
+    1983:	31 c9                	xor    %ecx,%ecx
+    1985:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    198c:	00 00 00 00 
+    if (inflated_buf[idy * (1 + 4 * width)]) {
+    1990:	89 ca                	mov    %ecx,%edx
+    1992:	41 80 3c 16 00       	cmpb   $0x0,(%r14,%rdx,1)
+    1997:	75 09                	jne    19a2 <convert_rgb_alpha_to_image+0x132>
+  for (uint32_t idy = 0; idy < height; idy++) {
+    1999:	01 e9                	add    %ebp,%ecx
+    199b:	49 ff cf             	dec    %r15
+    199e:	75 f0                	jne    1990 <convert_rgb_alpha_to_image+0x120>
+    19a0:	eb 10                	jmp    19b2 <convert_rgb_alpha_to_image+0x142>
+  return img;
+
+error:
+  if (img) {
+    if (img->px) {
+      free(img->px);
+    19a2:	48 89 c7             	mov    %rax,%rdi
+    19a5:	e8 86 f6 ff ff       	call   1030 <free@plt>
+    }
+    free(img);
+    19aa:	48 89 df             	mov    %rbx,%rdi
+    19ad:	e8 7e f6 ff ff       	call   1030 <free@plt>
+  }
+}
+    19b2:	48 89 d8             	mov    %rbx,%rax
+    19b5:	48 83 c4 18          	add    $0x18,%rsp
+    19b9:	5b                   	pop    %rbx
+    19ba:	41 5c                	pop    %r12
+    19bc:	41 5d                	pop    %r13
+    19be:	41 5e                	pop    %r14
+    19c0:	41 5f                	pop    %r15
+    19c2:	5d                   	pop    %rbp
+    19c3:	c3                   	ret    
+    19c4:	66 66 66 2e 0f 1f 84 	data16 data16 cs nopw 0x0(%rax,%rax,1)
+    19cb:	00 00 00 00 00 
+
+00000000000019d0 <reverse_filter_on_scanlines>:
+
+/* Creates magic unicorns */
+void reverse_filter_on_scanlines(png_chunk_ihdr *ihdr_chunk,
+                                 uint8_t *inflated_buf,
+                                 uint32_t inflated_size) {
+  return;
+    19d0:	c3                   	ret    
+    19d1:	66 66 66 66 66 66 2e 	data16 data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    19d8:	0f 1f 84 00 00 00 00 
+    19df:	00 
+
+00000000000019e0 <convert_data_to_image>:
+struct image *convert_data_to_image(png_chunk_ihdr *ihdr_chunk,
+                                    png_chunk_plte *plte_chunk,
+                                    uint8_t *inflated_buf,
+                                    uint32_t inflated_size) {
+  struct png_header_ihdr *ihdr_header =
+      (struct png_header_ihdr *)ihdr_chunk->chunk_data;
+    19e0:	48 8b 47 08          	mov    0x8(%rdi),%rax
+  switch (ihdr_header->color_type) {
+    19e4:	0f b6 40 09          	movzbl 0x9(%rax),%eax
+    19e8:	83 f8 06             	cmp    $0x6,%eax
+    19eb:	74 0a                	je     19f7 <convert_data_to_image+0x17>
+    19ed:	83 f8 03             	cmp    $0x3,%eax
+    19f0:	75 0d                	jne    19ff <convert_data_to_image+0x1f>
+  case PNG_IHDR_COLOR_PALETTE:
+    return convert_color_palette_to_image(ihdr_chunk, plte_chunk, inflated_buf,
+    19f2:	e9 49 fd ff ff       	jmp    1740 <convert_color_palette_to_image>
+                                          inflated_size);
+  case PNG_IHDR_COLOR_RGB_ALPHA:
+    return convert_rgb_alpha_to_image(ihdr_chunk, inflated_buf, inflated_size);
+    19f7:	48 89 d6             	mov    %rdx,%rsi
+    19fa:	e9 71 fe ff ff       	jmp    1870 <convert_rgb_alpha_to_image>
+  default:
+    return NULL;
+  }
+}
+    19ff:	31 c0                	xor    %eax,%eax
+    1a01:	c3                   	ret    
+    1a02:	66 66 66 66 66 2e 0f 	data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    1a09:	1f 84 00 00 00 00 00 
+
+0000000000001a10 <parse_png_no_interlace>:
+      (struct png_header_ihdr *)ihdr_chunk->chunk_data;
+    1a10:	48 8b 47 08          	mov    0x8(%rdi),%rax
+  switch (ihdr_header->color_type) {
+    1a14:	0f b6 40 09          	movzbl 0x9(%rax),%eax
+    1a18:	83 f8 06             	cmp    $0x6,%eax
+    1a1b:	74 0a                	je     1a27 <parse_png_no_interlace+0x17>
+    1a1d:	83 f8 03             	cmp    $0x3,%eax
+    1a20:	75 0d                	jne    1a2f <parse_png_no_interlace+0x1f>
+    return convert_color_palette_to_image(ihdr_chunk, plte_chunk, inflated_buf,
+    1a22:	e9 19 fd ff ff       	jmp    1740 <convert_color_palette_to_image>
+    return convert_rgb_alpha_to_image(ihdr_chunk, inflated_buf, inflated_size);
+    1a27:	48 89 d6             	mov    %rdx,%rsi
+    1a2a:	e9 41 fe ff ff       	jmp    1870 <convert_rgb_alpha_to_image>
+                                     png_chunk_plte *plte_chunk,
+                                     uint8_t *inflated_buf,
+                                     uint32_t inflated_size) {
+  reverse_filter_on_scanlines(ihdr_chunk, inflated_buf, inflated_size);
+
+  return convert_data_to_image(ihdr_chunk, plte_chunk, inflated_buf,
+    1a2f:	31 c0                	xor    %eax,%eax
+    1a31:	c3                   	ret    
+    1a32:	66 66 66 66 66 2e 0f 	data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    1a39:	1f 84 00 00 00 00 00 
+
+0000000000001a40 <parse_png>:
+}
+
+/* Parses a Y0L0 PNG from read data. Returns NULL if the image is interlaced. */
+struct image *parse_png(png_chunk_ihdr *ihdr_chunk, png_chunk_plte *plte_chunk,
+                        uint8_t *inflated_buf, uint32_t inflated_size) {
+  if (!ihdr_chunk) {
+    1a40:	48 85 ff             	test   %rdi,%rdi
+    1a43:	74 0a                	je     1a4f <parse_png+0xf>
+    return NULL;
+  }
+
+  struct png_header_ihdr *ihdr_header =
+      (struct png_header_ihdr *)ihdr_chunk->chunk_data;
+    1a45:	48 8b 47 08          	mov    0x8(%rdi),%rax
+
+  switch (ihdr_header->interlace) {
+    1a49:	80 78 0c 00          	cmpb   $0x0,0xc(%rax)
+    1a4d:	74 03                	je     1a52 <parse_png+0x12>
+                                  inflated_size);
+  case PNG_IHDR_INTERLACE_ADAM7:
+  default:
+    return NULL;
+  }
+}
+    1a4f:	31 c0                	xor    %eax,%eax
+    1a51:	c3                   	ret    
+  switch (ihdr_header->color_type) {
+    1a52:	0f b6 40 09          	movzbl 0x9(%rax),%eax
+    1a56:	83 f8 06             	cmp    $0x6,%eax
+    1a59:	74 0a                	je     1a65 <parse_png+0x25>
+    1a5b:	83 f8 03             	cmp    $0x3,%eax
+    1a5e:	75 ef                	jne    1a4f <parse_png+0xf>
+    return convert_color_palette_to_image(ihdr_chunk, plte_chunk, inflated_buf,
+    1a60:	e9 db fc ff ff       	jmp    1740 <convert_color_palette_to_image>
+    return convert_rgb_alpha_to_image(ihdr_chunk, inflated_buf, inflated_size);
+    1a65:	48 89 d6             	mov    %rdx,%rsi
+    1a68:	e9 03 fe ff ff       	jmp    1870 <convert_rgb_alpha_to_image>
+    1a6d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001a70 <load_png>:
+
+/* Reads a Y0l0 PNG from file and parses it into an image */
+int load_png(const char *filename, struct image **img) {
+    1a70:	55                   	push   %rbp
+    1a71:	41 57                	push   %r15
+    1a73:	41 56                	push   %r14
+    1a75:	41 55                	push   %r13
+    1a77:	41 54                	push   %r12
+    1a79:	53                   	push   %rbx
+    1a7a:	48 83 ec 48          	sub    $0x48,%rsp
+    1a7e:	49 89 f6             	mov    %rsi,%r14
+    1a81:	48 89 fb             	mov    %rdi,%rbx
+
+  uint32_t deflated_data_length = 0;
+  uint32_t deflated_data_idx = 0;
+  uint8_t *deflated_buf = NULL;
+
+  uint8_t *inflated_buf = NULL;
+    1a84:	48 c7 44 24 38 00 00 	movq   $0x0,0x38(%rsp)
+    1a8b:	00 00 
+  uint32_t inflated_size = 0;
+    1a8d:	c7 44 24 34 00 00 00 	movl   $0x0,0x34(%rsp)
+    1a94:	00 
+  int idat_train_started = 0;
+  int idat_train_finished = 0;
+
+  int chunk_idx = -1;
+
+  struct png_chunk *current_chunk = malloc(sizeof(struct png_chunk));
+    1a95:	bf 14 00 00 00       	mov    $0x14,%edi
+    1a9a:	e8 21 f6 ff ff       	call   10c0 <malloc@plt>
+    1a9f:	49 89 c5             	mov    %rax,%r13
+
+  FILE *input = fopen(filename, "rb");
+    1aa2:	48 8d 35 9a 15 00 00 	lea    0x159a(%rip),%rsi        # 3043 <_IO_stdin_used+0x43>
+    1aa9:	48 89 df             	mov    %rbx,%rdi
+    1aac:	e8 4f f6 ff ff       	call   1100 <fopen@plt>
+
+  // Has the file been open properly?
+  if (!input) {
+    1ab1:	48 85 c0             	test   %rax,%rax
+    1ab4:	74 52                	je     1b08 <load_png+0x98>
+    1ab6:	48 89 c3             	mov    %rax,%rbx
+    1ab9:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+  return fread(filesig, sizeof(*filesig), 1, file) != 1;
+    1abe:	be 08 00 00 00       	mov    $0x8,%esi
+    1ac3:	ba 01 00 00 00       	mov    $0x1,%edx
+    1ac8:	48 89 c1             	mov    %rax,%rcx
+    1acb:	e8 80 f5 ff ff       	call   1050 <fread@plt>
+    1ad0:	48 83 f8 01          	cmp    $0x1,%rax
+    goto error;
+  }
+
+  // Did we read the starting bytes properly?
+  if (read_png_filesig(input, &filesig)) {
+    1ad4:	75 2a                	jne    1b00 <load_png+0x90>
+    1ad6:	48 b8 89 50 4e 47 0d 	movabs $0xa1a0a0d474e5089,%rax
+    1add:	0a 1a 0a 
+  return !memcmp(filesig, "\211PNG\r\n\032\n", 8);
+    1ae0:	48 39 44 24 40       	cmp    %rax,0x40(%rsp)
+    goto error;
+  }
+
+  // Are the starting bytes correct?
+  if (!is_png_filesig_valid(&filesig)) {
+    1ae5:	75 19                	jne    1b00 <load_png+0x90>
+    goto error;
+  }
+
+  // Read all PNG chunks
+  for (; !read_png_chunk(input, current_chunk);
+    1ae7:	48 89 df             	mov    %rbx,%rdi
+    1aea:	4c 89 ee             	mov    %r13,%rsi
+    1aed:	e8 ae f9 ff ff       	call   14a0 <read_png_chunk>
+    1af2:	85 c0                	test   %eax,%eax
+    1af4:	75 0a                	jne    1b00 <load_png+0x90>
+  return !memcmp(&chunk->chunk_type, "IHDR", 4);
+    1af6:	41 81 7d 04 49 48 44 	cmpl   $0x52444849,0x4(%r13)
+    1afd:	52 
+      idat_train_started = 0;
+    }
+
+    // The first iteration: We must have IHDR!
+    if (!chunk_idx) {
+      if (!is_chunk_ihdr(current_chunk)) {
+    1afe:	74 58                	je     1b58 <load_png+0xe8>
+    free(ihdr_chunk);
+
+  return 0;
+error:
+  if (input)
+    fclose(input);
+    1b00:	48 89 df             	mov    %rbx,%rdi
+    1b03:	e8 58 f5 ff ff       	call   1060 <fclose@plt>
+    1b08:	45 31 ff             	xor    %r15d,%r15d
+    1b0b:	31 ed                	xor    %ebp,%ebp
+error_noinput:
+  if (deflated_buf)
+    free(deflated_buf);
+
+  if (current_chunk) {
+    1b0d:	4d 85 ed             	test   %r13,%r13
+    1b10:	74 16                	je     1b28 <load_png+0xb8>
+    if (current_chunk->chunk_data) {
+    1b12:	49 8b 7d 08          	mov    0x8(%r13),%rdi
+    1b16:	48 85 ff             	test   %rdi,%rdi
+    1b19:	74 05                	je     1b20 <load_png+0xb0>
+      free(current_chunk->chunk_data);
+    1b1b:	e8 10 f5 ff ff       	call   1030 <free@plt>
+    }
+    free(current_chunk);
+    1b20:	4c 89 ef             	mov    %r13,%rdi
+    1b23:	e8 08 f5 ff ff       	call   1030 <free@plt>
+  }
+
+  if (plte_chunk)
+    1b28:	4d 85 ff             	test   %r15,%r15
+    1b2b:	74 08                	je     1b35 <load_png+0xc5>
+    free(plte_chunk);
+    1b2d:	4c 89 ff             	mov    %r15,%rdi
+    1b30:	e8 fb f4 ff ff       	call   1030 <free@plt>
+    1b35:	bb 01 00 00 00       	mov    $0x1,%ebx
+    1b3a:	48 85 ed             	test   %rbp,%rbp
+    1b3d:	74 08                	je     1b47 <load_png+0xd7>
+    1b3f:	48 89 ef             	mov    %rbp,%rdi
+    1b42:	e8 e9 f4 ff ff       	call   1030 <free@plt>
+
+  if (ihdr_chunk)
+    free(ihdr_chunk);
+
+  return 1;
+}
+    1b47:	89 d8                	mov    %ebx,%eax
+    1b49:	48 83 c4 48          	add    $0x48,%rsp
+    1b4d:	5b                   	pop    %rbx
+    1b4e:	41 5c                	pop    %r12
+    1b50:	41 5d                	pop    %r13
+    1b52:	41 5e                	pop    %r14
+    1b54:	41 5f                	pop    %r15
+    1b56:	5d                   	pop    %rbp
+    1b57:	c3                   	ret    
+  return !memcmp(&chunk->chunk_type, "IHDR", 4);
+    1b58:	41 81 7d 04 49 48 44 	cmpl   $0x52444849,0x4(%r13)
+    1b5f:	52 
+    if (is_chunk_ihdr(current_chunk)) {
+    1b60:	74 44                	je     1ba6 <load_png+0x136>
+  return !memcmp(&chunk->chunk_type, "PLTE", 4);
+    1b62:	41 81 7d 04 50 4c 54 	cmpl   $0x45544c50,0x4(%r13)
+    1b69:	45 
+    if (is_chunk_plte(current_chunk)) {
+    1b6a:	0f 84 c5 00 00 00    	je     1c35 <load_png+0x1c5>
+  return !memcmp(&chunk->chunk_type, "IEND", 4);
+    1b70:	41 81 7d 04 49 45 4e 	cmpl   $0x444e4549,0x4(%r13)
+    1b77:	44 
+    if (is_chunk_iend(current_chunk)) {
+    1b78:	0f 84 e9 00 00 00    	je     1c67 <load_png+0x1f7>
+  return !memcmp(&chunk->chunk_type, "IDAT", 4);
+    1b7e:	41 81 7d 04 49 44 41 	cmpl   $0x54414449,0x4(%r13)
+    1b85:	54 
+    if (is_chunk_idat(current_chunk)) {
+    1b86:	0f 84 02 01 00 00    	je     1c8e <load_png+0x21e>
+    1b8c:	31 c0                	xor    %eax,%eax
+    1b8e:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+    1b93:	31 c0                	xor    %eax,%eax
+    1b95:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    1b9a:	31 c0                	xor    %eax,%eax
+    1b9c:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    1ba1:	e9 b5 00 00 00       	jmp    1c5b <load_png+0x1eb>
+  if (chunk->length != sizeof(struct png_header_ihdr))
+    1ba6:	41 83 7d 00 0d       	cmpl   $0xd,0x0(%r13)
+    1bab:	0f 85 4f ff ff ff    	jne    1b00 <load_png+0x90>
+  if (!is_png_ihdr_valid(ihdr->chunk_data))
+    1bb1:	49 8b 45 08          	mov    0x8(%r13),%rax
+  if (!is_color_type_valid(ihdr->color_type))
+    1bb5:	0f b6 48 09          	movzbl 0x9(%rax),%ecx
+    1bb9:	83 f9 06             	cmp    $0x6,%ecx
+    1bbc:	74 09                	je     1bc7 <load_png+0x157>
+    1bbe:	83 f9 03             	cmp    $0x3,%ecx
+    1bc1:	0f 85 39 ff ff ff    	jne    1b00 <load_png+0x90>
+  switch (color_type) {
+    1bc7:	80 f9 03             	cmp    $0x3,%cl
+    1bca:	0f 95 c2             	setne  %dl
+    1bcd:	80 f9 06             	cmp    $0x6,%cl
+    1bd0:	0f 95 c1             	setne  %cl
+  if (!is_bit_depth_valid(ihdr->color_type, ihdr->bit_depth))
+    1bd3:	84 ca                	test   %cl,%dl
+    1bd5:	0f 85 25 ff ff ff    	jne    1b00 <load_png+0x90>
+    1bdb:	80 78 08 08          	cmpb   $0x8,0x8(%rax)
+    1bdf:	0f 85 1b ff ff ff    	jne    1b00 <load_png+0x90>
+int is_compression_valid(uint8_t compression) { return !compression; }
+    1be5:	80 78 0a 00          	cmpb   $0x0,0xa(%rax)
+  if (!is_compression_valid(ihdr->compression))
+    1be9:	0f 85 11 ff ff ff    	jne    1b00 <load_png+0x90>
+int is_filter_valid(uint8_t filter) { return !filter; }
+    1bef:	80 78 0b 00          	cmpb   $0x0,0xb(%rax)
+  if (!is_filter_valid(ihdr->filter))
+    1bf3:	0f 85 07 ff ff ff    	jne    1b00 <load_png+0x90>
+  switch (interlace) {
+    1bf9:	80 78 0c 00          	cmpb   $0x0,0xc(%rax)
+  if (!is_png_ihdr_valid(ihdr->chunk_data))
+    1bfd:	0f 85 fd fe ff ff    	jne    1b00 <load_png+0x90>
+  ihdr_header->width = to_little_endian(ihdr_header->width);
+    1c03:	8b 08                	mov    (%rax),%ecx
+  ihdr_header->height = to_little_endian(ihdr_header->height);
+    1c05:	8b 50 04             	mov    0x4(%rax),%edx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    1c08:	0f ca                	bswap  %edx
+  ihdr_header->height = to_little_endian(ihdr_header->height);
+    1c0a:	89 50 04             	mov    %edx,0x4(%rax)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    1c0d:	0f c9                	bswap  %ecx
+  ihdr_header->width = to_little_endian(ihdr_header->width);
+    1c0f:	89 08                	mov    %ecx,(%rax)
+    1c11:	31 c0                	xor    %eax,%eax
+    1c13:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+    1c18:	31 c0                	xor    %eax,%eax
+    1c1a:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    1c1f:	31 c0                	xor    %eax,%eax
+    1c21:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    1c26:	31 c0                	xor    %eax,%eax
+    1c28:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    1c2d:	45 31 ff             	xor    %r15d,%r15d
+    1c30:	e9 ad 00 00 00       	jmp    1ce2 <load_png+0x272>
+  if (chunk->length % 3)
+    1c35:	41 69 45 00 ab aa aa 	imul   $0xaaaaaaab,0x0(%r13),%eax
+    1c3c:	aa 
+    1c3d:	3d 56 55 55 55       	cmp    $0x55555556,%eax
+    1c42:	0f 83 b8 fe ff ff    	jae    1b00 <load_png+0x90>
+    1c48:	31 c0                	xor    %eax,%eax
+    1c4a:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+    1c4f:	31 c0                	xor    %eax,%eax
+    1c51:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    1c56:	4c 89 6c 24 08       	mov    %r13,0x8(%rsp)
+    1c5b:	31 c0                	xor    %eax,%eax
+    1c5d:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    1c62:	45 31 ff             	xor    %r15d,%r15d
+    1c65:	eb 78                	jmp    1cdf <load_png+0x26f>
+  if (chunk->length) {
+    1c67:	41 83 7d 00 00       	cmpl   $0x0,0x0(%r13)
+    1c6c:	0f 85 8e fe ff ff    	jne    1b00 <load_png+0x90>
+  if (chunk->chunk_data) {
+    1c72:	49 83 7d 08 00       	cmpq   $0x0,0x8(%r13)
+    1c77:	0f 85 83 fe ff ff    	jne    1b00 <load_png+0x90>
+    1c7d:	31 c0                	xor    %eax,%eax
+    1c7f:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    1c84:	4c 89 6c 24 28       	mov    %r13,0x28(%rsp)
+    1c89:	e9 0c ff ff ff       	jmp    1b9a <load_png+0x12a>
+      deflated_data_length += idat_chunk->length;
+    1c8e:	45 8b 65 00          	mov    0x0(%r13),%r12d
+      deflated_buf = realloc(deflated_buf, deflated_data_length);
+    1c92:	4c 89 e7             	mov    %r12,%rdi
+    1c95:	e8 26 f4 ff ff       	call   10c0 <malloc@plt>
+      memcpy(deflated_buf + deflated_data_idx, idat_chunk->chunk_data,
+    1c9a:	4d 8b 7d 08          	mov    0x8(%r13),%r15
+    1c9e:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    1ca3:	48 89 c7             	mov    %rax,%rdi
+    1ca6:	4c 89 fe             	mov    %r15,%rsi
+    1ca9:	4c 89 64 24 18       	mov    %r12,0x18(%rsp)
+    1cae:	4c 89 e2             	mov    %r12,%rdx
+    1cb1:	e8 ea f3 ff ff       	call   10a0 <memcpy@plt>
+      if (idat_chunk->chunk_data) {
+    1cb6:	4d 85 ff             	test   %r15,%r15
+    1cb9:	74 08                	je     1cc3 <load_png+0x253>
+        free(idat_chunk->chunk_data);
+    1cbb:	4c 89 ff             	mov    %r15,%rdi
+    1cbe:	e8 6d f3 ff ff       	call   1030 <free@plt>
+      free(idat_chunk);
+    1cc3:	4c 89 ef             	mov    %r13,%rdi
+    1cc6:	e8 65 f3 ff ff       	call   1030 <free@plt>
+    1ccb:	41 bf 01 00 00 00    	mov    $0x1,%r15d
+    1cd1:	31 c0                	xor    %eax,%eax
+    1cd3:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+    1cd8:	31 c0                	xor    %eax,%eax
+    1cda:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    1cdf:	45 31 ed             	xor    %r13d,%r13d
+       current_chunk = malloc(sizeof(struct png_chunk))) {
+    1ce2:	bf 14 00 00 00       	mov    $0x14,%edi
+    1ce7:	e8 d4 f3 ff ff       	call   10c0 <malloc@plt>
+    1cec:	49 89 c4             	mov    %rax,%r12
+  for (; !read_png_chunk(input, current_chunk);
+    1cef:	48 89 df             	mov    %rbx,%rdi
+    1cf2:	48 89 c6             	mov    %rax,%rsi
+    1cf5:	e8 a6 f7 ff ff       	call   14a0 <read_png_chunk>
+    1cfa:	4c 89 ed             	mov    %r13,%rbp
+    1cfd:	85 c0                	test   %eax,%eax
+    1cff:	74 3f                	je     1d40 <load_png+0x2d0>
+    1d01:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+  if (!iend_chunk) {
+    1d06:	48 85 c9             	test   %rcx,%rcx
+    1d09:	0f 84 72 02 00 00    	je     1f81 <load_png+0x511>
+    1d0f:	48 8d 54 24 38       	lea    0x38(%rsp),%rdx
+    1d14:	48 8d 4c 24 34       	lea    0x34(%rsp),%rcx
+    1d19:	4c 8b 7c 24 10       	mov    0x10(%rsp),%r15
+  if (decompress_png_data(deflated_buf, deflated_data_length, &inflated_buf,
+    1d1e:	4c 89 ff             	mov    %r15,%rdi
+    1d21:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+    1d26:	e8 d5 f8 ff ff       	call   1600 <decompress_png_data>
+    1d2b:	85 c0                	test   %eax,%eax
+    1d2d:	4c 8b 6c 24 08       	mov    0x8(%rsp),%r13
+    1d32:	0f 84 dd 01 00 00    	je     1f15 <load_png+0x4a5>
+    1d38:	4d 89 ef             	mov    %r13,%r15
+    1d3b:	e9 46 02 00 00       	jmp    1f86 <load_png+0x516>
+    1d40:	c7 44 24 24 00 00 00 	movl   $0x0,0x24(%rsp)
+    1d47:	00 
+    1d48:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+    1d4d:	eb 35                	jmp    1d84 <load_png+0x314>
+      free(idat_chunk);
+    1d4f:	4c 89 e7             	mov    %r12,%rdi
+    1d52:	e8 d9 f2 ff ff       	call   1030 <free@plt>
+    1d57:	41 bd 01 00 00 00    	mov    $0x1,%r13d
+    1d5d:	31 d2                	xor    %edx,%edx
+       current_chunk = malloc(sizeof(struct png_chunk))) {
+    1d5f:	bf 14 00 00 00       	mov    $0x14,%edi
+    1d64:	49 89 d7             	mov    %rdx,%r15
+    1d67:	e8 54 f3 ff ff       	call   10c0 <malloc@plt>
+    1d6c:	49 89 c4             	mov    %rax,%r12
+  for (; !read_png_chunk(input, current_chunk);
+    1d6f:	48 89 df             	mov    %rbx,%rdi
+    1d72:	48 89 c6             	mov    %rax,%rsi
+    1d75:	e8 26 f7 ff ff       	call   14a0 <read_png_chunk>
+    1d7a:	4c 89 f9             	mov    %r15,%rcx
+    1d7d:	85 c0                	test   %eax,%eax
+    1d7f:	45 89 ef             	mov    %r13d,%r15d
+    1d82:	75 82                	jne    1d06 <load_png+0x296>
+    if (iend_chunk)
+    1d84:	48 85 c9             	test   %rcx,%rcx
+    1d87:	0f 85 f4 01 00 00    	jne    1f81 <load_png+0x511>
+  return !memcmp(&chunk->chunk_type, "IDAT", 4);
+    1d8d:	45 31 ed             	xor    %r13d,%r13d
+    if (idat_train_started && !is_chunk_idat(current_chunk)) {
+    1d90:	45 85 ff             	test   %r15d,%r15d
+    1d93:	74 1d                	je     1db2 <load_png+0x342>
+  return !memcmp(&chunk->chunk_type, "IDAT", 4);
+    1d95:	41 81 7c 24 04 49 44 	cmpl   $0x54414449,0x4(%r12)
+    1d9c:	41 54 
+    1d9e:	41 0f 94 c5          	sete   %r13b
+    if (idat_train_started && !is_chunk_idat(current_chunk)) {
+    1da2:	b8 01 00 00 00       	mov    $0x1,%eax
+    1da7:	8b 4c 24 24          	mov    0x24(%rsp),%ecx
+    1dab:	0f 45 c8             	cmovne %eax,%ecx
+    1dae:	89 4c 24 24          	mov    %ecx,0x24(%rsp)
+  return !memcmp(&chunk->chunk_type, "IHDR", 4);
+    1db2:	41 81 7c 24 04 49 48 	cmpl   $0x52444849,0x4(%r12)
+    1db9:	44 52 
+    if (is_chunk_ihdr(current_chunk)) {
+    1dbb:	74 7f                	je     1e3c <load_png+0x3cc>
+  return !memcmp(&chunk->chunk_type, "PLTE", 4);
+    1dbd:	41 81 7c 24 04 50 4c 	cmpl   $0x45544c50,0x4(%r12)
+    1dc4:	54 45 
+    if (is_chunk_plte(current_chunk)) {
+    1dc6:	0f 84 ef 00 00 00    	je     1ebb <load_png+0x44b>
+  return !memcmp(&chunk->chunk_type, "IEND", 4);
+    1dcc:	41 81 7c 24 04 49 45 	cmpl   $0x444e4549,0x4(%r12)
+    1dd3:	4e 44 
+    if (is_chunk_iend(current_chunk)) {
+    1dd5:	0f 84 19 01 00 00    	je     1ef4 <load_png+0x484>
+  return !memcmp(&chunk->chunk_type, "IDAT", 4);
+    1ddb:	41 81 7c 24 04 49 44 	cmpl   $0x54414449,0x4(%r12)
+    1de2:	41 54 
+    if (is_chunk_idat(current_chunk)) {
+    1de4:	0f 85 73 ff ff ff    	jne    1d5d <load_png+0x2ed>
+      if (idat_train_finished) {
+    1dea:	83 7c 24 24 00       	cmpl   $0x0,0x24(%rsp)
+    1def:	0f 85 8c 01 00 00    	jne    1f81 <load_png+0x511>
+    1df5:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+      deflated_data_length += idat_chunk->length;
+    1dfa:	41 03 34 24          	add    (%r12),%esi
+    1dfe:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+    1e03:	48 89 74 24 18       	mov    %rsi,0x18(%rsp)
+      deflated_buf = realloc(deflated_buf, deflated_data_length);
+    1e08:	e8 d3 f2 ff ff       	call   10e0 <realloc@plt>
+      memcpy(deflated_buf + deflated_data_idx, idat_chunk->chunk_data,
+    1e0d:	4d 8b 7c 24 08       	mov    0x8(%r12),%r15
+             idat_chunk->length);
+    1e12:	41 8b 14 24          	mov    (%r12),%edx
+    1e16:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+      memcpy(deflated_buf + deflated_data_idx, idat_chunk->chunk_data,
+    1e1b:	48 89 c7             	mov    %rax,%rdi
+    1e1e:	4c 89 fe             	mov    %r15,%rsi
+    1e21:	e8 7a f2 ff ff       	call   10a0 <memcpy@plt>
+      if (idat_chunk->chunk_data) {
+    1e26:	4d 85 ff             	test   %r15,%r15
+    1e29:	0f 84 20 ff ff ff    	je     1d4f <load_png+0x2df>
+        free(idat_chunk->chunk_data);
+    1e2f:	4c 89 ff             	mov    %r15,%rdi
+    1e32:	e8 f9 f1 ff ff       	call   1030 <free@plt>
+    1e37:	e9 13 ff ff ff       	jmp    1d4f <load_png+0x2df>
+      if (ihdr_chunk) {
+    1e3c:	48 85 ed             	test   %rbp,%rbp
+    1e3f:	0f 85 3c 01 00 00    	jne    1f81 <load_png+0x511>
+  if (chunk->length != sizeof(struct png_header_ihdr))
+    1e45:	41 83 3c 24 0d       	cmpl   $0xd,(%r12)
+    1e4a:	0f 85 2f 01 00 00    	jne    1f7f <load_png+0x50f>
+  if (!is_png_ihdr_valid(ihdr->chunk_data))
+    1e50:	49 8b 44 24 08       	mov    0x8(%r12),%rax
+  if (!is_color_type_valid(ihdr->color_type))
+    1e55:	0f b6 48 09          	movzbl 0x9(%rax),%ecx
+    1e59:	83 f9 06             	cmp    $0x6,%ecx
+    1e5c:	74 09                	je     1e67 <load_png+0x3f7>
+    1e5e:	83 f9 03             	cmp    $0x3,%ecx
+    1e61:	0f 85 18 01 00 00    	jne    1f7f <load_png+0x50f>
+  switch (color_type) {
+    1e67:	80 f9 03             	cmp    $0x3,%cl
+    1e6a:	0f 95 c2             	setne  %dl
+    1e6d:	80 f9 06             	cmp    $0x6,%cl
+    1e70:	0f 95 c1             	setne  %cl
+  if (!is_bit_depth_valid(ihdr->color_type, ihdr->bit_depth))
+    1e73:	84 ca                	test   %cl,%dl
+    1e75:	0f 85 04 01 00 00    	jne    1f7f <load_png+0x50f>
+    1e7b:	80 78 08 08          	cmpb   $0x8,0x8(%rax)
+    1e7f:	0f 85 fa 00 00 00    	jne    1f7f <load_png+0x50f>
+int is_compression_valid(uint8_t compression) { return !compression; }
+    1e85:	80 78 0a 00          	cmpb   $0x0,0xa(%rax)
+  if (!is_compression_valid(ihdr->compression))
+    1e89:	0f 85 f0 00 00 00    	jne    1f7f <load_png+0x50f>
+int is_filter_valid(uint8_t filter) { return !filter; }
+    1e8f:	80 78 0b 00          	cmpb   $0x0,0xb(%rax)
+  if (!is_filter_valid(ihdr->filter))
+    1e93:	0f 85 e6 00 00 00    	jne    1f7f <load_png+0x50f>
+  switch (interlace) {
+    1e99:	80 78 0c 00          	cmpb   $0x0,0xc(%rax)
+  if (!is_png_ihdr_valid(ihdr->chunk_data))
+    1e9d:	0f 85 dc 00 00 00    	jne    1f7f <load_png+0x50f>
+  ihdr_header->width = to_little_endian(ihdr_header->width);
+    1ea3:	8b 08                	mov    (%rax),%ecx
+  ihdr_header->height = to_little_endian(ihdr_header->height);
+    1ea5:	8b 50 04             	mov    0x4(%rax),%edx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    1ea8:	0f ca                	bswap  %edx
+  ihdr_header->height = to_little_endian(ihdr_header->height);
+    1eaa:	89 50 04             	mov    %edx,0x4(%rax)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    1ead:	0f c9                	bswap  %ecx
+  ihdr_header->width = to_little_endian(ihdr_header->width);
+    1eaf:	89 08                	mov    %ecx,(%rax)
+    1eb1:	31 d2                	xor    %edx,%edx
+    1eb3:	4c 89 e5             	mov    %r12,%rbp
+    1eb6:	e9 a4 fe ff ff       	jmp    1d5f <load_png+0x2ef>
+    1ebb:	4c 8b 7c 24 08       	mov    0x8(%rsp),%r15
+      if (plte_chunk) {
+    1ec0:	4d 85 ff             	test   %r15,%r15
+    1ec3:	0f 85 bd 00 00 00    	jne    1f86 <load_png+0x516>
+  if (chunk->length % 3)
+    1ec9:	41 69 04 24 ab aa aa 	imul   $0xaaaaaaab,(%r12),%eax
+    1ed0:	aa 
+    1ed1:	ba 00 00 00 00       	mov    $0x0,%edx
+    1ed6:	4c 89 e1             	mov    %r12,%rcx
+    1ed9:	4c 89 64 24 08       	mov    %r12,0x8(%rsp)
+    1ede:	41 bf 00 00 00 00    	mov    $0x0,%r15d
+    1ee4:	3d 56 55 55 55       	cmp    $0x55555556,%eax
+    1ee9:	0f 82 70 fe ff ff    	jb     1d5f <load_png+0x2ef>
+    1eef:	e9 92 00 00 00       	jmp    1f86 <load_png+0x516>
+  if (chunk->length) {
+    1ef4:	41 83 3c 24 00       	cmpl   $0x0,(%r12)
+    1ef9:	0f 85 82 00 00 00    	jne    1f81 <load_png+0x511>
+  if (chunk->chunk_data) {
+    1eff:	49 83 7c 24 08 00    	cmpq   $0x0,0x8(%r12)
+    1f05:	4c 89 e2             	mov    %r12,%rdx
+    1f08:	4c 8b 7c 24 08       	mov    0x8(%rsp),%r15
+    1f0d:	0f 84 4c fe ff ff    	je     1d5f <load_png+0x2ef>
+    1f13:	eb 71                	jmp    1f86 <load_png+0x516>
+  *img = parse_png(ihdr_chunk, plte_chunk, inflated_buf, inflated_size);
+    1f15:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+    1f1a:	48 89 ef             	mov    %rbp,%rdi
+    1f1d:	4c 89 ee             	mov    %r13,%rsi
+    1f20:	e8 1b fb ff ff       	call   1a40 <parse_png>
+    1f25:	49 89 06             	mov    %rax,(%r14)
+  if (!*img) {
+    1f28:	48 85 c0             	test   %rax,%rax
+    1f2b:	0f 84 07 fe ff ff    	je     1d38 <load_png+0x2c8>
+  fclose(input);
+    1f31:	48 89 df             	mov    %rbx,%rdi
+    1f34:	e8 27 f1 ff ff       	call   1060 <fclose@plt>
+  if (deflated_buf)
+    1f39:	4d 85 ff             	test   %r15,%r15
+    1f3c:	74 08                	je     1f46 <load_png+0x4d6>
+    free(deflated_buf);
+    1f3e:	4c 89 ff             	mov    %r15,%rdi
+    1f41:	e8 ea f0 ff ff       	call   1030 <free@plt>
+  if (current_chunk) {
+    1f46:	4d 85 e4             	test   %r12,%r12
+    1f49:	74 17                	je     1f62 <load_png+0x4f2>
+    if (current_chunk->chunk_data) {
+    1f4b:	49 8b 7c 24 08       	mov    0x8(%r12),%rdi
+    1f50:	48 85 ff             	test   %rdi,%rdi
+    1f53:	74 05                	je     1f5a <load_png+0x4ea>
+      free(current_chunk->chunk_data);
+    1f55:	e8 d6 f0 ff ff       	call   1030 <free@plt>
+    free(current_chunk);
+    1f5a:	4c 89 e7             	mov    %r12,%rdi
+    1f5d:	e8 ce f0 ff ff       	call   1030 <free@plt>
+  if (plte_chunk)
+    1f62:	4d 85 ed             	test   %r13,%r13
+    1f65:	74 08                	je     1f6f <load_png+0x4ff>
+    free(plte_chunk);
+    1f67:	4c 89 ef             	mov    %r13,%rdi
+    1f6a:	e8 c1 f0 ff ff       	call   1030 <free@plt>
+    1f6f:	31 db                	xor    %ebx,%ebx
+    1f71:	48 85 ed             	test   %rbp,%rbp
+    1f74:	0f 85 c5 fb ff ff    	jne    1b3f <load_png+0xcf>
+    1f7a:	e9 c8 fb ff ff       	jmp    1b47 <load_png+0xd7>
+    1f7f:	31 ed                	xor    %ebp,%ebp
+    1f81:	4c 8b 7c 24 08       	mov    0x8(%rsp),%r15
+    fclose(input);
+    1f86:	48 89 df             	mov    %rbx,%rdi
+    1f89:	e8 d2 f0 ff ff       	call   1060 <fclose@plt>
+    1f8e:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+  if (deflated_buf)
+    1f93:	48 85 ff             	test   %rdi,%rdi
+    1f96:	74 05                	je     1f9d <load_png+0x52d>
+    free(deflated_buf);
+    1f98:	e8 93 f0 ff ff       	call   1030 <free@plt>
+    1f9d:	4d 89 e5             	mov    %r12,%r13
+  if (current_chunk) {
+    1fa0:	4d 85 ed             	test   %r13,%r13
+    1fa3:	0f 85 69 fb ff ff    	jne    1b12 <load_png+0xa2>
+    1fa9:	e9 7a fb ff ff       	jmp    1b28 <load_png+0xb8>
+    1fae:	66 90                	xchg   %ax,%ax
+
+0000000000001fb0 <store_filesig>:
+
+// Store a valid file signature
+int store_filesig(FILE *output) {
+    1fb0:	50                   	push   %rax
+    1fb1:	48 89 f9             	mov    %rdi,%rcx
+  return fwrite("\211PNG\r\n\032\n", 8, 1, output) != 1;
+    1fb4:	48 8d 3d 6e 10 00 00 	lea    0x106e(%rip),%rdi        # 3029 <_IO_stdin_used+0x29>
+    1fbb:	be 08 00 00 00       	mov    $0x8,%esi
+    1fc0:	ba 01 00 00 00       	mov    $0x1,%edx
+    1fc5:	e8 46 f1 ff ff       	call   1110 <fwrite@plt>
+    1fca:	31 c9                	xor    %ecx,%ecx
+    1fcc:	48 83 f8 01          	cmp    $0x1,%rax
+    1fd0:	0f 95 c1             	setne  %cl
+    1fd3:	89 c8                	mov    %ecx,%eax
+    1fd5:	59                   	pop    %rcx
+    1fd6:	c3                   	ret    
+    1fd7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    1fde:	00 00 
+
+0000000000001fe0 <fill_ihdr_rgb_alpha>:
+  ihdr.bit_depth = 8;
+  ihdr.color_type = PNG_IHDR_COLOR_RGB_ALPHA;
+  ihdr.compression = 0;
+  ihdr.filter = 0;
+  ihdr.interlace = 0;
+  ihdr.height = to_big_endian(img->size_y);
+    1fe0:	0f b7 4f 02          	movzwl 0x2(%rdi),%ecx
+  ihdr.width = to_big_endian(img->size_x);
+    1fe4:	0f b7 07             	movzwl (%rdi),%eax
+
+  return ihdr;
+    1fe7:	48 c1 e0 20          	shl    $0x20,%rax
+    1feb:	48 09 c8             	or     %rcx,%rax
+    1fee:	48 0f c8             	bswap  %rax
+    1ff1:	ba 08 06 00 00       	mov    $0x608,%edx
+    1ff6:	c3                   	ret    
+    1ff7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    1ffe:	00 00 
+
+0000000000002000 <fill_ihdr_plte>:
+  ihdr.bit_depth = 8;
+  ihdr.color_type = PNG_IHDR_COLOR_PALETTE;
+  ihdr.compression = 0;
+  ihdr.filter = 0;
+  ihdr.interlace = 0;
+  ihdr.height = to_big_endian(img->size_y);
+    2000:	0f b7 4f 02          	movzwl 0x2(%rdi),%ecx
+  ihdr.width = to_big_endian(img->size_x);
+    2004:	0f b7 07             	movzwl (%rdi),%eax
+
+  return ihdr;
+    2007:	48 c1 e0 20          	shl    $0x20,%rax
+    200b:	48 09 c8             	or     %rcx,%rax
+    200e:	48 0f c8             	bswap  %rax
+    2011:	ba 08 03 00 00       	mov    $0x308,%edx
+    2016:	c3                   	ret    
+    2017:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    201e:	00 00 
+
+0000000000002020 <fill_chunk_crc>:
+}
+
+// Expects the length in the little endian format and converts it to big endian
+// Calculates and fills the CRC value for a chunk
+void fill_chunk_crc(struct png_chunk *chunk) {
+    2020:	53                   	push   %rbx
+    2021:	48 89 fb             	mov    %rdi,%rbx
+  chunk->crc =
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    2024:	48 83 c7 04          	add    $0x4,%rdi
+    2028:	be 04 00 00 00       	mov    $0x4,%esi
+    202d:	e8 4e 0e 00 00       	call   2e80 <crc>
+  chunk->crc =
+    2032:	89 43 10             	mov    %eax,0x10(%rbx)
+  if (chunk->length) {
+    2035:	8b 13                	mov    (%rbx),%edx
+    2037:	85 d2                	test   %edx,%edx
+    2039:	74 14                	je     204f <fill_chunk_crc+0x2f>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    203b:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    203d:	48 8b 73 08          	mov    0x8(%rbx),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2041:	48 89 c7             	mov    %rax,%rdi
+    2044:	e8 17 0c 00 00       	call   2c60 <update_crc>
+    2049:	f7 d0                	not    %eax
+                 0xffffffffL;
+  }
+  chunk->crc = to_big_endian(chunk->crc);
+  chunk->length = to_big_endian(chunk->length);
+    204b:	8b 0b                	mov    (%rbx),%ecx
+    204d:	eb 02                	jmp    2051 <fill_chunk_crc+0x31>
+    204f:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2051:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    2053:	89 43 10             	mov    %eax,0x10(%rbx)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2056:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    2058:	89 0b                	mov    %ecx,(%rbx)
+}
+    205a:	5b                   	pop    %rbx
+    205b:	c3                   	ret    
+    205c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002060 <fill_ihdr_chunk>:
+
+// Fills the IHDR image metadata chunk
+png_chunk_ihdr fill_ihdr_chunk(struct png_header_ihdr *ihdr) {
+    2060:	53                   	push   %rbx
+    2061:	48 89 fb             	mov    %rdi,%rbx
+  png_chunk_ihdr ihdr_chunk;
+  memcpy(&ihdr_chunk.chunk_type, "IHDR", 4);
+    2064:	48 83 c7 04          	add    $0x4,%rdi
+    2068:	48 b8 0d 00 00 00 49 	movabs $0x524448490000000d,%rax
+    206f:	48 44 52 
+  ihdr_chunk.length = sizeof(*ihdr);
+    2072:	48 89 03             	mov    %rax,(%rbx)
+  ihdr_chunk.chunk_data = ihdr;
+    2075:	48 89 73 08          	mov    %rsi,0x8(%rbx)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    2079:	be 04 00 00 00       	mov    $0x4,%esi
+    207e:	e8 fd 0d 00 00       	call   2e80 <crc>
+  chunk->crc =
+    2083:	89 43 10             	mov    %eax,0x10(%rbx)
+  if (chunk->length) {
+    2086:	8b 13                	mov    (%rbx),%edx
+    2088:	85 d2                	test   %edx,%edx
+    208a:	74 14                	je     20a0 <fill_ihdr_chunk+0x40>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    208c:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    208e:	48 8b 73 08          	mov    0x8(%rbx),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2092:	48 89 c7             	mov    %rax,%rdi
+    2095:	e8 c6 0b 00 00       	call   2c60 <update_crc>
+    209a:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    209c:	8b 0b                	mov    (%rbx),%ecx
+    209e:	eb 02                	jmp    20a2 <fill_ihdr_chunk+0x42>
+    20a0:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    20a2:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    20a4:	89 43 10             	mov    %eax,0x10(%rbx)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    20a7:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    20a9:	89 0b                	mov    %ecx,(%rbx)
+  fill_chunk_crc((struct png_chunk *)&ihdr_chunk);
+  return ihdr_chunk;
+    20ab:	48 89 d8             	mov    %rbx,%rax
+    20ae:	5b                   	pop    %rbx
+    20af:	c3                   	ret    
+
+00000000000020b0 <store_png_chunk>:
+}
+
+// Chunk needs to already be in the big endian format
+// Writes a chunk to the file
+int store_png_chunk(FILE *output, struct png_chunk *chunk) {
+    20b0:	41 56                	push   %r14
+    20b2:	53                   	push   %rbx
+    20b3:	50                   	push   %rax
+    20b4:	48 89 f3             	mov    %rsi,%rbx
+    20b7:	49 89 fe             	mov    %rdi,%r14
+  fwrite(&chunk->length, 4, 1, output);
+    20ba:	be 04 00 00 00       	mov    $0x4,%esi
+    20bf:	ba 01 00 00 00       	mov    $0x1,%edx
+    20c4:	48 89 df             	mov    %rbx,%rdi
+    20c7:	4c 89 f1             	mov    %r14,%rcx
+    20ca:	e8 41 f0 ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->chunk_type, 4, 1, output);
+    20cf:	48 8d 7b 04          	lea    0x4(%rbx),%rdi
+    20d3:	be 04 00 00 00       	mov    $0x4,%esi
+    20d8:	ba 01 00 00 00       	mov    $0x1,%edx
+    20dd:	4c 89 f1             	mov    %r14,%rcx
+    20e0:	e8 2b f0 ff ff       	call   1110 <fwrite@plt>
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    20e5:	48 8b 7b 08          	mov    0x8(%rbx),%rdi
+    20e9:	8b 33                	mov    (%rbx),%esi
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    20eb:	0f ce                	bswap  %esi
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    20ed:	ba 01 00 00 00       	mov    $0x1,%edx
+    20f2:	4c 89 f1             	mov    %r14,%rcx
+    20f5:	e8 16 f0 ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->crc, 4, 1, output);
+    20fa:	48 83 c3 10          	add    $0x10,%rbx
+    20fe:	be 04 00 00 00       	mov    $0x4,%esi
+    2103:	ba 01 00 00 00       	mov    $0x1,%edx
+    2108:	48 89 df             	mov    %rbx,%rdi
+    210b:	4c 89 f1             	mov    %r14,%rcx
+    210e:	48 83 c4 08          	add    $0x8,%rsp
+    2112:	5b                   	pop    %rbx
+    2113:	41 5e                	pop    %r14
+    2115:	e9 f6 ef ff ff       	jmp    1110 <fwrite@plt>
+    211a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000002120 <store_ihdr_rgb_alpha>:
+}
+
+// Writes a RGBA metadata chunk
+int store_ihdr_rgb_alpha(FILE *output, struct image *img) {
+    2120:	41 57                	push   %r15
+    2122:	41 56                	push   %r14
+    2124:	53                   	push   %rbx
+    2125:	48 83 ec 30          	sub    $0x30,%rsp
+    2129:	48 89 fb             	mov    %rdi,%rbx
+  ihdr.height = to_big_endian(img->size_y);
+    212c:	0f b7 46 02          	movzwl 0x2(%rsi),%eax
+  ihdr.width = to_big_endian(img->size_x);
+    2130:	0f b7 0e             	movzwl (%rsi),%ecx
+  return ihdr;
+    2133:	48 c1 e1 20          	shl    $0x20,%rcx
+    2137:	48 09 c1             	or     %rax,%rcx
+    213a:	48 0f c9             	bswap  %rcx
+  struct png_header_ihdr ihdr = fill_ihdr_rgb_alpha(img);
+    213d:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+    2142:	c6 44 24 2c 00       	movb   $0x0,0x2c(%rsp)
+    2147:	c7 44 24 28 08 06 00 	movl   $0x608,0x28(%rsp)
+    214e:	00 
+  memcpy(&ihdr_chunk.chunk_type, "IHDR", 4);
+    214f:	4c 8d 7c 24 10       	lea    0x10(%rsp),%r15
+    2154:	48 b8 0d 00 00 00 49 	movabs $0x524448490000000d,%rax
+    215b:	48 44 52 
+  ihdr_chunk.length = sizeof(*ihdr);
+    215e:	48 89 44 24 0c       	mov    %rax,0xc(%rsp)
+    2163:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+  ihdr_chunk.chunk_data = ihdr;
+    2168:	48 89 44 24 14       	mov    %rax,0x14(%rsp)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    216d:	4c 89 ff             	mov    %r15,%rdi
+    2170:	be 04 00 00 00       	mov    $0x4,%esi
+    2175:	e8 06 0d 00 00       	call   2e80 <crc>
+  chunk->crc =
+    217a:	4c 8d 74 24 1c       	lea    0x1c(%rsp),%r14
+    217f:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+  if (chunk->length) {
+    2183:	8b 54 24 0c          	mov    0xc(%rsp),%edx
+    2187:	85 d2                	test   %edx,%edx
+    2189:	74 17                	je     21a2 <store_ihdr_rgb_alpha+0x82>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    218b:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    218d:	48 8b 74 24 14       	mov    0x14(%rsp),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2192:	48 89 c7             	mov    %rax,%rdi
+    2195:	e8 c6 0a 00 00       	call   2c60 <update_crc>
+    219a:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    219c:	8b 4c 24 0c          	mov    0xc(%rsp),%ecx
+    21a0:	eb 02                	jmp    21a4 <store_ihdr_rgb_alpha+0x84>
+    21a2:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    21a4:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    21a6:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    21aa:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    21ac:	89 4c 24 0c          	mov    %ecx,0xc(%rsp)
+    21b0:	48 8d 7c 24 0c       	lea    0xc(%rsp),%rdi
+  fwrite(&chunk->length, 4, 1, output);
+    21b5:	be 04 00 00 00       	mov    $0x4,%esi
+    21ba:	ba 01 00 00 00       	mov    $0x1,%edx
+    21bf:	48 89 d9             	mov    %rbx,%rcx
+    21c2:	e8 49 ef ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->chunk_type, 4, 1, output);
+    21c7:	be 04 00 00 00       	mov    $0x4,%esi
+    21cc:	ba 01 00 00 00       	mov    $0x1,%edx
+    21d1:	4c 89 ff             	mov    %r15,%rdi
+    21d4:	48 89 d9             	mov    %rbx,%rcx
+    21d7:	e8 34 ef ff ff       	call   1110 <fwrite@plt>
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    21dc:	48 8b 7c 24 14       	mov    0x14(%rsp),%rdi
+    21e1:	8b 74 24 0c          	mov    0xc(%rsp),%esi
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    21e5:	0f ce                	bswap  %esi
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    21e7:	ba 01 00 00 00       	mov    $0x1,%edx
+    21ec:	48 89 d9             	mov    %rbx,%rcx
+    21ef:	e8 1c ef ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->crc, 4, 1, output);
+    21f4:	be 04 00 00 00       	mov    $0x4,%esi
+    21f9:	ba 01 00 00 00       	mov    $0x1,%edx
+    21fe:	4c 89 f7             	mov    %r14,%rdi
+    2201:	48 89 d9             	mov    %rbx,%rcx
+    2204:	e8 07 ef ff ff       	call   1110 <fwrite@plt>
+  png_chunk_ihdr ihdr_chunk = fill_ihdr_chunk(&ihdr);
+  store_png_chunk(output, (struct png_chunk *)&ihdr_chunk);
+  return 0;
+    2209:	31 c0                	xor    %eax,%eax
+    220b:	48 83 c4 30          	add    $0x30,%rsp
+    220f:	5b                   	pop    %rbx
+    2210:	41 5e                	pop    %r14
+    2212:	41 5f                	pop    %r15
+    2214:	c3                   	ret    
+    2215:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    221c:	00 00 00 00 
+
+0000000000002220 <store_ihdr_plte>:
+}
+
+// Writes a palette metadata chunk
+int store_ihdr_plte(FILE *output, struct image *img) {
+    2220:	41 57                	push   %r15
+    2222:	41 56                	push   %r14
+    2224:	53                   	push   %rbx
+    2225:	48 83 ec 30          	sub    $0x30,%rsp
+    2229:	48 89 fb             	mov    %rdi,%rbx
+  ihdr.height = to_big_endian(img->size_y);
+    222c:	0f b7 46 02          	movzwl 0x2(%rsi),%eax
+  ihdr.width = to_big_endian(img->size_x);
+    2230:	0f b7 0e             	movzwl (%rsi),%ecx
+  return ihdr;
+    2233:	48 c1 e1 20          	shl    $0x20,%rcx
+    2237:	48 09 c1             	or     %rax,%rcx
+    223a:	48 0f c9             	bswap  %rcx
+  struct png_header_ihdr ihdr = fill_ihdr_plte(img);
+    223d:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+    2242:	c6 44 24 2c 00       	movb   $0x0,0x2c(%rsp)
+    2247:	c7 44 24 28 08 03 00 	movl   $0x308,0x28(%rsp)
+    224e:	00 
+  memcpy(&ihdr_chunk.chunk_type, "IHDR", 4);
+    224f:	4c 8d 7c 24 10       	lea    0x10(%rsp),%r15
+    2254:	48 b8 0d 00 00 00 49 	movabs $0x524448490000000d,%rax
+    225b:	48 44 52 
+  ihdr_chunk.length = sizeof(*ihdr);
+    225e:	48 89 44 24 0c       	mov    %rax,0xc(%rsp)
+    2263:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+  ihdr_chunk.chunk_data = ihdr;
+    2268:	48 89 44 24 14       	mov    %rax,0x14(%rsp)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    226d:	4c 89 ff             	mov    %r15,%rdi
+    2270:	be 04 00 00 00       	mov    $0x4,%esi
+    2275:	e8 06 0c 00 00       	call   2e80 <crc>
+  chunk->crc =
+    227a:	4c 8d 74 24 1c       	lea    0x1c(%rsp),%r14
+    227f:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+  if (chunk->length) {
+    2283:	8b 54 24 0c          	mov    0xc(%rsp),%edx
+    2287:	85 d2                	test   %edx,%edx
+    2289:	74 17                	je     22a2 <store_ihdr_plte+0x82>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    228b:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    228d:	48 8b 74 24 14       	mov    0x14(%rsp),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2292:	48 89 c7             	mov    %rax,%rdi
+    2295:	e8 c6 09 00 00       	call   2c60 <update_crc>
+    229a:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    229c:	8b 4c 24 0c          	mov    0xc(%rsp),%ecx
+    22a0:	eb 02                	jmp    22a4 <store_ihdr_plte+0x84>
+    22a2:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    22a4:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    22a6:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    22aa:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    22ac:	89 4c 24 0c          	mov    %ecx,0xc(%rsp)
+    22b0:	48 8d 7c 24 0c       	lea    0xc(%rsp),%rdi
+  fwrite(&chunk->length, 4, 1, output);
+    22b5:	be 04 00 00 00       	mov    $0x4,%esi
+    22ba:	ba 01 00 00 00       	mov    $0x1,%edx
+    22bf:	48 89 d9             	mov    %rbx,%rcx
+    22c2:	e8 49 ee ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->chunk_type, 4, 1, output);
+    22c7:	be 04 00 00 00       	mov    $0x4,%esi
+    22cc:	ba 01 00 00 00       	mov    $0x1,%edx
+    22d1:	4c 89 ff             	mov    %r15,%rdi
+    22d4:	48 89 d9             	mov    %rbx,%rcx
+    22d7:	e8 34 ee ff ff       	call   1110 <fwrite@plt>
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    22dc:	48 8b 7c 24 14       	mov    0x14(%rsp),%rdi
+    22e1:	8b 74 24 0c          	mov    0xc(%rsp),%esi
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    22e5:	0f ce                	bswap  %esi
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    22e7:	ba 01 00 00 00       	mov    $0x1,%edx
+    22ec:	48 89 d9             	mov    %rbx,%rcx
+    22ef:	e8 1c ee ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->crc, 4, 1, output);
+    22f4:	be 04 00 00 00       	mov    $0x4,%esi
+    22f9:	ba 01 00 00 00       	mov    $0x1,%edx
+    22fe:	4c 89 f7             	mov    %r14,%rdi
+    2301:	48 89 d9             	mov    %rbx,%rcx
+    2304:	e8 07 ee ff ff       	call   1110 <fwrite@plt>
+  png_chunk_ihdr ihdr_chunk = fill_ihdr_chunk(&ihdr);
+  store_png_chunk(output, (struct png_chunk *)&ihdr_chunk);
+  return 0;
+    2309:	31 c0                	xor    %eax,%eax
+    230b:	48 83 c4 30          	add    $0x30,%rsp
+    230f:	5b                   	pop    %rbx
+    2310:	41 5e                	pop    %r14
+    2312:	41 5f                	pop    %r15
+    2314:	c3                   	ret    
+    2315:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    231c:	00 00 00 00 
+
+0000000000002320 <compress_png_data>:
+}
+
+// Compresses image data using deflate
+int compress_png_data(uint8_t *decompressed_data, uint32_t decompressed_length,
+                      uint8_t **compressed_data, uint32_t *compressed_length) {
+    2320:	55                   	push   %rbp
+    2321:	41 57                	push   %r15
+    2323:	41 56                	push   %r14
+    2325:	41 55                	push   %r13
+    2327:	41 54                	push   %r12
+    2329:	53                   	push   %rbx
+    232a:	48 81 ec 78 40 00 00 	sub    $0x4078,%rsp
+    2331:	49 89 ce             	mov    %rcx,%r14
+    2334:	48 89 d3             	mov    %rdx,%rbx
+    2337:	89 f5                	mov    %esi,%ebp
+    2339:	49 89 ff             	mov    %rdi,%r15
+  unsigned have;
+  z_stream strm;
+  unsigned char out[PNG_OUTPUT_CHUNK_SIZE];
+  int level = 1;
+
+  *compressed_data = NULL;
+    233c:	48 c7 02 00 00 00 00 	movq   $0x0,(%rdx)
+  *compressed_length = 0;
+    2343:	c7 01 00 00 00 00    	movl   $0x0,(%rcx)
+  /* allocate deflate state */
+  strm.zalloc = Z_NULL;
+  strm.zfree = Z_NULL;
+    2349:	0f 57 c0             	xorps  %xmm0,%xmm0
+    234c:	0f 11 44 24 40       	movups %xmm0,0x40(%rsp)
+    2351:	48 c7 44 24 50 00 00 	movq   $0x0,0x50(%rsp)
+    2358:	00 00 
+  strm.opaque = Z_NULL;
+  ret = deflateInit(&strm, level);
+    235a:	48 8d 15 db 0c 00 00 	lea    0xcdb(%rip),%rdx        # 303c <_IO_stdin_used+0x3c>
+    2361:	48 89 e7             	mov    %rsp,%rdi
+    2364:	be 01 00 00 00       	mov    $0x1,%esi
+    2369:	b9 70 00 00 00       	mov    $0x70,%ecx
+    236e:	e8 1d ed ff ff       	call   1090 <deflateInit_@plt>
+  if (ret != Z_OK)
+    2373:	85 c0                	test   %eax,%eax
+    2375:	0f 85 a5 00 00 00    	jne    2420 <compress_png_data+0x100>
+    return ret;
+
+  /* compress until end of file */
+
+  strm.avail_in = decompressed_length;
+    237b:	89 6c 24 08          	mov    %ebp,0x8(%rsp)
+  flush = Z_FINISH;
+  strm.next_in = decompressed_data;
+    237f:	4c 89 3c 24          	mov    %r15,(%rsp)
+    2383:	66 66 66 66 2e 0f 1f 	data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    238a:	84 00 00 00 00 00 
+
+  /* run deflate() on input until output buffer not full, finish
+      compression if all of source has been read in */
+  do {
+    strm.avail_out = PNG_OUTPUT_CHUNK_SIZE;
+    2390:	c7 44 24 20 00 40 00 	movl   $0x4000,0x20(%rsp)
+    2397:	00 
+    strm.next_out = out;
+    2398:	48 8d 44 24 70       	lea    0x70(%rsp),%rax
+    239d:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    ret = deflate(&strm, flush); /* no bad return value */
+    23a2:	48 89 e7             	mov    %rsp,%rdi
+    23a5:	be 04 00 00 00       	mov    $0x4,%esi
+    23aa:	e8 d1 ec ff ff       	call   1080 <deflate@plt>
+    if (ret == Z_STREAM_ERROR) {
+    23af:	83 f8 fe             	cmp    $0xfffffffe,%eax
+    23b2:	74 5c                	je     2410 <compress_png_data+0xf0>
+    23b4:	89 c5                	mov    %eax,%ebp
+      goto error;
+    }
+    have = PNG_OUTPUT_CHUNK_SIZE - strm.avail_out;
+    23b6:	41 bc 00 40 00 00    	mov    $0x4000,%r12d
+    23bc:	44 2b 64 24 20       	sub    0x20(%rsp),%r12d
+
+    *compressed_data = realloc(*compressed_data, *compressed_length + have);
+    23c1:	48 8b 3b             	mov    (%rbx),%rdi
+    23c4:	41 8b 36             	mov    (%r14),%esi
+    23c7:	44 01 e6             	add    %r12d,%esi
+    23ca:	e8 11 ed ff ff       	call   10e0 <realloc@plt>
+    23cf:	49 89 c5             	mov    %rax,%r13
+    23d2:	48 89 03             	mov    %rax,(%rbx)
+    memcpy(*compressed_data + *compressed_length, out, have);
+    23d5:	45 8b 3e             	mov    (%r14),%r15d
+    23d8:	4c 89 ff             	mov    %r15,%rdi
+    23db:	48 01 c7             	add    %rax,%rdi
+    23de:	48 8d 74 24 70       	lea    0x70(%rsp),%rsi
+    23e3:	4c 89 e2             	mov    %r12,%rdx
+    23e6:	e8 b5 ec ff ff       	call   10a0 <memcpy@plt>
+    *compressed_length += have;
+    23eb:	45 01 fc             	add    %r15d,%r12d
+    23ee:	45 89 26             	mov    %r12d,(%r14)
+
+  } while (strm.avail_out == 0);
+    23f1:	83 7c 24 20 00       	cmpl   $0x0,0x20(%rsp)
+    23f6:	74 98                	je     2390 <compress_png_data+0x70>
+    23f8:	83 fd 01             	cmp    $0x1,%ebp
+  if (strm.avail_in != 0) {
+    23fb:	75 16                	jne    2413 <compress_png_data+0xf3>
+    23fd:	83 7c 24 08 00       	cmpl   $0x0,0x8(%rsp)
+    2402:	75 0f                	jne    2413 <compress_png_data+0xf3>
+    2404:	48 89 e7             	mov    %rsp,%rdi
+  if (ret != Z_STREAM_END) {
+    goto error;
+  }
+
+  /* clean up and return */
+  (void)deflateEnd(&strm);
+    2407:	e8 c4 ec ff ff       	call   10d0 <deflateEnd@plt>
+    240c:	31 c0                	xor    %eax,%eax
+    240e:	eb 10                	jmp    2420 <compress_png_data+0x100>
+  return 0;
+
+error:
+  if (*compressed_data) {
+    2410:	4c 8b 2b             	mov    (%rbx),%r13
+    2413:	4d 85 ed             	test   %r13,%r13
+    2416:	74 08                	je     2420 <compress_png_data+0x100>
+    free(*compressed_data);
+    2418:	4c 89 ef             	mov    %r13,%rdi
+    241b:	e8 10 ec ff ff       	call   1030 <free@plt>
+  }
+}
+    2420:	48 81 c4 78 40 00 00 	add    $0x4078,%rsp
+    2427:	5b                   	pop    %rbx
+    2428:	41 5c                	pop    %r12
+    242a:	41 5d                	pop    %r13
+    242c:	41 5e                	pop    %r14
+    242e:	41 5f                	pop    %r15
+    2430:	5d                   	pop    %rbp
+    2431:	c3                   	ret    
+    2432:	66 66 66 66 66 2e 0f 	data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    2439:	1f 84 00 00 00 00 00 
+
+0000000000002440 <fill_idat_chunk>:
+
+// Fills IDAT with compressed data
+png_chunk_idat fill_idat_chunk(uint8_t *data, uint32_t length) {
+    2440:	53                   	push   %rbx
+    2441:	48 89 fb             	mov    %rdi,%rbx
+  png_chunk_idat idat;
+  memcpy(&idat.chunk_type, "IDAT", 4);
+    2444:	48 83 c7 04          	add    $0x4,%rdi
+    2448:	c7 43 04 49 44 41 54 	movl   $0x54414449,0x4(%rbx)
+  idat.chunk_data = data;
+    244f:	48 89 73 08          	mov    %rsi,0x8(%rbx)
+  idat.length = length;
+    2453:	89 13                	mov    %edx,(%rbx)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    2455:	be 04 00 00 00       	mov    $0x4,%esi
+    245a:	e8 21 0a 00 00       	call   2e80 <crc>
+  chunk->crc =
+    245f:	89 43 10             	mov    %eax,0x10(%rbx)
+  if (chunk->length) {
+    2462:	8b 13                	mov    (%rbx),%edx
+    2464:	85 d2                	test   %edx,%edx
+    2466:	74 14                	je     247c <fill_idat_chunk+0x3c>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2468:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    246a:	48 8b 73 08          	mov    0x8(%rbx),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    246e:	48 89 c7             	mov    %rax,%rdi
+    2471:	e8 ea 07 00 00       	call   2c60 <update_crc>
+    2476:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    2478:	8b 0b                	mov    (%rbx),%ecx
+    247a:	eb 02                	jmp    247e <fill_idat_chunk+0x3e>
+    247c:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    247e:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    2480:	89 43 10             	mov    %eax,0x10(%rbx)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2483:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    2485:	89 0b                	mov    %ecx,(%rbx)
+  fill_chunk_crc(&idat);
+  return idat;
+    2487:	48 89 d8             	mov    %rbx,%rax
+    248a:	5b                   	pop    %rbx
+    248b:	c3                   	ret    
+    248c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002490 <store_idat_rgb_alpha>:
+}
+
+// Writes an IDAT chunk from image data to a file
+int store_idat_rgb_alpha(FILE *output, struct image *img) {
+    2490:	55                   	push   %rbp
+    2491:	41 57                	push   %r15
+    2493:	41 56                	push   %r14
+    2495:	41 55                	push   %r13
+    2497:	41 54                	push   %r12
+    2499:	53                   	push   %rbx
+    249a:	48 83 ec 28          	sub    $0x28,%rsp
+    249e:	49 89 f7             	mov    %rsi,%r15
+    24a1:	48 89 fb             	mov    %rdi,%rbx
+  uint32_t non_compressed_length = img->size_y * (1 + img->size_x * 4);
+    24a4:	44 0f b7 6e 02       	movzwl 0x2(%rsi),%r13d
+    24a9:	0f b7 2e             	movzwl (%rsi),%ebp
+    24ac:	44 8d 24 ad 01 00 00 	lea    0x1(,%rbp,4),%r12d
+    24b3:	00 
+    24b4:	45 89 e6             	mov    %r12d,%r14d
+    24b7:	45 0f af f5          	imul   %r13d,%r14d
+  uint8_t *non_compressed_buf = malloc(non_compressed_length);
+    24bb:	4c 89 f7             	mov    %r14,%rdi
+    24be:	e8 fd eb ff ff       	call   10c0 <malloc@plt>
+  uint32_t non_compressed_length = img->size_y * (1 + img->size_x * 4);
+    24c3:	45 85 ed             	test   %r13d,%r13d
+
+  for (uint32_t id_y = 0; id_y < img->size_y; id_y++) {
+    24c6:	0f 84 22 01 00 00    	je     25ee <store_idat_rgb_alpha+0x15e>
+    24cc:	85 ed                	test   %ebp,%ebp
+    non_compressed_buf[id_y * (1 + img->size_x * 4)] = 0;
+    for (uint32_t id_x = 0; id_x < img->size_x; id_x++) {
+    24ce:	0f 84 88 00 00 00    	je     255c <store_idat_rgb_alpha+0xcc>
+    24d4:	49 8b 4f 08          	mov    0x8(%r15),%rcx
+  for (uint32_t id_y = 0; id_y < img->size_y; id_y++) {
+    24d8:	89 ea                	mov    %ebp,%edx
+    24da:	48 8d 34 95 01 00 00 	lea    0x1(,%rdx,4),%rsi
+    24e1:	00 
+    24e2:	48 c1 e2 02          	shl    $0x2,%rdx
+    24e6:	48 83 c1 03          	add    $0x3,%rcx
+    24ea:	31 ff                	xor    %edi,%edi
+    24ec:	45 31 c0             	xor    %r8d,%r8d
+    24ef:	90                   	nop
+    non_compressed_buf[id_y * (1 + img->size_x * 4)] = 0;
+    24f0:	45 89 e1             	mov    %r12d,%r9d
+    24f3:	45 0f af c8          	imul   %r8d,%r9d
+    24f7:	42 c6 04 08 00       	movb   $0x0,(%rax,%r9,1)
+    24fc:	45 31 c9             	xor    %r9d,%r9d
+    24ff:	90                   	nop
+      uint32_t id_pix_buf = id_y * (1 + img->size_x * 4) + 1 + 4 * id_x;
+      uint32_t id_pix = id_y * img->size_x + id_x;
+    2500:	46 8d 14 0f          	lea    (%rdi,%r9,1),%r10d
+    2504:	41 ff c2             	inc    %r10d
+
+      non_compressed_buf[id_pix_buf] = img->px[id_pix].red;
+    2507:	46 0f b6 5c 09 fd    	movzbl -0x3(%rcx,%r9,1),%r11d
+    250d:	46 88 1c 10          	mov    %r11b,(%rax,%r10,1)
+      non_compressed_buf[id_pix_buf + 1] = img->px[id_pix].green;
+    2511:	46 0f b6 54 09 fe    	movzbl -0x2(%rcx,%r9,1),%r10d
+    2517:	46 8d 5c 0f 02       	lea    0x2(%rdi,%r9,1),%r11d
+    251c:	46 88 14 18          	mov    %r10b,(%rax,%r11,1)
+      non_compressed_buf[id_pix_buf + 2] = img->px[id_pix].blue;
+    2520:	46 0f b6 54 09 ff    	movzbl -0x1(%rcx,%r9,1),%r10d
+    2526:	46 8d 5c 0f 03       	lea    0x3(%rdi,%r9,1),%r11d
+    252b:	46 88 14 18          	mov    %r10b,(%rax,%r11,1)
+      non_compressed_buf[id_pix_buf + 3] = img->px[id_pix].alpha;
+    252f:	46 0f b6 14 09       	movzbl (%rcx,%r9,1),%r10d
+    2534:	46 8d 1c 0f          	lea    (%rdi,%r9,1),%r11d
+    2538:	41 83 c3 04          	add    $0x4,%r11d
+    253c:	46 88 14 18          	mov    %r10b,(%rax,%r11,1)
+    for (uint32_t id_x = 0; id_x < img->size_x; id_x++) {
+    2540:	49 83 c1 04          	add    $0x4,%r9
+    2544:	4c 39 ca             	cmp    %r9,%rdx
+    2547:	75 b7                	jne    2500 <store_idat_rgb_alpha+0x70>
+  for (uint32_t id_y = 0; id_y < img->size_y; id_y++) {
+    2549:	49 ff c0             	inc    %r8
+    254c:	48 01 f7             	add    %rsi,%rdi
+    254f:	48 01 d1             	add    %rdx,%rcx
+    2552:	4d 39 e8             	cmp    %r13,%r8
+    2555:	75 99                	jne    24f0 <store_idat_rgb_alpha+0x60>
+    2557:	e9 92 00 00 00       	jmp    25ee <store_idat_rgb_alpha+0x15e>
+    255c:	44 89 e9             	mov    %r13d,%ecx
+    255f:	83 e1 03             	and    $0x3,%ecx
+    2562:	31 f6                	xor    %esi,%esi
+    2564:	66 41 83 fd 04       	cmp    $0x4,%r13w
+    2569:	73 04                	jae    256f <store_idat_rgb_alpha+0xdf>
+    256b:	31 d2                	xor    %edx,%edx
+    256d:	eb 60                	jmp    25cf <store_idat_rgb_alpha+0x13f>
+    256f:	41 83 e5 fc          	and    $0xfffffffc,%r13d
+    2573:	8d 14 ad 00 00 00 00 	lea    0x0(,%rbp,4),%edx
+    257a:	8d 3c 52             	lea    (%rdx,%rdx,2),%edi
+    257d:	83 c7 03             	add    $0x3,%edi
+    2580:	41 89 e8             	mov    %ebp,%r8d
+    2583:	41 c1 e0 04          	shl    $0x4,%r8d
+    2587:	41 83 c8 04          	or     $0x4,%r8d
+    258b:	44 8d 0c ed 02 00 00 	lea    0x2(,%rbp,8),%r9d
+    2592:	00 
+    2593:	31 d2                	xor    %edx,%edx
+    2595:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    259c:	00 00 00 00 
+    non_compressed_buf[id_y * (1 + img->size_x * 4)] = 0;
+    25a0:	41 89 f2             	mov    %esi,%r10d
+    25a3:	42 c6 04 10 00       	movb   $0x0,(%rax,%r10,1)
+    25a8:	45 8d 14 34          	lea    (%r12,%rsi,1),%r10d
+    25ac:	42 c6 04 10 00       	movb   $0x0,(%rax,%r10,1)
+    25b1:	45 8d 14 31          	lea    (%r9,%rsi,1),%r10d
+    25b5:	42 c6 04 10 00       	movb   $0x0,(%rax,%r10,1)
+    25ba:	44 8d 14 37          	lea    (%rdi,%rsi,1),%r10d
+    25be:	42 c6 04 10 00       	movb   $0x0,(%rax,%r10,1)
+  for (uint32_t id_y = 0; id_y < img->size_y; id_y++) {
+    25c3:	48 83 c2 04          	add    $0x4,%rdx
+    25c7:	44 01 c6             	add    %r8d,%esi
+    25ca:	49 39 d5             	cmp    %rdx,%r13
+    25cd:	75 d1                	jne    25a0 <store_idat_rgb_alpha+0x110>
+    25cf:	48 85 c9             	test   %rcx,%rcx
+    25d2:	74 1a                	je     25ee <store_idat_rgb_alpha+0x15e>
+    25d4:	41 0f af d4          	imul   %r12d,%edx
+    25d8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    25df:	00 
+    non_compressed_buf[id_y * (1 + img->size_x * 4)] = 0;
+    25e0:	89 d6                	mov    %edx,%esi
+    25e2:	c6 04 30 00          	movb   $0x0,(%rax,%rsi,1)
+  for (uint32_t id_y = 0; id_y < img->size_y; id_y++) {
+    25e6:	44 01 e2             	add    %r12d,%edx
+    25e9:	48 ff c9             	dec    %rcx
+    25ec:	75 f2                	jne    25e0 <store_idat_rgb_alpha+0x150>
+    25ee:	48 8d 54 24 20       	lea    0x20(%rsp),%rdx
+    25f3:	48 8d 4c 24 0c       	lea    0xc(%rsp),%rcx
+  }
+
+  uint8_t *compressed_data_buf;
+  uint32_t compressed_length;
+
+  compress_png_data(non_compressed_buf, non_compressed_length,
+    25f8:	48 89 c7             	mov    %rax,%rdi
+    25fb:	44 89 f6             	mov    %r14d,%esi
+    25fe:	e8 1d fd ff ff       	call   2320 <compress_png_data>
+                    &compressed_data_buf, &compressed_length);
+
+  png_chunk_idat idat = fill_idat_chunk(compressed_data_buf, compressed_length);
+    2603:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+  memcpy(&idat.chunk_type, "IDAT", 4);
+    2608:	4c 8d 7c 24 10       	lea    0x10(%rsp),%r15
+    260d:	c7 44 24 10 49 44 41 	movl   $0x54414449,0x10(%rsp)
+    2614:	54 
+  idat.chunk_data = data;
+    2615:	48 89 44 24 14       	mov    %rax,0x14(%rsp)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    261a:	4c 89 ff             	mov    %r15,%rdi
+    261d:	be 04 00 00 00       	mov    $0x4,%esi
+    2622:	e8 59 08 00 00       	call   2e80 <crc>
+  chunk->crc =
+    2627:	4c 8d 74 24 1c       	lea    0x1c(%rsp),%r14
+    262c:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+  if (chunk->length) {
+    2630:	8b 54 24 0c          	mov    0xc(%rsp),%edx
+    2634:	85 d2                	test   %edx,%edx
+    2636:	74 17                	je     264f <store_idat_rgb_alpha+0x1bf>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2638:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    263a:	48 8b 74 24 14       	mov    0x14(%rsp),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    263f:	48 89 c7             	mov    %rax,%rdi
+    2642:	e8 19 06 00 00       	call   2c60 <update_crc>
+    2647:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    2649:	8b 4c 24 0c          	mov    0xc(%rsp),%ecx
+    264d:	eb 02                	jmp    2651 <store_idat_rgb_alpha+0x1c1>
+    264f:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2651:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    2653:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2657:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    2659:	89 4c 24 0c          	mov    %ecx,0xc(%rsp)
+    265d:	48 8d 7c 24 0c       	lea    0xc(%rsp),%rdi
+  fwrite(&chunk->length, 4, 1, output);
+    2662:	be 04 00 00 00       	mov    $0x4,%esi
+    2667:	ba 01 00 00 00       	mov    $0x1,%edx
+    266c:	48 89 d9             	mov    %rbx,%rcx
+    266f:	e8 9c ea ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->chunk_type, 4, 1, output);
+    2674:	be 04 00 00 00       	mov    $0x4,%esi
+    2679:	ba 01 00 00 00       	mov    $0x1,%edx
+    267e:	4c 89 ff             	mov    %r15,%rdi
+    2681:	48 89 d9             	mov    %rbx,%rcx
+    2684:	e8 87 ea ff ff       	call   1110 <fwrite@plt>
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    2689:	48 8b 7c 24 14       	mov    0x14(%rsp),%rdi
+    268e:	8b 74 24 0c          	mov    0xc(%rsp),%esi
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2692:	0f ce                	bswap  %esi
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    2694:	ba 01 00 00 00       	mov    $0x1,%edx
+    2699:	48 89 d9             	mov    %rbx,%rcx
+    269c:	e8 6f ea ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->crc, 4, 1, output);
+    26a1:	be 04 00 00 00       	mov    $0x4,%esi
+    26a6:	ba 01 00 00 00       	mov    $0x1,%edx
+    26ab:	4c 89 f7             	mov    %r14,%rdi
+    26ae:	48 89 d9             	mov    %rbx,%rcx
+    26b1:	e8 5a ea ff ff       	call   1110 <fwrite@plt>
+  store_png_chunk(output, (struct png_chunk *)&idat);
+  return 0;
+    26b6:	31 c0                	xor    %eax,%eax
+    26b8:	48 83 c4 28          	add    $0x28,%rsp
+    26bc:	5b                   	pop    %rbx
+    26bd:	41 5c                	pop    %r12
+    26bf:	41 5d                	pop    %r13
+    26c1:	41 5e                	pop    %r14
+    26c3:	41 5f                	pop    %r15
+    26c5:	5d                   	pop    %rbp
+    26c6:	c3                   	ret    
+    26c7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    26ce:	00 00 
+
+00000000000026d0 <find_color>:
+}
+
+// Finds a color in a palette and returns its index
+int find_color(struct pixel *palette, uint32_t palette_length,
+               struct pixel *target) {
+    26d0:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  for (int idx = 0; idx < palette_length; idx++) {
+    26d5:	85 f6                	test   %esi,%esi
+    26d7:	74 3e                	je     2717 <find_color+0x47>
+    26d9:	0f b6 0a             	movzbl (%rdx),%ecx
+    26dc:	41 89 f0             	mov    %esi,%r8d
+    26df:	31 f6                	xor    %esi,%esi
+    26e1:	eb 15                	jmp    26f8 <find_color+0x28>
+    26e3:	66 66 66 66 2e 0f 1f 	data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    26ea:	84 00 00 00 00 00 
+    26f0:	48 ff c6             	inc    %rsi
+    26f3:	49 39 f0             	cmp    %rsi,%r8
+    26f6:	74 1f                	je     2717 <find_color+0x47>
+    if (palette[idx].red == target->red &&
+    26f8:	38 0c b7             	cmp    %cl,(%rdi,%rsi,4)
+    26fb:	75 f3                	jne    26f0 <find_color+0x20>
+        palette[idx].green == target->green &&
+    26fd:	44 0f b6 4c b7 01    	movzbl 0x1(%rdi,%rsi,4),%r9d
+    2703:	44 3a 4a 01          	cmp    0x1(%rdx),%r9b
+    2707:	75 e7                	jne    26f0 <find_color+0x20>
+        palette[idx].blue == target->blue) {
+    2709:	44 0f b6 4c b7 02    	movzbl 0x2(%rdi,%rsi,4),%r9d
+    270f:	44 3a 4a 02          	cmp    0x2(%rdx),%r9b
+    if (palette[idx].red == target->red &&
+    2713:	75 db                	jne    26f0 <find_color+0x20>
+    2715:	89 f0                	mov    %esi,%eax
+      return idx;
+    }
+  }
+
+  return -1;
+}
+    2717:	c3                   	ret    
+    2718:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    271f:	00 
+
+0000000000002720 <store_idat_plte>:
+
+// Writes an IDAT chunk for a palette image
+int store_idat_plte(FILE *output, struct image *img, struct pixel *palette,
+                    uint32_t palette_length) {
+    2720:	55                   	push   %rbp
+    2721:	41 57                	push   %r15
+    2723:	41 56                	push   %r14
+    2725:	41 55                	push   %r13
+    2727:	41 54                	push   %r12
+    2729:	53                   	push   %rbx
+    272a:	48 83 ec 38          	sub    $0x38,%rsp
+    272e:	49 89 d6             	mov    %rdx,%r14
+    2731:	49 89 f7             	mov    %rsi,%r15
+    2734:	48 89 7c 24 30       	mov    %rdi,0x30(%rsp)
+  uint32_t non_compressed_length = img->size_y * (1 + img->size_x);
+    2739:	44 0f b7 6e 02       	movzwl 0x2(%rsi),%r13d
+    273e:	0f b7 2e             	movzwl (%rsi),%ebp
+    2741:	4c 8d 65 01          	lea    0x1(%rbp),%r12
+    2745:	4c 89 e7             	mov    %r12,%rdi
+    2748:	49 0f af fd          	imul   %r13,%rdi
+    274c:	48 89 7c 24 28       	mov    %rdi,0x28(%rsp)
+  uint8_t *non_compressed_buf = malloc(non_compressed_length);
+    2751:	e8 6a e9 ff ff       	call   10c0 <malloc@plt>
+  uint32_t non_compressed_length = img->size_y * (1 + img->size_x);
+    2756:	4d 85 ed             	test   %r13,%r13
+
+  for (uint32_t id_y = 0; id_y < img->size_y; id_y++) {
+    2759:	74 7a                	je     27d5 <store_idat_plte+0xb5>
+    275b:	31 c9                	xor    %ecx,%ecx
+    275d:	eb 09                	jmp    2768 <store_idat_plte+0x48>
+    275f:	90                   	nop
+    2760:	48 ff c1             	inc    %rcx
+    2763:	4c 39 e9             	cmp    %r13,%rcx
+    2766:	74 6d                	je     27d5 <store_idat_plte+0xb5>
+    non_compressed_buf[id_y * (1 + img->size_x)] = 0;
+    2768:	48 89 ca             	mov    %rcx,%rdx
+    276b:	49 0f af d4          	imul   %r12,%rdx
+    276f:	c6 04 10 00          	movb   $0x0,(%rax,%rdx,1)
+    2773:	48 85 ed             	test   %rbp,%rbp
+    for (uint32_t id_x = 0; id_x < img->size_x; id_x++) {
+    2776:	74 e8                	je     2760 <store_idat_plte+0x40>
+    2778:	48 89 ce             	mov    %rcx,%rsi
+    277b:	48 0f af f5          	imul   %rbp,%rsi
+    277f:	48 ff c2             	inc    %rdx
+    2782:	49 8b 7f 08          	mov    0x8(%r15),%rdi
+    2786:	45 31 c0             	xor    %r8d,%r8d
+    2789:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+      uint32_t id_pix_buf = id_y * (1 + img->size_x) + 1 + id_x;
+      uint32_t id_pix = id_y * img->size_x + id_x;
+    2790:	4d 8d 14 30          	lea    (%r8,%rsi,1),%r10
+    2794:	46 0f b6 1c 97       	movzbl (%rdi,%r10,4),%r11d
+    2799:	45 31 c9             	xor    %r9d,%r9d
+    279c:	eb 05                	jmp    27a3 <store_idat_plte+0x83>
+    279e:	66 90                	xchg   %ax,%ax
+  for (int idx = 0; idx < palette_length; idx++) {
+    27a0:	49 ff c1             	inc    %r9
+    if (palette[idx].red == target->red &&
+    27a3:	47 38 1c 8e          	cmp    %r11b,(%r14,%r9,4)
+    27a7:	75 f7                	jne    27a0 <store_idat_plte+0x80>
+        palette[idx].green == target->green &&
+    27a9:	43 0f b6 5c 8e 01    	movzbl 0x1(%r14,%r9,4),%ebx
+    27af:	42 3a 5c 97 01       	cmp    0x1(%rdi,%r10,4),%bl
+    27b4:	75 ea                	jne    27a0 <store_idat_plte+0x80>
+        palette[idx].blue == target->blue) {
+    27b6:	43 0f b6 5c 8e 02    	movzbl 0x2(%r14,%r9,4),%ebx
+    27bc:	42 3a 5c 97 02       	cmp    0x2(%rdi,%r10,4),%bl
+    if (palette[idx].red == target->red &&
+    27c1:	75 dd                	jne    27a0 <store_idat_plte+0x80>
+      uint32_t id_pix_buf = id_y * (1 + img->size_x) + 1 + id_x;
+    27c3:	4e 8d 14 02          	lea    (%rdx,%r8,1),%r10
+      int code = find_color(palette, palette_length, &img->px[id_pix]);
+      if (code < 0) {
+        goto error;
+      }
+      non_compressed_buf[id_pix_buf] = code;
+    27c7:	46 88 0c 10          	mov    %r9b,(%rax,%r10,1)
+    for (uint32_t id_x = 0; id_x < img->size_x; id_x++) {
+    27cb:	49 ff c0             	inc    %r8
+    27ce:	49 39 e8             	cmp    %rbp,%r8
+    27d1:	75 bd                	jne    2790 <store_idat_plte+0x70>
+    27d3:	eb 8b                	jmp    2760 <store_idat_plte+0x40>
+    }
+  }
+
+  uint8_t *compressed_data_buf = NULL;
+    27d5:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+    27dc:	00 00 
+    27de:	48 8d 54 24 20       	lea    0x20(%rsp),%rdx
+    27e3:	48 8d 4c 24 0c       	lea    0xc(%rsp),%rcx
+  uint32_t compressed_length;
+
+  compress_png_data(non_compressed_buf, non_compressed_length,
+    27e8:	48 89 c7             	mov    %rax,%rdi
+    27eb:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+    27f0:	e8 2b fb ff ff       	call   2320 <compress_png_data>
+                    &compressed_data_buf, &compressed_length);
+
+  png_chunk_idat idat = fill_idat_chunk(compressed_data_buf, compressed_length);
+    27f5:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+  memcpy(&idat.chunk_type, "IDAT", 4);
+    27fa:	4c 8d 7c 24 10       	lea    0x10(%rsp),%r15
+    27ff:	c7 44 24 10 49 44 41 	movl   $0x54414449,0x10(%rsp)
+    2806:	54 
+  idat.chunk_data = data;
+    2807:	48 89 44 24 14       	mov    %rax,0x14(%rsp)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    280c:	4c 89 ff             	mov    %r15,%rdi
+    280f:	be 04 00 00 00       	mov    $0x4,%esi
+    2814:	e8 67 06 00 00       	call   2e80 <crc>
+  chunk->crc =
+    2819:	4c 8d 74 24 1c       	lea    0x1c(%rsp),%r14
+    281e:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+  if (chunk->length) {
+    2822:	8b 54 24 0c          	mov    0xc(%rsp),%edx
+    2826:	85 d2                	test   %edx,%edx
+    2828:	74 17                	je     2841 <store_idat_plte+0x121>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    282a:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    282c:	48 8b 74 24 14       	mov    0x14(%rsp),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2831:	48 89 c7             	mov    %rax,%rdi
+    2834:	e8 27 04 00 00       	call   2c60 <update_crc>
+    2839:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    283b:	8b 4c 24 0c          	mov    0xc(%rsp),%ecx
+    283f:	eb 02                	jmp    2843 <store_idat_plte+0x123>
+    2841:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2843:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    2845:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2849:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    284b:	89 4c 24 0c          	mov    %ecx,0xc(%rsp)
+    284f:	48 8d 7c 24 0c       	lea    0xc(%rsp),%rdi
+  fwrite(&chunk->length, 4, 1, output);
+    2854:	be 04 00 00 00       	mov    $0x4,%esi
+    2859:	ba 01 00 00 00       	mov    $0x1,%edx
+    285e:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+    2863:	48 89 d9             	mov    %rbx,%rcx
+    2866:	e8 a5 e8 ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->chunk_type, 4, 1, output);
+    286b:	be 04 00 00 00       	mov    $0x4,%esi
+    2870:	ba 01 00 00 00       	mov    $0x1,%edx
+    2875:	4c 89 ff             	mov    %r15,%rdi
+    2878:	48 89 d9             	mov    %rbx,%rcx
+    287b:	e8 90 e8 ff ff       	call   1110 <fwrite@plt>
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    2880:	48 8b 7c 24 14       	mov    0x14(%rsp),%rdi
+    2885:	8b 74 24 0c          	mov    0xc(%rsp),%esi
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2889:	0f ce                	bswap  %esi
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    288b:	ba 01 00 00 00       	mov    $0x1,%edx
+    2890:	48 89 d9             	mov    %rbx,%rcx
+    2893:	e8 78 e8 ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->crc, 4, 1, output);
+    2898:	be 04 00 00 00       	mov    $0x4,%esi
+    289d:	ba 01 00 00 00       	mov    $0x1,%edx
+    28a2:	4c 89 f7             	mov    %r14,%rdi
+    28a5:	48 89 d9             	mov    %rbx,%rcx
+    28a8:	e8 63 e8 ff ff       	call   1110 <fwrite@plt>
+error:
+  if (compressed_data_buf) {
+    free(compressed_data_buf);
+  }
+  return 1;
+}
+    28ad:	31 c0                	xor    %eax,%eax
+    28af:	48 83 c4 38          	add    $0x38,%rsp
+    28b3:	5b                   	pop    %rbx
+    28b4:	41 5c                	pop    %r12
+    28b6:	41 5d                	pop    %r13
+    28b8:	41 5e                	pop    %r14
+    28ba:	41 5f                	pop    %r15
+    28bc:	5d                   	pop    %rbp
+    28bd:	c3                   	ret    
+    28be:	66 90                	xchg   %ax,%ax
+
+00000000000028c0 <store_png_rgb_alpha>:
+
+// Writes the first two chunks for a RGBA image
+int store_png_rgb_alpha(FILE *output, struct image *img) {
+    28c0:	41 56                	push   %r14
+    28c2:	53                   	push   %rbx
+    28c3:	50                   	push   %rax
+    28c4:	48 89 f3             	mov    %rsi,%rbx
+    28c7:	49 89 fe             	mov    %rdi,%r14
+  store_ihdr_rgb_alpha(output, img);
+    28ca:	e8 51 f8 ff ff       	call   2120 <store_ihdr_rgb_alpha>
+  store_idat_rgb_alpha(output, img);
+    28cf:	4c 89 f7             	mov    %r14,%rdi
+    28d2:	48 89 de             	mov    %rbx,%rsi
+    28d5:	48 83 c4 08          	add    $0x8,%rsp
+    28d9:	5b                   	pop    %rbx
+    28da:	41 5e                	pop    %r14
+    28dc:	e9 af fb ff ff       	jmp    2490 <store_idat_rgb_alpha>
+    28e1:	66 66 66 66 66 66 2e 	data16 data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    28e8:	0f 1f 84 00 00 00 00 
+    28ef:	00 
+
+00000000000028f0 <fill_plte_chunk>:
+}
+
+// Creates a PLTE chunk from PLTE entries (colors)
+png_chunk_plte fill_plte_chunk(struct plte_entry *plte_data,
+                               uint32_t color_count) {
+    28f0:	53                   	push   %rbx
+    28f1:	48 89 fb             	mov    %rdi,%rbx
+  png_chunk_plte plte;
+
+  memcpy(&plte.chunk_type, "PLTE", 4);
+    28f4:	48 83 c7 04          	add    $0x4,%rdi
+    28f8:	c7 43 04 50 4c 54 45 	movl   $0x45544c50,0x4(%rbx)
+  plte.chunk_data = plte_data;
+    28ff:	48 89 73 08          	mov    %rsi,0x8(%rbx)
+  plte.length = 3 * color_count;
+    2903:	8d 04 52             	lea    (%rdx,%rdx,2),%eax
+    2906:	89 03                	mov    %eax,(%rbx)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    2908:	be 04 00 00 00       	mov    $0x4,%esi
+    290d:	e8 6e 05 00 00       	call   2e80 <crc>
+  chunk->crc =
+    2912:	89 43 10             	mov    %eax,0x10(%rbx)
+  if (chunk->length) {
+    2915:	8b 13                	mov    (%rbx),%edx
+    2917:	85 d2                	test   %edx,%edx
+    2919:	74 14                	je     292f <fill_plte_chunk+0x3f>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    291b:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    291d:	48 8b 73 08          	mov    0x8(%rbx),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2921:	48 89 c7             	mov    %rax,%rdi
+    2924:	e8 37 03 00 00       	call   2c60 <update_crc>
+    2929:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    292b:	8b 0b                	mov    (%rbx),%ecx
+    292d:	eb 02                	jmp    2931 <fill_plte_chunk+0x41>
+    292f:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2931:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    2933:	89 43 10             	mov    %eax,0x10(%rbx)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2936:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    2938:	89 0b                	mov    %ecx,(%rbx)
+  fill_chunk_crc((struct png_chunk *)&plte);
+  return plte;
+    293a:	48 89 d8             	mov    %rbx,%rax
+    293d:	5b                   	pop    %rbx
+    293e:	c3                   	ret    
+    293f:	90                   	nop
+
+0000000000002940 <store_plte>:
+}
+
+// Writes a palette to the file
+int store_plte(FILE *output, struct pixel *palette, uint32_t palette_length) {
+    2940:	41 57                	push   %r15
+    2942:	41 56                	push   %r14
+    2944:	53                   	push   %rbx
+    2945:	48 81 ec 20 03 00 00 	sub    $0x320,%rsp
+    294c:	48 89 fb             	mov    %rdi,%rbx
+  struct plte_entry plte_data[256];
+
+  for (int idx = 0; idx < palette_length; idx++) {
+    294f:	85 d2                	test   %edx,%edx
+    2951:	0f 84 82 00 00 00    	je     29d9 <store_plte+0x99>
+    2957:	89 d0                	mov    %edx,%eax
+    2959:	83 fa 01             	cmp    $0x1,%edx
+    295c:	75 04                	jne    2962 <store_plte+0x22>
+    295e:	31 c9                	xor    %ecx,%ecx
+    2960:	eb 55                	jmp    29b7 <store_plte+0x77>
+    2962:	89 c7                	mov    %eax,%edi
+    2964:	83 e7 fe             	and    $0xfffffffe,%edi
+    2967:	4c 8d 44 24 25       	lea    0x25(%rsp),%r8
+    296c:	31 c9                	xor    %ecx,%ecx
+    296e:	66 90                	xchg   %ax,%ax
+    plte_data[idx].red = palette[idx].red;
+    2970:	44 0f b6 0c 8e       	movzbl (%rsi,%rcx,4),%r9d
+    2975:	45 88 48 fb          	mov    %r9b,-0x5(%r8)
+    plte_data[idx].green = palette[idx].green;
+    2979:	44 0f b6 4c 8e 01    	movzbl 0x1(%rsi,%rcx,4),%r9d
+    297f:	45 88 48 fc          	mov    %r9b,-0x4(%r8)
+    plte_data[idx].blue = palette[idx].blue;
+    2983:	44 0f b6 4c 8e 02    	movzbl 0x2(%rsi,%rcx,4),%r9d
+    2989:	45 88 48 fd          	mov    %r9b,-0x3(%r8)
+    plte_data[idx].red = palette[idx].red;
+    298d:	44 0f b6 4c 8e 04    	movzbl 0x4(%rsi,%rcx,4),%r9d
+    2993:	45 88 48 fe          	mov    %r9b,-0x2(%r8)
+    plte_data[idx].green = palette[idx].green;
+    2997:	44 0f b6 4c 8e 05    	movzbl 0x5(%rsi,%rcx,4),%r9d
+    299d:	45 88 48 ff          	mov    %r9b,-0x1(%r8)
+    plte_data[idx].blue = palette[idx].blue;
+    29a1:	44 0f b6 4c 8e 06    	movzbl 0x6(%rsi,%rcx,4),%r9d
+    29a7:	45 88 08             	mov    %r9b,(%r8)
+  for (int idx = 0; idx < palette_length; idx++) {
+    29aa:	48 83 c1 02          	add    $0x2,%rcx
+    29ae:	49 83 c0 06          	add    $0x6,%r8
+    29b2:	48 39 cf             	cmp    %rcx,%rdi
+    29b5:	75 b9                	jne    2970 <store_plte+0x30>
+    29b7:	a8 01                	test   $0x1,%al
+    29b9:	74 1e                	je     29d9 <store_plte+0x99>
+    plte_data[idx].red = palette[idx].red;
+    29bb:	0f b6 04 8e          	movzbl (%rsi,%rcx,4),%eax
+    29bf:	48 8d 3c 49          	lea    (%rcx,%rcx,2),%rdi
+    29c3:	88 44 3c 20          	mov    %al,0x20(%rsp,%rdi,1)
+    plte_data[idx].green = palette[idx].green;
+    29c7:	0f b6 44 8e 01       	movzbl 0x1(%rsi,%rcx,4),%eax
+    29cc:	88 44 3c 21          	mov    %al,0x21(%rsp,%rdi,1)
+    plte_data[idx].blue = palette[idx].blue;
+    29d0:	0f b6 44 8e 02       	movzbl 0x2(%rsi,%rcx,4),%eax
+    29d5:	88 44 3c 22          	mov    %al,0x22(%rsp,%rdi,1)
+  memcpy(&plte.chunk_type, "PLTE", 4);
+    29d9:	4c 8d 7c 24 10       	lea    0x10(%rsp),%r15
+    29de:	c7 44 24 10 50 4c 54 	movl   $0x45544c50,0x10(%rsp)
+    29e5:	45 
+    29e6:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+  plte.chunk_data = plte_data;
+    29eb:	48 89 44 24 14       	mov    %rax,0x14(%rsp)
+  plte.length = 3 * color_count;
+    29f0:	8d 04 52             	lea    (%rdx,%rdx,2),%eax
+    29f3:	89 44 24 0c          	mov    %eax,0xc(%rsp)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    29f7:	4c 89 ff             	mov    %r15,%rdi
+    29fa:	be 04 00 00 00       	mov    $0x4,%esi
+    29ff:	e8 7c 04 00 00       	call   2e80 <crc>
+  chunk->crc =
+    2a04:	4c 8d 74 24 1c       	lea    0x1c(%rsp),%r14
+    2a09:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+  if (chunk->length) {
+    2a0d:	8b 54 24 0c          	mov    0xc(%rsp),%edx
+    2a11:	85 d2                	test   %edx,%edx
+    2a13:	74 17                	je     2a2c <store_plte+0xec>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2a15:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    2a17:	48 8b 74 24 14       	mov    0x14(%rsp),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2a1c:	48 89 c7             	mov    %rax,%rdi
+    2a1f:	e8 3c 02 00 00       	call   2c60 <update_crc>
+    2a24:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    2a26:	8b 4c 24 0c          	mov    0xc(%rsp),%ecx
+    2a2a:	eb 02                	jmp    2a2e <store_plte+0xee>
+    2a2c:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2a2e:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    2a30:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2a34:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    2a36:	89 4c 24 0c          	mov    %ecx,0xc(%rsp)
+    2a3a:	48 8d 7c 24 0c       	lea    0xc(%rsp),%rdi
+  fwrite(&chunk->length, 4, 1, output);
+    2a3f:	be 04 00 00 00       	mov    $0x4,%esi
+    2a44:	ba 01 00 00 00       	mov    $0x1,%edx
+    2a49:	48 89 d9             	mov    %rbx,%rcx
+    2a4c:	e8 bf e6 ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->chunk_type, 4, 1, output);
+    2a51:	be 04 00 00 00       	mov    $0x4,%esi
+    2a56:	ba 01 00 00 00       	mov    $0x1,%edx
+    2a5b:	4c 89 ff             	mov    %r15,%rdi
+    2a5e:	48 89 d9             	mov    %rbx,%rcx
+    2a61:	e8 aa e6 ff ff       	call   1110 <fwrite@plt>
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    2a66:	48 8b 7c 24 14       	mov    0x14(%rsp),%rdi
+    2a6b:	8b 74 24 0c          	mov    0xc(%rsp),%esi
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2a6f:	0f ce                	bswap  %esi
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    2a71:	ba 01 00 00 00       	mov    $0x1,%edx
+    2a76:	48 89 d9             	mov    %rbx,%rcx
+    2a79:	e8 92 e6 ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->crc, 4, 1, output);
+    2a7e:	be 04 00 00 00       	mov    $0x4,%esi
+    2a83:	ba 01 00 00 00       	mov    $0x1,%edx
+    2a88:	4c 89 f7             	mov    %r14,%rdi
+    2a8b:	48 89 d9             	mov    %rbx,%rcx
+    2a8e:	e8 7d e6 ff ff       	call   1110 <fwrite@plt>
+  }
+
+  png_chunk_plte plte_chunk = fill_plte_chunk(plte_data, palette_length);
+  store_png_chunk(output, (struct png_chunk *)&plte_chunk);
+}
+    2a93:	48 81 c4 20 03 00 00 	add    $0x320,%rsp
+    2a9a:	5b                   	pop    %rbx
+    2a9b:	41 5e                	pop    %r14
+    2a9d:	41 5f                	pop    %r15
+    2a9f:	c3                   	ret    
+
+0000000000002aa0 <store_png_palette>:
+
+// Writes the first 3 chunks for a palette Y0L0 PNG image
+int store_png_palette(FILE *output, struct image *img, struct pixel *palette,
+                      uint32_t palette_length) {
+    2aa0:	41 57                	push   %r15
+    2aa2:	41 56                	push   %r14
+    2aa4:	41 54                	push   %r12
+    2aa6:	53                   	push   %rbx
+    2aa7:	50                   	push   %rax
+    2aa8:	89 cb                	mov    %ecx,%ebx
+    2aaa:	49 89 d6             	mov    %rdx,%r14
+    2aad:	49 89 f7             	mov    %rsi,%r15
+    2ab0:	49 89 fc             	mov    %rdi,%r12
+  store_ihdr_plte(output, img);
+    2ab3:	e8 68 f7 ff ff       	call   2220 <store_ihdr_plte>
+  store_plte(output, palette, palette_length);
+    2ab8:	4c 89 e7             	mov    %r12,%rdi
+    2abb:	4c 89 f6             	mov    %r14,%rsi
+    2abe:	89 da                	mov    %ebx,%edx
+    2ac0:	e8 7b fe ff ff       	call   2940 <store_plte>
+  store_idat_plte(output, img, palette, palette_length);
+    2ac5:	4c 89 e7             	mov    %r12,%rdi
+    2ac8:	4c 89 fe             	mov    %r15,%rsi
+    2acb:	4c 89 f2             	mov    %r14,%rdx
+    2ace:	89 d9                	mov    %ebx,%ecx
+    2ad0:	48 83 c4 08          	add    $0x8,%rsp
+    2ad4:	5b                   	pop    %rbx
+    2ad5:	41 5c                	pop    %r12
+    2ad7:	41 5e                	pop    %r14
+    2ad9:	41 5f                	pop    %r15
+    2adb:	e9 40 fc ff ff       	jmp    2720 <store_idat_plte>
+
+0000000000002ae0 <store_png_chunk_iend>:
+}
+
+// Stores an IEND chunk to a file
+int store_png_chunk_iend(FILE *output) {
+    2ae0:	41 57                	push   %r15
+    2ae2:	41 56                	push   %r14
+    2ae4:	53                   	push   %rbx
+    2ae5:	48 83 ec 20          	sub    $0x20,%rsp
+    2ae9:	48 89 fb             	mov    %rdi,%rbx
+  png_chunk_iend iend;
+  memcpy(&iend.chunk_type, "IEND", 4);
+    2aec:	4c 8d 7c 24 10       	lea    0x10(%rsp),%r15
+    2af1:	48 b8 00 00 00 00 49 	movabs $0x444e454900000000,%rax
+    2af8:	45 4e 44 
+  iend.length = 0;
+    2afb:	48 89 44 24 0c       	mov    %rax,0xc(%rsp)
+      crc((unsigned char *)&chunk->chunk_type, sizeof(chunk->chunk_type));
+    2b00:	4c 89 ff             	mov    %r15,%rdi
+    2b03:	be 04 00 00 00       	mov    $0x4,%esi
+    2b08:	e8 73 03 00 00       	call   2e80 <crc>
+  chunk->crc =
+    2b0d:	4c 8d 74 24 1c       	lea    0x1c(%rsp),%r14
+    2b12:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+  if (chunk->length) {
+    2b16:	8b 54 24 0c          	mov    0xc(%rsp),%edx
+    2b1a:	85 d2                	test   %edx,%edx
+    2b1c:	74 17                	je     2b35 <store_png_chunk_iend+0x55>
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2b1e:	f7 d0                	not    %eax
+                            (unsigned char *)chunk->chunk_data, chunk->length) ^
+    2b20:	48 8b 74 24 14       	mov    0x14(%rsp),%rsi
+    chunk->crc = update_crc(chunk->crc ^ 0xffffffffL,
+    2b25:	48 89 c7             	mov    %rax,%rdi
+    2b28:	e8 33 01 00 00       	call   2c60 <update_crc>
+    2b2d:	f7 d0                	not    %eax
+  chunk->length = to_big_endian(chunk->length);
+    2b2f:	8b 4c 24 0c          	mov    0xc(%rsp),%ecx
+    2b33:	eb 02                	jmp    2b37 <store_png_chunk_iend+0x57>
+    2b35:	31 c9                	xor    %ecx,%ecx
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2b37:	0f c8                	bswap  %eax
+  chunk->crc = to_big_endian(chunk->crc);
+    2b39:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2b3d:	0f c9                	bswap  %ecx
+  chunk->length = to_big_endian(chunk->length);
+    2b3f:	89 4c 24 0c          	mov    %ecx,0xc(%rsp)
+    2b43:	48 8d 7c 24 0c       	lea    0xc(%rsp),%rdi
+  fwrite(&chunk->length, 4, 1, output);
+    2b48:	be 04 00 00 00       	mov    $0x4,%esi
+    2b4d:	ba 01 00 00 00       	mov    $0x1,%edx
+    2b52:	48 89 d9             	mov    %rbx,%rcx
+    2b55:	e8 b6 e5 ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->chunk_type, 4, 1, output);
+    2b5a:	be 04 00 00 00       	mov    $0x4,%esi
+    2b5f:	ba 01 00 00 00       	mov    $0x1,%edx
+    2b64:	4c 89 ff             	mov    %r15,%rdi
+    2b67:	48 89 d9             	mov    %rbx,%rcx
+    2b6a:	e8 a1 e5 ff ff       	call   1110 <fwrite@plt>
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    2b6f:	48 8b 7c 24 14       	mov    0x14(%rsp),%rdi
+    2b74:	8b 74 24 0c          	mov    0xc(%rsp),%esi
+    result |= ((x >> (8 * i)) & 0xff) << (8 * (3 - i));
+    2b78:	0f ce                	bswap  %esi
+  fwrite(chunk->chunk_data, to_little_endian(chunk->length), 1, output);
+    2b7a:	ba 01 00 00 00       	mov    $0x1,%edx
+    2b7f:	48 89 d9             	mov    %rbx,%rcx
+    2b82:	e8 89 e5 ff ff       	call   1110 <fwrite@plt>
+  fwrite(&chunk->crc, 4, 1, output);
+    2b87:	be 04 00 00 00       	mov    $0x4,%esi
+    2b8c:	ba 01 00 00 00       	mov    $0x1,%edx
+    2b91:	4c 89 f7             	mov    %r14,%rdi
+    2b94:	48 89 d9             	mov    %rbx,%rcx
+    2b97:	e8 74 e5 ff ff       	call   1110 <fwrite@plt>
+  fill_chunk_crc(&iend);
+  store_png_chunk(output, &iend);
+}
+    2b9c:	48 83 c4 20          	add    $0x20,%rsp
+    2ba0:	5b                   	pop    %rbx
+    2ba1:	41 5e                	pop    %r14
+    2ba3:	41 5f                	pop    %r15
+    2ba5:	c3                   	ret    
+    2ba6:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2bad:	00 00 00 
+
+0000000000002bb0 <store_png>:
+
+// Store a Y0L0 PNG to a file. Provide an array of pixels if you want to use a
+// palette format. If it is NULL, RGBA is selected.
+int store_png(const char *filename, struct image *img, struct pixel *palette,
+              uint8_t palette_length) {
+    2bb0:	55                   	push   %rbp
+    2bb1:	41 57                	push   %r15
+    2bb3:	41 56                	push   %r14
+    2bb5:	53                   	push   %rbx
+    2bb6:	50                   	push   %rax
+    2bb7:	89 cd                	mov    %ecx,%ebp
+    2bb9:	49 89 d7             	mov    %rdx,%r15
+    2bbc:	49 89 f6             	mov    %rsi,%r14
+  int result = 0;
+  FILE *output = fopen(filename, "wb");
+    2bbf:	48 8d 35 80 04 00 00 	lea    0x480(%rip),%rsi        # 3046 <_IO_stdin_used+0x46>
+    2bc6:	e8 35 e5 ff ff       	call   1100 <fopen@plt>
+
+  if (!output)
+    2bcb:	48 85 c0             	test   %rax,%rax
+    2bce:	74 4f                	je     2c1f <store_png+0x6f>
+    2bd0:	48 89 c3             	mov    %rax,%rbx
+  return fwrite("\211PNG\r\n\032\n", 8, 1, output) != 1;
+    2bd3:	48 8d 3d 4f 04 00 00 	lea    0x44f(%rip),%rdi        # 3029 <_IO_stdin_used+0x29>
+    2bda:	be 08 00 00 00       	mov    $0x8,%esi
+    2bdf:	ba 01 00 00 00       	mov    $0x1,%edx
+    2be4:	48 89 c1             	mov    %rax,%rcx
+    2be7:	e8 24 e5 ff ff       	call   1110 <fwrite@plt>
+    return 1;
+
+  store_filesig(output);
+
+  if (palette) {
+    2bec:	4d 85 ff             	test   %r15,%r15
+    2bef:	74 35                	je     2c26 <store_png+0x76>
+    store_png_palette(output, img, palette, palette_length);
+    2bf1:	40 0f b6 ed          	movzbl %bpl,%ebp
+  store_ihdr_plte(output, img);
+    2bf5:	48 89 df             	mov    %rbx,%rdi
+    2bf8:	4c 89 f6             	mov    %r14,%rsi
+    2bfb:	e8 20 f6 ff ff       	call   2220 <store_ihdr_plte>
+  store_plte(output, palette, palette_length);
+    2c00:	48 89 df             	mov    %rbx,%rdi
+    2c03:	4c 89 fe             	mov    %r15,%rsi
+    2c06:	89 ea                	mov    %ebp,%edx
+    2c08:	e8 33 fd ff ff       	call   2940 <store_plte>
+  store_idat_plte(output, img, palette, palette_length);
+    2c0d:	48 89 df             	mov    %rbx,%rdi
+    2c10:	4c 89 f6             	mov    %r14,%rsi
+    2c13:	4c 89 fa             	mov    %r15,%rdx
+    2c16:	89 e9                	mov    %ebp,%ecx
+    2c18:	e8 03 fb ff ff       	call   2720 <store_idat_plte>
+    2c1d:	eb 1d                	jmp    2c3c <store_png+0x8c>
+    2c1f:	b8 01 00 00 00       	mov    $0x1,%eax
+    2c24:	eb 28                	jmp    2c4e <store_png+0x9e>
+  store_ihdr_rgb_alpha(output, img);
+    2c26:	48 89 df             	mov    %rbx,%rdi
+    2c29:	4c 89 f6             	mov    %r14,%rsi
+    2c2c:	e8 ef f4 ff ff       	call   2120 <store_ihdr_rgb_alpha>
+  store_idat_rgb_alpha(output, img);
+    2c31:	48 89 df             	mov    %rbx,%rdi
+    2c34:	4c 89 f6             	mov    %r14,%rsi
+    2c37:	e8 54 f8 ff ff       	call   2490 <store_idat_rgb_alpha>
+  } else {
+    store_png_rgb_alpha(output, img);
+  }
+
+  store_png_chunk_iend(output);
+    2c3c:	48 89 df             	mov    %rbx,%rdi
+    2c3f:	e8 9c fe ff ff       	call   2ae0 <store_png_chunk_iend>
+  fclose(output);
+    2c44:	48 89 df             	mov    %rbx,%rdi
+    2c47:	e8 14 e4 ff ff       	call   1060 <fclose@plt>
+    2c4c:	31 c0                	xor    %eax,%eax
+  return 0;
+}
+    2c4e:	48 83 c4 08          	add    $0x8,%rsp
+    2c52:	5b                   	pop    %rbx
+    2c53:	41 5e                	pop    %r14
+    2c55:	41 5f                	pop    %r15
+    2c57:	5d                   	pop    %rbp
+    2c58:	c3                   	ret    
+    2c59:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000002c60 <update_crc>:
+/* Update a running CRC with the bytes buf[0..len-1]--the CRC
+    should be initialized to all 1's, and the transmitted value
+    is the 1's complement of the final running CRC (see the
+    crc() routine below)). */
+
+unsigned long update_crc(unsigned long crc, unsigned char *buf, int len) {
+    2c60:	48 89 f8             	mov    %rdi,%rax
+  unsigned long c = crc;
+  int n;
+
+  if (!crc_table_computed)
+    2c63:	83 3d 46 24 00 00 00 	cmpl   $0x0,0x2446(%rip)        # 50b0 <crc_table_computed>
+    2c6a:	0f 85 98 01 00 00    	jne    2e08 <update_crc+0x1a8>
+    2c70:	66 0f 6f 05 d8 03 00 	movdqa 0x3d8(%rip),%xmm0        # 3050 <_IO_stdin_used+0x50>
+    2c77:	00 
+    2c78:	31 c9                	xor    %ecx,%ecx
+    2c7a:	66 0f 6f 0d de 03 00 	movdqa 0x3de(%rip),%xmm1        # 3060 <_IO_stdin_used+0x60>
+    2c81:	00 
+    2c82:	48 8d 3d 37 24 00 00 	lea    0x2437(%rip),%rdi        # 50c0 <crc_table>
+    2c89:	66 0f 6f 15 df 03 00 	movdqa 0x3df(%rip),%xmm2        # 3070 <_IO_stdin_used+0x70>
+    2c90:	00 
+    2c91:	66 66 66 66 66 66 2e 	data16 data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    2c98:	0f 1f 84 00 00 00 00 
+    2c9f:	00 
+      if (c & 1)
+    2ca0:	66 0f 6f d8          	movdqa %xmm0,%xmm3
+    2ca4:	66 0f 70 e0 a0       	pshufd $0xa0,%xmm0,%xmm4
+    2ca9:	66 0f 72 f4 1f       	pslld  $0x1f,%xmm4
+    2cae:	66 0f 72 e4 1f       	psrad  $0x1f,%xmm4
+    2cb3:	66 0f 73 d3 01       	psrlq  $0x1,%xmm3
+    2cb8:	66 0f 6f ec          	movdqa %xmm4,%xmm5
+    2cbc:	66 0f df eb          	pandn  %xmm3,%xmm5
+    2cc0:	66 0f ef d9          	pxor   %xmm1,%xmm3
+    2cc4:	66 0f db dc          	pand   %xmm4,%xmm3
+    2cc8:	66 0f eb dd          	por    %xmm5,%xmm3
+    2ccc:	66 0f 70 e3 a0       	pshufd $0xa0,%xmm3,%xmm4
+    2cd1:	66 0f 72 f4 1f       	pslld  $0x1f,%xmm4
+    2cd6:	66 0f 73 d3 01       	psrlq  $0x1,%xmm3
+    2cdb:	66 0f 72 e4 1f       	psrad  $0x1f,%xmm4
+    2ce0:	66 0f 6f ec          	movdqa %xmm4,%xmm5
+    2ce4:	66 0f df eb          	pandn  %xmm3,%xmm5
+    2ce8:	66 0f ef d9          	pxor   %xmm1,%xmm3
+    2cec:	66 0f db dc          	pand   %xmm4,%xmm3
+    2cf0:	66 0f eb dd          	por    %xmm5,%xmm3
+    2cf4:	66 0f 70 e3 a0       	pshufd $0xa0,%xmm3,%xmm4
+    2cf9:	66 0f 73 d3 01       	psrlq  $0x1,%xmm3
+    2cfe:	66 0f 72 f4 1f       	pslld  $0x1f,%xmm4
+    2d03:	66 0f 72 e4 1f       	psrad  $0x1f,%xmm4
+    2d08:	66 0f 6f ec          	movdqa %xmm4,%xmm5
+    2d0c:	66 0f df eb          	pandn  %xmm3,%xmm5
+    2d10:	66 0f ef d9          	pxor   %xmm1,%xmm3
+    2d14:	66 0f db dc          	pand   %xmm4,%xmm3
+    2d18:	66 0f eb dd          	por    %xmm5,%xmm3
+    2d1c:	66 0f 70 e3 a0       	pshufd $0xa0,%xmm3,%xmm4
+    2d21:	66 0f 73 d3 01       	psrlq  $0x1,%xmm3
+    2d26:	66 0f 72 f4 1f       	pslld  $0x1f,%xmm4
+    2d2b:	66 0f 72 e4 1f       	psrad  $0x1f,%xmm4
+    2d30:	66 0f 6f ec          	movdqa %xmm4,%xmm5
+    2d34:	66 0f df eb          	pandn  %xmm3,%xmm5
+    2d38:	66 0f ef d9          	pxor   %xmm1,%xmm3
+    2d3c:	66 0f db dc          	pand   %xmm4,%xmm3
+    2d40:	66 0f eb dd          	por    %xmm5,%xmm3
+    2d44:	66 0f 70 e3 a0       	pshufd $0xa0,%xmm3,%xmm4
+    2d49:	66 0f 72 f4 1f       	pslld  $0x1f,%xmm4
+    2d4e:	66 0f 72 e4 1f       	psrad  $0x1f,%xmm4
+    2d53:	66 0f 73 d3 01       	psrlq  $0x1,%xmm3
+    2d58:	66 0f 6f ec          	movdqa %xmm4,%xmm5
+    2d5c:	66 0f df eb          	pandn  %xmm3,%xmm5
+    2d60:	66 0f ef d9          	pxor   %xmm1,%xmm3
+    2d64:	66 0f db dc          	pand   %xmm4,%xmm3
+    2d68:	66 0f eb dd          	por    %xmm5,%xmm3
+    2d6c:	66 0f 70 e3 a0       	pshufd $0xa0,%xmm3,%xmm4
+    2d71:	66 0f 72 f4 1f       	pslld  $0x1f,%xmm4
+    2d76:	66 0f 73 d3 01       	psrlq  $0x1,%xmm3
+    2d7b:	66 0f 72 e4 1f       	psrad  $0x1f,%xmm4
+    2d80:	66 0f 6f ec          	movdqa %xmm4,%xmm5
+    2d84:	66 0f df eb          	pandn  %xmm3,%xmm5
+    2d88:	66 0f ef d9          	pxor   %xmm1,%xmm3
+    2d8c:	66 0f db dc          	pand   %xmm4,%xmm3
+    2d90:	66 0f eb dd          	por    %xmm5,%xmm3
+    2d94:	66 0f 70 e3 a0       	pshufd $0xa0,%xmm3,%xmm4
+    2d99:	66 0f 73 d3 01       	psrlq  $0x1,%xmm3
+    2d9e:	66 0f 72 f4 1f       	pslld  $0x1f,%xmm4
+    2da3:	66 0f 72 e4 1f       	psrad  $0x1f,%xmm4
+    2da8:	66 0f 6f ec          	movdqa %xmm4,%xmm5
+    2dac:	66 0f df eb          	pandn  %xmm3,%xmm5
+    2db0:	66 0f ef d9          	pxor   %xmm1,%xmm3
+    2db4:	66 0f db dc          	pand   %xmm4,%xmm3
+    2db8:	66 0f eb dd          	por    %xmm5,%xmm3
+    2dbc:	66 0f 70 e3 a0       	pshufd $0xa0,%xmm3,%xmm4
+    2dc1:	66 0f 73 d3 01       	psrlq  $0x1,%xmm3
+    2dc6:	66 0f 72 f4 1f       	pslld  $0x1f,%xmm4
+    2dcb:	66 0f 72 e4 1f       	psrad  $0x1f,%xmm4
+    2dd0:	66 0f 6f ec          	movdqa %xmm4,%xmm5
+    2dd4:	66 0f df eb          	pandn  %xmm3,%xmm5
+    2dd8:	66 0f ef d9          	pxor   %xmm1,%xmm3
+    2ddc:	66 0f db dc          	pand   %xmm4,%xmm3
+    2de0:	66 0f eb dd          	por    %xmm5,%xmm3
+    crc_table[n] = c;
+    2de4:	66 0f 7f 1c 39       	movdqa %xmm3,(%rcx,%rdi,1)
+    2de9:	66 0f d4 c2          	paddq  %xmm2,%xmm0
+  for (n = 0; n < 256; n++) {
+    2ded:	48 83 c1 10          	add    $0x10,%rcx
+    2df1:	48 81 f9 00 08 00 00 	cmp    $0x800,%rcx
+    2df8:	0f 85 a2 fe ff ff    	jne    2ca0 <update_crc+0x40>
+  crc_table_computed = 1;
+    2dfe:	c7 05 a8 22 00 00 01 	movl   $0x1,0x22a8(%rip)        # 50b0 <crc_table_computed>
+    2e05:	00 00 00 
+    make_crc_table();
+  for (n = 0; n < len; n++) {
+    2e08:	85 d2                	test   %edx,%edx
+    2e0a:	7e 73                	jle    2e7f <update_crc+0x21f>
+    2e0c:	89 d1                	mov    %edx,%ecx
+    2e0e:	83 fa 01             	cmp    $0x1,%edx
+    2e11:	75 04                	jne    2e17 <update_crc+0x1b7>
+    2e13:	31 d2                	xor    %edx,%edx
+    2e15:	eb 4b                	jmp    2e62 <update_crc+0x202>
+    2e17:	89 cf                	mov    %ecx,%edi
+    2e19:	83 e7 fe             	and    $0xfffffffe,%edi
+    2e1c:	31 d2                	xor    %edx,%edx
+    2e1e:	4c 8d 05 9b 22 00 00 	lea    0x229b(%rip),%r8        # 50c0 <crc_table>
+    2e25:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    2e2c:	00 00 00 00 
+    2e30:	44 0f b6 0c 16       	movzbl (%rsi,%rdx,1),%r9d
+    c = crc_table[(c ^ buf[n]) & 0xff] ^ (c >> 8);
+    2e35:	41 30 c1             	xor    %al,%r9b
+    2e38:	45 0f b6 c9          	movzbl %r9b,%r9d
+    2e3c:	48 c1 e8 08          	shr    $0x8,%rax
+    2e40:	4b 33 04 c8          	xor    (%r8,%r9,8),%rax
+    2e44:	44 0f b6 4c 16 01    	movzbl 0x1(%rsi,%rdx,1),%r9d
+    2e4a:	41 30 c1             	xor    %al,%r9b
+    2e4d:	45 0f b6 c9          	movzbl %r9b,%r9d
+    2e51:	48 c1 e8 08          	shr    $0x8,%rax
+    2e55:	4b 33 04 c8          	xor    (%r8,%r9,8),%rax
+  for (n = 0; n < len; n++) {
+    2e59:	48 83 c2 02          	add    $0x2,%rdx
+    2e5d:	48 39 d7             	cmp    %rdx,%rdi
+    2e60:	75 ce                	jne    2e30 <update_crc+0x1d0>
+    2e62:	f6 c1 01             	test   $0x1,%cl
+    2e65:	74 18                	je     2e7f <update_crc+0x21f>
+    2e67:	0f b6 0c 16          	movzbl (%rsi,%rdx,1),%ecx
+    c = crc_table[(c ^ buf[n]) & 0xff] ^ (c >> 8);
+    2e6b:	30 c1                	xor    %al,%cl
+    2e6d:	0f b6 c9             	movzbl %cl,%ecx
+    2e70:	48 8d 15 49 22 00 00 	lea    0x2249(%rip),%rdx        # 50c0 <crc_table>
+    2e77:	48 c1 e8 08          	shr    $0x8,%rax
+    2e7b:	48 33 04 ca          	xor    (%rdx,%rcx,8),%rax
+  }
+  return c;
+    2e7f:	c3                   	ret    
+
+0000000000002e80 <crc>:
+}
+
+/* Return the CRC of the bytes buf[0..len-1]. */
+unsigned long crc(unsigned char *buf, int len) {
+    2e80:	53                   	push   %rbx
+    2e81:	89 f2                	mov    %esi,%edx
+    2e83:	48 89 fe             	mov    %rdi,%rsi
+    2e86:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  return update_crc(0xffffffffL, buf, len) ^ 0xffffffffL;
+    2e8b:	bf ff ff ff ff       	mov    $0xffffffff,%edi
+    2e90:	e8 cb fd ff ff       	call   2c60 <update_crc>
+    2e95:	48 31 d8             	xor    %rbx,%rax
+    2e98:	5b                   	pop    %rbx
+    2e99:	c3                   	ret    
+
+Disassembly of section .fini:
+
+0000000000002e9c <_fini>:
+    2e9c:	f3 0f 1e fa          	endbr64 
+    2ea0:	48 83 ec 08          	sub    $0x8,%rsp
+    2ea4:	48 83 c4 08          	add    $0x8,%rsp
+    2ea8:	c3                   	ret    

@@ -1,0 +1,301 @@
+
+fibonacci_debug:     file format elf64-x86-64
+architecture: i386:x86-64, flags 0x00000150:
+HAS_SYMS, DYNAMIC, D_PAGED
+start address 0x0000000000001060
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64 
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 d9 2f 00 00 	mov    0x2fd9(%rip),%rax        # 3fe8 <__gmon_start__@Base>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	call   *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	ret    
+
+Disassembly of section .plt:
+
+0000000000001020 <printf@plt-0x10>:
+    1020:	ff 35 e2 2f 00 00    	push   0x2fe2(%rip)        # 4008 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	ff 25 e4 2f 00 00    	jmp    *0x2fe4(%rip)        # 4010 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001030 <printf@plt>:
+    1030:	ff 25 e2 2f 00 00    	jmp    *0x2fe2(%rip)        # 4018 <printf@GLIBC_2.2.5>
+    1036:	68 00 00 00 00       	push   $0x0
+    103b:	e9 e0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001040 <__isoc99_scanf@plt>:
+    1040:	ff 25 da 2f 00 00    	jmp    *0x2fda(%rip)        # 4020 <__isoc99_scanf@GLIBC_2.7>
+    1046:	68 01 00 00 00       	push   $0x1
+    104b:	e9 d0 ff ff ff       	jmp    1020 <_init+0x20>
+
+Disassembly of section .plt.got:
+
+0000000000001050 <__cxa_finalize@plt>:
+    1050:	ff 25 a2 2f 00 00    	jmp    *0x2fa2(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    1056:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+0000000000001060 <_start>:
+    1060:	f3 0f 1e fa          	endbr64 
+    1064:	31 ed                	xor    %ebp,%ebp
+    1066:	49 89 d1             	mov    %rdx,%r9
+    1069:	5e                   	pop    %rsi
+    106a:	48 89 e2             	mov    %rsp,%rdx
+    106d:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    1071:	50                   	push   %rax
+    1072:	54                   	push   %rsp
+    1073:	45 31 c0             	xor    %r8d,%r8d
+    1076:	31 c9                	xor    %ecx,%ecx
+    1078:	48 8d 3d d1 00 00 00 	lea    0xd1(%rip),%rdi        # 1150 <main>
+    107f:	ff 15 53 2f 00 00    	call   *0x2f53(%rip)        # 3fd8 <__libc_start_main@GLIBC_2.34>
+    1085:	f4                   	hlt    
+    1086:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    108d:	00 00 00 
+
+0000000000001090 <deregister_tm_clones>:
+    1090:	48 8d 3d a1 2f 00 00 	lea    0x2fa1(%rip),%rdi        # 4038 <__TMC_END__>
+    1097:	48 8d 05 9a 2f 00 00 	lea    0x2f9a(%rip),%rax        # 4038 <__TMC_END__>
+    109e:	48 39 f8             	cmp    %rdi,%rax
+    10a1:	74 15                	je     10b8 <deregister_tm_clones+0x28>
+    10a3:	48 8b 05 36 2f 00 00 	mov    0x2f36(%rip),%rax        # 3fe0 <_ITM_deregisterTMCloneTable@Base>
+    10aa:	48 85 c0             	test   %rax,%rax
+    10ad:	74 09                	je     10b8 <deregister_tm_clones+0x28>
+    10af:	ff e0                	jmp    *%rax
+    10b1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    10b8:	c3                   	ret    
+    10b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000010c0 <register_tm_clones>:
+    10c0:	48 8d 3d 71 2f 00 00 	lea    0x2f71(%rip),%rdi        # 4038 <__TMC_END__>
+    10c7:	48 8d 35 6a 2f 00 00 	lea    0x2f6a(%rip),%rsi        # 4038 <__TMC_END__>
+    10ce:	48 29 fe             	sub    %rdi,%rsi
+    10d1:	48 89 f0             	mov    %rsi,%rax
+    10d4:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    10d8:	48 c1 f8 03          	sar    $0x3,%rax
+    10dc:	48 01 c6             	add    %rax,%rsi
+    10df:	48 d1 fe             	sar    %rsi
+    10e2:	74 14                	je     10f8 <register_tm_clones+0x38>
+    10e4:	48 8b 05 05 2f 00 00 	mov    0x2f05(%rip),%rax        # 3ff0 <_ITM_registerTMCloneTable@Base>
+    10eb:	48 85 c0             	test   %rax,%rax
+    10ee:	74 08                	je     10f8 <register_tm_clones+0x38>
+    10f0:	ff e0                	jmp    *%rax
+    10f2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    10f8:	c3                   	ret    
+    10f9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001100 <__do_global_dtors_aux>:
+    1100:	f3 0f 1e fa          	endbr64 
+    1104:	80 3d 2d 2f 00 00 00 	cmpb   $0x0,0x2f2d(%rip)        # 4038 <__TMC_END__>
+    110b:	75 2b                	jne    1138 <__do_global_dtors_aux+0x38>
+    110d:	55                   	push   %rbp
+    110e:	48 83 3d e2 2e 00 00 	cmpq   $0x0,0x2ee2(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    1115:	00 
+    1116:	48 89 e5             	mov    %rsp,%rbp
+    1119:	74 0c                	je     1127 <__do_global_dtors_aux+0x27>
+    111b:	48 8b 3d 0e 2f 00 00 	mov    0x2f0e(%rip),%rdi        # 4030 <__dso_handle>
+    1122:	e8 29 ff ff ff       	call   1050 <__cxa_finalize@plt>
+    1127:	e8 64 ff ff ff       	call   1090 <deregister_tm_clones>
+    112c:	c6 05 05 2f 00 00 01 	movb   $0x1,0x2f05(%rip)        # 4038 <__TMC_END__>
+    1133:	5d                   	pop    %rbp
+    1134:	c3                   	ret    
+    1135:	0f 1f 00             	nopl   (%rax)
+    1138:	c3                   	ret    
+    1139:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001140 <frame_dummy>:
+    1140:	f3 0f 1e fa          	endbr64 
+    1144:	e9 77 ff ff ff       	jmp    10c0 <register_tm_clones>
+    1149:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001150 <main>:
+
+// Function declarations
+unsigned long long fibonacciIterative(int n);
+unsigned long long fibonacciRecursive(int n);
+
+int main() {
+    1150:	55                   	push   %rbp
+    1151:	48 89 e5             	mov    %rsp,%rbp
+    1154:	48 83 ec 10          	sub    $0x10,%rsp
+    1158:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
+    int num;
+
+    // Take input from the user
+    printf("Enter the number of terms for Fibonacci sequence: ");
+    115f:	48 8d 3d 9e 0e 00 00 	lea    0xe9e(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+    1166:	b0 00                	mov    $0x0,%al
+    1168:	e8 c3 fe ff ff       	call   1030 <printf@plt>
+    scanf("%d", &num);
+    116d:	48 8d 3d c3 0e 00 00 	lea    0xec3(%rip),%rdi        # 2037 <_IO_stdin_used+0x37>
+    1174:	48 8d 75 f8          	lea    -0x8(%rbp),%rsi
+    1178:	b0 00                	mov    $0x0,%al
+    117a:	e8 c1 fe ff ff       	call   1040 <__isoc99_scanf@plt>
+
+    printf("Fibonacci sequence using iterative method:\n");
+    117f:	48 8d 3d b4 0e 00 00 	lea    0xeb4(%rip),%rdi        # 203a <_IO_stdin_used+0x3a>
+    1186:	b0 00                	mov    $0x0,%al
+    1188:	e8 a3 fe ff ff       	call   1030 <printf@plt>
+    for (int i = 0; i < num; i++) {
+    118d:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%rbp)
+    1194:	8b 45 f4             	mov    -0xc(%rbp),%eax
+    1197:	3b 45 f8             	cmp    -0x8(%rbp),%eax
+    119a:	0f 8d 27 00 00 00    	jge    11c7 <main+0x77>
+        printf("%llu ", fibonacciIterative(i));
+    11a0:	8b 7d f4             	mov    -0xc(%rbp),%edi
+    11a3:	e8 78 00 00 00       	call   1220 <fibonacciIterative>
+    11a8:	48 89 c6             	mov    %rax,%rsi
+    11ab:	48 8d 3d b4 0e 00 00 	lea    0xeb4(%rip),%rdi        # 2066 <_IO_stdin_used+0x66>
+    11b2:	b0 00                	mov    $0x0,%al
+    11b4:	e8 77 fe ff ff       	call   1030 <printf@plt>
+    for (int i = 0; i < num; i++) {
+    11b9:	8b 45 f4             	mov    -0xc(%rbp),%eax
+    11bc:	83 c0 01             	add    $0x1,%eax
+    11bf:	89 45 f4             	mov    %eax,-0xc(%rbp)
+    11c2:	e9 cd ff ff ff       	jmp    1194 <main+0x44>
+    }
+
+    printf("\n\nFibonacci sequence using recursive method:\n");
+    11c7:	48 8d 3d 9e 0e 00 00 	lea    0xe9e(%rip),%rdi        # 206c <_IO_stdin_used+0x6c>
+    11ce:	b0 00                	mov    $0x0,%al
+    11d0:	e8 5b fe ff ff       	call   1030 <printf@plt>
+    for (int i = 0; i < num; i++) {
+    11d5:	c7 45 f0 00 00 00 00 	movl   $0x0,-0x10(%rbp)
+    11dc:	8b 45 f0             	mov    -0x10(%rbp),%eax
+    11df:	3b 45 f8             	cmp    -0x8(%rbp),%eax
+    11e2:	0f 8d 27 00 00 00    	jge    120f <main+0xbf>
+        printf("%llu ", fibonacciRecursive(i));
+    11e8:	8b 7d f0             	mov    -0x10(%rbp),%edi
+    11eb:	e8 d0 00 00 00       	call   12c0 <fibonacciRecursive>
+    11f0:	48 89 c6             	mov    %rax,%rsi
+    11f3:	48 8d 3d 6c 0e 00 00 	lea    0xe6c(%rip),%rdi        # 2066 <_IO_stdin_used+0x66>
+    11fa:	b0 00                	mov    $0x0,%al
+    11fc:	e8 2f fe ff ff       	call   1030 <printf@plt>
+    for (int i = 0; i < num; i++) {
+    1201:	8b 45 f0             	mov    -0x10(%rbp),%eax
+    1204:	83 c0 01             	add    $0x1,%eax
+    1207:	89 45 f0             	mov    %eax,-0x10(%rbp)
+    120a:	e9 cd ff ff ff       	jmp    11dc <main+0x8c>
+    }
+
+    return 0;
+    120f:	31 c0                	xor    %eax,%eax
+    1211:	48 83 c4 10          	add    $0x10,%rsp
+    1215:	5d                   	pop    %rbp
+    1216:	c3                   	ret    
+    1217:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    121e:	00 00 
+
+0000000000001220 <fibonacciIterative>:
+}
+
+// Function definition for Fibonacci sequence using iterative method
+unsigned long long fibonacciIterative(int n) {
+    1220:	55                   	push   %rbp
+    1221:	48 89 e5             	mov    %rsp,%rbp
+    1224:	89 7d f4             	mov    %edi,-0xc(%rbp)
+    unsigned long long a = 0, b = 1, temp;
+    1227:	48 c7 45 e8 00 00 00 	movq   $0x0,-0x18(%rbp)
+    122e:	00 
+    122f:	48 c7 45 e0 01 00 00 	movq   $0x1,-0x20(%rbp)
+    1236:	00 
+
+    if (n == 0) {
+    1237:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+    123b:	0f 85 0d 00 00 00    	jne    124e <fibonacciIterative+0x2e>
+        return a;
+    1241:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    1245:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    1249:	e9 61 00 00 00       	jmp    12af <fibonacciIterative+0x8f>
+    }
+    else if (n == 1) {
+    124e:	83 7d f4 01          	cmpl   $0x1,-0xc(%rbp)
+    1252:	0f 85 0d 00 00 00    	jne    1265 <fibonacciIterative+0x45>
+        return b;
+    1258:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    125c:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    1260:	e9 4a 00 00 00       	jmp    12af <fibonacciIterative+0x8f>
+    1265:	e9 00 00 00 00       	jmp    126a <fibonacciIterative+0x4a>
+    }
+
+    for (int i = 2; i <= n; i++) {
+    126a:	c7 45 d4 02 00 00 00 	movl   $0x2,-0x2c(%rbp)
+    1271:	8b 45 d4             	mov    -0x2c(%rbp),%eax
+    1274:	3b 45 f4             	cmp    -0xc(%rbp),%eax
+    1277:	0f 8f 2a 00 00 00    	jg     12a7 <fibonacciIterative+0x87>
+        temp = a + b;
+    127d:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    1281:	48 03 45 e0          	add    -0x20(%rbp),%rax
+    1285:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+        a = b;
+    1289:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    128d:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+        b = temp;
+    1291:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+    1295:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+    for (int i = 2; i <= n; i++) {
+    1299:	8b 45 d4             	mov    -0x2c(%rbp),%eax
+    129c:	83 c0 01             	add    $0x1,%eax
+    129f:	89 45 d4             	mov    %eax,-0x2c(%rbp)
+    12a2:	e9 ca ff ff ff       	jmp    1271 <fibonacciIterative+0x51>
+    }
+
+    return b;
+    12a7:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    12ab:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+}
+    12af:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    12b3:	5d                   	pop    %rbp
+    12b4:	c3                   	ret    
+    12b5:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    12bc:	00 00 00 00 
+
+00000000000012c0 <fibonacciRecursive>:
+
+// Function definition for Fibonacci sequence using recursive method
+unsigned long long fibonacciRecursive(int n) {
+    12c0:	55                   	push   %rbp
+    12c1:	48 89 e5             	mov    %rsp,%rbp
+    12c4:	48 83 ec 20          	sub    $0x20,%rsp
+    12c8:	89 7d f4             	mov    %edi,-0xc(%rbp)
+    if (n <= 1) {
+    12cb:	83 7d f4 01          	cmpl   $0x1,-0xc(%rbp)
+    12cf:	0f 8f 0d 00 00 00    	jg     12e2 <fibonacciRecursive+0x22>
+        return n;
+    12d5:	48 63 45 f4          	movslq -0xc(%rbp),%rax
+    12d9:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    12dd:	e9 28 00 00 00       	jmp    130a <fibonacciRecursive+0x4a>
+    }
+    else {
+        return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+    12e2:	8b 7d f4             	mov    -0xc(%rbp),%edi
+    12e5:	83 ef 01             	sub    $0x1,%edi
+    12e8:	e8 d3 ff ff ff       	call   12c0 <fibonacciRecursive>
+    12ed:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+    12f1:	8b 7d f4             	mov    -0xc(%rbp),%edi
+    12f4:	83 ef 02             	sub    $0x2,%edi
+    12f7:	e8 c4 ff ff ff       	call   12c0 <fibonacciRecursive>
+    12fc:	48 89 c1             	mov    %rax,%rcx
+    12ff:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    1303:	48 01 c8             	add    %rcx,%rax
+    1306:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    }
+}
+    130a:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    130e:	48 83 c4 20          	add    $0x20,%rsp
+    1312:	5d                   	pop    %rbp
+    1313:	c3                   	ret    
+
+Disassembly of section .fini:
+
+0000000000001314 <_fini>:
+    1314:	f3 0f 1e fa          	endbr64 
+    1318:	48 83 ec 08          	sub    $0x8,%rsp
+    131c:	48 83 c4 08          	add    $0x8,%rsp
+    1320:	c3                   	ret    

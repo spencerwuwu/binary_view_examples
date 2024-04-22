@@ -1,0 +1,494 @@
+{
+  "all_nodes": {
+    "4208": {
+      "addr": 4208,
+      "size": 37,
+      "name": "_start",
+      "function_address": 4208,
+      "instructions": {
+        "4208": "",
+        "4212": "ebp, ebp",
+        "4214": "r9, rdx",
+        "4217": "rsi",
+        "4218": "rdx, rsp",
+        "4221": "rsp, 0xfffffffffffffff0",
+        "4225": "rax",
+        "4226": "rsp",
+        "4227": "r8d, r8d",
+        "4230": "ecx, ecx",
+        "4232": "rdi, [rip + 0x131]",
+        "4239": "qword ptr [rip + 0x2f43]"
+      },
+      "successors": [
+        [
+          1048576,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": []
+    },
+    "1048576": {
+      "addr": 1048576,
+      "size": null,
+      "name": "__libc_start_main",
+      "function_address": 1048576,
+      "instructions": [],
+      "successors": [
+        [
+          4544,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4208,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4544": {
+      "addr": 4544,
+      "size": 33,
+      "name": "main",
+      "function_address": 4544,
+      "instructions": {
+        "4544": "rbp",
+        "4545": "rbp, rsp",
+        "4548": "rsp, 0x10",
+        "4552": "dword ptr [rbp - 4], 0",
+        "4559": "rdi, [rip + 0xe44]",
+        "4566": "rsi, [rbp - 8]",
+        "4570": "al, 0",
+        "4572": "0x1050"
+      },
+      "successors": [
+        [
+          4176,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048576,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4176": {
+      "addr": 4176,
+      "size": 6,
+      "name": null,
+      "function_address": 4176,
+      "instructions": {
+        "4176": "qword ptr [rip + 0x2fd2]"
+      },
+      "successors": [
+        [
+          1048600,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4544,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "1048600": {
+      "addr": 1048600,
+      "size": null,
+      "name": "__isoc99_scanf",
+      "function_address": 1048600,
+      "instructions": [],
+      "successors": [
+        [
+          4577,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4176,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4577": {
+      "addr": 4577,
+      "size": 10,
+      "name": "main+0x21",
+      "function_address": 4544,
+      "instructions": {
+        "4577": "edi, 0x10",
+        "4582": "0x1040"
+      },
+      "successors": [
+        [
+          4160,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048600,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4160": {
+      "addr": 4160,
+      "size": 6,
+      "name": null,
+      "function_address": 4160,
+      "instructions": {
+        "4160": "qword ptr [rip + 0x2fda]"
+      },
+      "successors": [
+        [
+          1048592,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4577,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "1048592": {
+      "addr": 1048592,
+      "size": null,
+      "name": "malloc",
+      "function_address": 1048592,
+      "instructions": [],
+      "successors": [
+        [
+          4587,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4160,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4587": {
+      "addr": 4587,
+      "size": 14,
+      "name": "main+0x2b",
+      "function_address": 4544,
+      "instructions": {
+        "4587": "qword ptr [rbp - 0x10], rax",
+        "4591": "dword ptr [rbp - 8], 0",
+        "4595": "0x1217"
+      },
+      "successors": [
+        [
+          4601,
+          "Ijk_Boring"
+        ],
+        [
+          4631,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048592,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4601": {
+      "addr": 4601,
+      "size": 30,
+      "name": "main+0x39",
+      "function_address": 4544,
+      "instructions": {
+        "4601": "rax, qword ptr [rbp - 0x10]",
+        "4605": "rcx, [rip - 0xa4]",
+        "4612": "qword ptr [rax], rcx",
+        "4615": "rax, qword ptr [rbp - 0x10]",
+        "4619": "dword ptr [rax + 8], 0",
+        "4626": "0x1241"
+      },
+      "successors": [
+        [
+          4673,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4587,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4631": {
+      "addr": 4631,
+      "size": 58,
+      "name": "main+0x57",
+      "function_address": 4544,
+      "instructions": {
+        "4631": "eax, dword ptr [rbp - 8]",
+        "4634": "ecx, 2",
+        "4639": "",
+        "4640": "ecx",
+        "4642": "rcx, edx",
+        "4645": "rax, [rip + 0x2e14]",
+        "4652": "rcx, qword ptr [rax + rcx*8]",
+        "4656": "rax, qword ptr [rbp - 0x10]",
+        "4660": "qword ptr [rax], rcx",
+        "4663": "ecx, dword ptr [rbp - 8]",
+        "4666": "rax, qword ptr [rbp - 0x10]",
+        "4670": "dword ptr [rax + 8], ecx",
+        "4673": "rax, qword ptr [rbp - 0x10]",
+        "4677": "rax, qword ptr [rax]",
+        "4680": "rcx, qword ptr [rbp - 0x10]",
+        "4684": "edi, dword ptr [rcx + 8]",
+        "4687": "rax"
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          4587,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4673": {
+      "addr": 4673,
+      "size": 16,
+      "name": "main+0x81",
+      "function_address": 4544,
+      "instructions": {
+        "4673": "rax, qword ptr [rbp - 0x10]",
+        "4677": "rax, qword ptr [rax]",
+        "4680": "rcx, qword ptr [rbp - 0x10]",
+        "4684": "edi, dword ptr [rcx + 8]",
+        "4687": "rax"
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          4601,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "2101352": {
+      "addr": 2101352,
+      "size": null,
+      "name": "__libc_start_main",
+      "function_address": 2101352,
+      "instructions": [],
+      "successors": [
+        [
+          2101352,
+          "Ijk_Exit"
+        ]
+      ],
+      "predecessors": [
+        [
+          2101352,
+          "Ijk_Exit"
+        ],
+        [
+          4689,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4689": {
+      "addr": 4689,
+      "size": 8,
+      "name": "main+0x91",
+      "function_address": 4544,
+      "instructions": {
+        "4689": "eax, eax",
+        "4691": "rsp, 0x10",
+        "4695": "rbp",
+        "4696": ""
+      },
+      "successors": [
+        [
+          2101352,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": []
+    }
+  },
+  "call_graph_edges": [
+    [
+      4256,
+      2101328,
+      "transition"
+    ],
+    [
+      4304,
+      2101328,
+      "transition"
+    ],
+    [
+      4096,
+      2101336,
+      "call"
+    ],
+    [
+      4140,
+      4144,
+      "transition"
+    ],
+    [
+      4140,
+      1048584,
+      "transition"
+    ],
+    [
+      4144,
+      1048584,
+      "transition"
+    ],
+    [
+      4160,
+      1048592,
+      "transition"
+    ],
+    [
+      4176,
+      1048600,
+      "transition"
+    ],
+    [
+      4208,
+      1048576,
+      "call"
+    ],
+    [
+      1048576,
+      4544,
+      "call"
+    ],
+    [
+      4246,
+      4256,
+      "transition"
+    ],
+    [
+      4297,
+      4304,
+      "transition"
+    ],
+    [
+      4361,
+      4368,
+      "transition"
+    ],
+    [
+      4361,
+      4256,
+      "call"
+    ],
+    [
+      4361,
+      4192,
+      "call"
+    ],
+    [
+      4368,
+      4256,
+      "call"
+    ],
+    [
+      4368,
+      4192,
+      "call"
+    ],
+    [
+      4421,
+      4368,
+      "transition"
+    ],
+    [
+      4425,
+      4432,
+      "transition"
+    ],
+    [
+      4425,
+      4304,
+      "transition"
+    ],
+    [
+      4432,
+      4304,
+      "transition"
+    ],
+    [
+      4441,
+      4448,
+      "transition"
+    ],
+    [
+      4441,
+      4144,
+      "call"
+    ],
+    [
+      4448,
+      4144,
+      "call"
+    ],
+    [
+      4482,
+      4496,
+      "transition"
+    ],
+    [
+      4482,
+      4144,
+      "call"
+    ],
+    [
+      4496,
+      4144,
+      "call"
+    ],
+    [
+      4530,
+      4544,
+      "transition"
+    ],
+    [
+      4530,
+      4176,
+      "call"
+    ],
+    [
+      4530,
+      4160,
+      "call"
+    ],
+    [
+      4544,
+      4176,
+      "call"
+    ],
+    [
+      4544,
+      4160,
+      "call"
+    ],
+    [
+      4544,
+      2101336,
+      "call"
+    ]
+  ]
+}

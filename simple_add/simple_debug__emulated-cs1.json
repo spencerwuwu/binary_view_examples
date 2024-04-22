@@ -1,0 +1,451 @@
+{
+  "all_nodes": {
+    "4176": {
+      "addr": 4176,
+      "size": 37,
+      "name": "_start",
+      "function_address": 4176,
+      "instructions": {
+        "4176": "",
+        "4180": "ebp, ebp",
+        "4182": "r9, rdx",
+        "4185": "rsi",
+        "4186": "rdx, rsp",
+        "4189": "rsp, 0xfffffffffffffff0",
+        "4193": "rax",
+        "4194": "rsp",
+        "4195": "r8d, r8d",
+        "4198": "ecx, ecx",
+        "4200": "rdi, [rip + 0xd1]",
+        "4207": "qword ptr [rip + 0x2f63]"
+      },
+      "successors": [
+        [
+          1048576,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": []
+    },
+    "1048576": {
+      "addr": 1048576,
+      "size": null,
+      "name": "__libc_start_main",
+      "function_address": 1048576,
+      "instructions": [],
+      "successors": [
+        [
+          4416,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4176,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4416": {
+      "addr": 4416,
+      "size": 20,
+      "name": "main",
+      "function_address": 4416,
+      "instructions": {
+        "4416": "rbp",
+        "4417": "rbp, rsp",
+        "4420": "rsp, 0x10",
+        "4424": "dword ptr [rbp - 4], 0",
+        "4431": "0x11b0"
+      },
+      "successors": [
+        [
+          4528,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048576,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4528": {
+      "addr": 4528,
+      "size": 18,
+      "name": "greet",
+      "function_address": 4528,
+      "instructions": {
+        "4528": "rbp",
+        "4529": "rbp, rsp",
+        "4532": "rdi, [rip + 0xe65]",
+        "4539": "al, 0",
+        "4541": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4416,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4144": {
+      "addr": 4144,
+      "size": 6,
+      "name": null,
+      "function_address": 4144,
+      "instructions": {
+        "4144": "qword ptr [rip + 0x2fe2]"
+      },
+      "successors": [
+        [
+          1048584,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4461,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "1048584": {
+      "addr": 1048584,
+      "size": null,
+      "name": "printf",
+      "function_address": 1048584,
+      "instructions": [],
+      "successors": [
+        [
+          4487,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4144,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4546": {
+      "addr": 4546,
+      "size": 2,
+      "name": "greet+0x12",
+      "function_address": 4528,
+      "instructions": {
+        "4546": "rbp",
+        "4547": ""
+      },
+      "successors": [
+        [
+          4436,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4436": {
+      "addr": 4436,
+      "size": 25,
+      "name": "main+0x14",
+      "function_address": 4416,
+      "instructions": {
+        "4436": "dword ptr [rbp - 8], 0xa",
+        "4443": "dword ptr [rbp - 0xc], 0x14",
+        "4450": "edi, dword ptr [rbp - 8]",
+        "4453": "esi, dword ptr [rbp - 0xc]",
+        "4456": "0x1190"
+      },
+      "successors": [
+        [
+          4496,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4546,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4496": {
+      "addr": 4496,
+      "size": 18,
+      "name": "add",
+      "function_address": 4496,
+      "instructions": {
+        "4496": "rbp",
+        "4497": "rbp, rsp",
+        "4500": "dword ptr [rbp - 4], edi",
+        "4503": "dword ptr [rbp - 8], esi",
+        "4506": "eax, dword ptr [rbp - 4]",
+        "4509": "eax, dword ptr [rbp - 8]",
+        "4512": "rbp",
+        "4513": ""
+      },
+      "successors": [
+        [
+          4461,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4436,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4461": {
+      "addr": 4461,
+      "size": 26,
+      "name": "main+0x2d",
+      "function_address": 4416,
+      "instructions": {
+        "4461": "dword ptr [rbp - 0x10], eax",
+        "4464": "esi, dword ptr [rbp - 8]",
+        "4467": "edx, dword ptr [rbp - 0xc]",
+        "4470": "ecx, dword ptr [rbp - 0x10]",
+        "4473": "rdi, [rip + 0xe84]",
+        "4480": "al, 0",
+        "4482": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4496,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4487": {
+      "addr": 4487,
+      "size": 8,
+      "name": "main+0x47",
+      "function_address": 4416,
+      "instructions": {
+        "4487": "eax, eax",
+        "4489": "rsp, 0x10",
+        "4493": "rbp",
+        "4494": ""
+      },
+      "successors": [
+        [
+          2101352,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "2101352": {
+      "addr": 2101352,
+      "size": null,
+      "name": "PathTerminator",
+      "function_address": 2101352,
+      "instructions": [],
+      "successors": [
+        [
+          4213,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          2101352,
+          "Ijk_Exit"
+        ]
+      ]
+    },
+    "4213": {
+      "addr": 4213,
+      "size": null,
+      "name": "PathTerminator",
+      "function_address": 2101352,
+      "instructions": [],
+      "successors": [],
+      "predecessors": [
+        [
+          2101352,
+          "Ijk_Ret"
+        ]
+      ]
+    }
+  },
+  "call_graph_edges": [
+    [
+      4224,
+      2101328,
+      "transition"
+    ],
+    [
+      4272,
+      2101328,
+      "transition"
+    ],
+    [
+      4096,
+      2101336,
+      "call"
+    ],
+    [
+      4140,
+      4144,
+      "transition"
+    ],
+    [
+      4140,
+      1048584,
+      "transition"
+    ],
+    [
+      4144,
+      1048584,
+      "transition"
+    ],
+    [
+      4176,
+      1048576,
+      "call"
+    ],
+    [
+      1048576,
+      4416,
+      "call"
+    ],
+    [
+      4214,
+      4224,
+      "transition"
+    ],
+    [
+      4265,
+      4272,
+      "transition"
+    ],
+    [
+      4329,
+      4336,
+      "transition"
+    ],
+    [
+      4329,
+      4224,
+      "call"
+    ],
+    [
+      4329,
+      4160,
+      "call"
+    ],
+    [
+      4336,
+      4224,
+      "call"
+    ],
+    [
+      4336,
+      4160,
+      "call"
+    ],
+    [
+      4389,
+      4336,
+      "transition"
+    ],
+    [
+      4393,
+      4400,
+      "transition"
+    ],
+    [
+      4393,
+      4272,
+      "transition"
+    ],
+    [
+      4400,
+      4272,
+      "transition"
+    ],
+    [
+      4409,
+      4416,
+      "transition"
+    ],
+    [
+      4409,
+      4528,
+      "call"
+    ],
+    [
+      4409,
+      4496,
+      "call"
+    ],
+    [
+      4409,
+      4144,
+      "call"
+    ],
+    [
+      4416,
+      4528,
+      "call"
+    ],
+    [
+      4416,
+      4496,
+      "call"
+    ],
+    [
+      4416,
+      4144,
+      "call"
+    ],
+    [
+      4528,
+      4144,
+      "call"
+    ],
+    [
+      4495,
+      4496,
+      "transition"
+    ],
+    [
+      4514,
+      4528,
+      "transition"
+    ],
+    [
+      4514,
+      4144,
+      "call"
+    ]
+  ]
+}

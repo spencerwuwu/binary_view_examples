@@ -1,0 +1,8006 @@
+{
+  "all_nodes": {
+    "4400": {
+      "addr": 4400,
+      "size": 37,
+      "name": "_start",
+      "function_address": 4400,
+      "instructions": {
+        "4400": "",
+        "4404": "ebp, ebp",
+        "4406": "r9, rdx",
+        "4409": "rsi",
+        "4410": "rdx, rsp",
+        "4413": "rsp, 0xfffffffffffffff0",
+        "4417": "rax",
+        "4418": "rsp",
+        "4419": "r8d, r8d",
+        "4422": "ecx, ecx",
+        "4424": "rdi, [rip + 0xd1]",
+        "4431": "qword ptr [rip + 0x3e83]"
+      },
+      "successors": [
+        [
+          1048576,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": []
+    },
+    "1048576": {
+      "addr": 1048576,
+      "size": null,
+      "name": "__libc_start_main",
+      "function_address": 1048576,
+      "instructions": [],
+      "successors": [
+        [
+          4640,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4400,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4640": {
+      "addr": 4640,
+      "size": 24,
+      "name": "main",
+      "function_address": 4640,
+      "instructions": {
+        "4640": "rbx",
+        "4641": "rsp, 0x10",
+        "4645": "qword ptr [rsp + 8], 0",
+        "4654": "ebx, 1",
+        "4659": "edi, 2",
+        "4662": "0x124a"
+      },
+      "successors": [
+        [
+          4664,
+          "Ijk_Boring"
+        ],
+        [
+          4682,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048576,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4664": {
+      "addr": 4664,
+      "size": 14,
+      "name": "main+0x18",
+      "function_address": 4640,
+      "instructions": {
+        "4664": "rdi, qword ptr [rsi + 8]",
+        "4668": "rsi, [rsp + 8]",
+        "4673": "0x1a70"
+      },
+      "successors": [
+        [
+          6768,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4640,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4682": {
+      "addr": 4682,
+      "size": 8,
+      "name": "main+0x2a",
+      "function_address": 4640,
+      "instructions": {
+        "4682": "eax, ebx",
+        "4684": "rsp, 0x10",
+        "4688": "rbx",
+        "4689": ""
+      },
+      "successors": [
+        [
+          2101352,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4640,
+          "Ijk_Boring"
+        ],
+        [
+          4678,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6768": {
+      "addr": 6768,
+      "size": 47,
+      "name": "load_png",
+      "function_address": 6768,
+      "instructions": {
+        "6768": "rbp",
+        "6769": "r15",
+        "6771": "r14",
+        "6773": "r13",
+        "6775": "r12",
+        "6777": "rbx",
+        "6778": "rsp, 0x48",
+        "6782": "r14, rsi",
+        "6785": "rbx, rdi",
+        "6788": "qword ptr [rsp + 0x38], 0",
+        "6797": "dword ptr [rsp + 0x34], 0",
+        "6805": "edi, 0x14",
+        "6810": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4664,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "2101352": {
+      "addr": 2101352,
+      "size": null,
+      "name": "PathTerminator",
+      "function_address": 2101352,
+      "instructions": [],
+      "successors": [
+        [
+          4437,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          2101352,
+          "Ijk_Exit"
+        ]
+      ]
+    },
+    "4288": {
+      "addr": 4288,
+      "size": 6,
+      "name": null,
+      "function_address": 4288,
+      "instructions": {
+        "4288": "qword ptr [rip + 0x3f9a]"
+      },
+      "successors": [
+        [
+          1048656,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7511,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "1048656": {
+      "addr": 1048656,
+      "size": null,
+      "name": "malloc",
+      "function_address": 1048656,
+      "instructions": [],
+      "successors": [
+        [
+          7532,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4288,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6815": {
+      "addr": 6815,
+      "size": 18,
+      "name": "load_png+0x2f",
+      "function_address": 6768,
+      "instructions": {
+        "6815": "r13, rax",
+        "6818": "rsi, [rip + 0x159a]",
+        "6825": "rdi, rbx",
+        "6828": "0x1100"
+      },
+      "successors": [
+        [
+          4352,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048656,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4352": {
+      "addr": 4352,
+      "size": 6,
+      "name": null,
+      "function_address": 4352,
+      "instructions": {
+        "4352": "qword ptr [rip + 0x3f7a]"
+      },
+      "successors": [
+        [
+          1048688,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6815,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "1048688": {
+      "addr": 1048688,
+      "size": null,
+      "name": "fopen",
+      "function_address": 1048688,
+      "instructions": [],
+      "successors": [
+        [
+          6833,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4352,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6833": {
+      "addr": 6833,
+      "size": 5,
+      "name": "load_png+0x41",
+      "function_address": 6768,
+      "instructions": {
+        "6833": "rax, rax",
+        "6836": "0x1b08"
+      },
+      "successors": [
+        [
+          6920,
+          "Ijk_Boring"
+        ],
+        [
+          6838,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048688,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6920": {
+      "addr": 6920,
+      "size": 10,
+      "name": "load_png+0x98",
+      "function_address": 6768,
+      "instructions": {
+        "6920": "r15d, r15d",
+        "6923": "ebp, ebp",
+        "6925": "r13, r13",
+        "6928": "0x1b28"
+      },
+      "successors": [
+        [
+          6952,
+          "Ijk_Boring"
+        ],
+        [
+          6930,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6833,
+          "Ijk_Boring"
+        ],
+        [
+          1048608,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6838": {
+      "addr": 6838,
+      "size": 26,
+      "name": "load_png+0x46",
+      "function_address": 6768,
+      "instructions": {
+        "6838": "rbx, rax",
+        "6841": "rdi, [rsp + 0x40]",
+        "6846": "esi, 8",
+        "6851": "edx, 1",
+        "6856": "rcx, rax",
+        "6859": "0x1050"
+      },
+      "successors": [
+        [
+          4176,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6833,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6952": {
+      "addr": 6952,
+      "size": 5,
+      "name": "load_png+0xb8",
+      "function_address": 6768,
+      "instructions": {
+        "6952": "r15, r15",
+        "6955": "0x1b35"
+      },
+      "successors": [
+        [
+          6965,
+          "Ijk_Boring"
+        ],
+        [
+          6957,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6920,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ],
+        [
+          8105,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6930": {
+      "addr": 6930,
+      "size": 9,
+      "name": "load_png+0xa2",
+      "function_address": 6768,
+      "instructions": {
+        "6930": "rdi, qword ptr [r13 + 8]",
+        "6934": "rdi, rdi",
+        "6937": "0x1b20"
+      },
+      "successors": [
+        [
+          6944,
+          "Ijk_Boring"
+        ],
+        [
+          6939,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6920,
+          "Ijk_Boring"
+        ],
+        [
+          8093,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4176": {
+      "addr": 4176,
+      "size": 6,
+      "name": null,
+      "function_address": 4176,
+      "instructions": {
+        "4176": "qword ptr [rip + 0x3fd2]"
+      },
+      "successors": [
+        [
+          1048600,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5368,
+          "Ijk_Call"
+        ],
+        [
+          5368,
+          "Ijk_Call"
+        ],
+        [
+          5368,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "6965": {
+      "addr": 6965,
+      "size": 10,
+      "name": "load_png+0xc5",
+      "function_address": 6768,
+      "instructions": {
+        "6965": "ebx, 1",
+        "6970": "rbp, rbp",
+        "6973": "0x1b47"
+      },
+      "successors": [
+        [
+          6983,
+          "Ijk_Boring"
+        ],
+        [
+          6975,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6952,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6957": {
+      "addr": 6957,
+      "size": 8,
+      "name": "load_png+0xbd",
+      "function_address": 6768,
+      "instructions": {
+        "6957": "rdi, r15",
+        "6960": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6952,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6944": {
+      "addr": 6944,
+      "size": 8,
+      "name": "load_png+0xb0",
+      "function_address": 6768,
+      "instructions": {
+        "6944": "rdi, r13",
+        "6947": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6930,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6939": {
+      "addr": 6939,
+      "size": 5,
+      "name": "load_png+0xab",
+      "function_address": 6768,
+      "instructions": {
+        "6939": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6930,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "1048600": {
+      "addr": 1048600,
+      "size": null,
+      "name": "fread",
+      "function_address": 1048600,
+      "instructions": [],
+      "successors": [
+        [
+          5387,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4176,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6983": {
+      "addr": 6983,
+      "size": 17,
+      "name": "load_png+0xd7",
+      "function_address": 6768,
+      "instructions": {
+        "6983": "eax, ebx",
+        "6985": "rsp, 0x48",
+        "6989": "rbx",
+        "6990": "r12",
+        "6992": "r13",
+        "6994": "r14",
+        "6996": "r15",
+        "6998": "rbp",
+        "6999": ""
+      },
+      "successors": [
+        [
+          4678,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          6965,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ],
+        [
+          8058,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6975": {
+      "addr": 6975,
+      "size": 8,
+      "name": "load_png+0xcf",
+      "function_address": 6768,
+      "instructions": {
+        "6975": "rdi, rbp",
+        "6978": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6965,
+          "Ijk_Boring"
+        ],
+        [
+          8047,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4144": {
+      "addr": 4144,
+      "size": 6,
+      "name": null,
+      "function_address": 4144,
+      "instructions": {
+        "4144": "qword ptr [rip + 0x3fe2]"
+      },
+      "successors": [
+        [
+          1048584,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6223,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "6864": {
+      "addr": 6864,
+      "size": 6,
+      "name": "load_png+0x60",
+      "function_address": 6768,
+      "instructions": {
+        "6864": "rax, 1",
+        "6868": "0x1b00"
+      },
+      "successors": [
+        [
+          6870,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048600,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4678": {
+      "addr": 4678,
+      "size": 4,
+      "name": "main+0x26",
+      "function_address": 4640,
+      "instructions": {
+        "4678": "eax, eax",
+        "4680": "0x1252"
+      },
+      "successors": [
+        [
+          4682,
+          "Ijk_Boring"
+        ],
+        [
+          4690,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6983,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "1048584": {
+      "addr": 1048584,
+      "size": null,
+      "name": "free",
+      "function_address": 1048584,
+      "instructions": [],
+      "successors": [
+        [
+          6233,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4144,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6870": {
+      "addr": 6870,
+      "size": 17,
+      "name": "load_png+0x66",
+      "function_address": 6768,
+      "instructions": {
+        "6870": "rax, 0xa1a0a0d474e5089",
+        "6880": "qword ptr [rsp + 0x40], rax",
+        "6885": "0x1b00"
+      },
+      "successors": [
+        [
+          6887,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6864,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6912": {
+      "addr": 6912,
+      "size": 8,
+      "name": "load_png+0x90",
+      "function_address": 6768,
+      "instructions": {
+        "6912": "rdi, rbx",
+        "6915": "0x1060"
+      },
+      "successors": [
+        [
+          4192,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6864,
+          "Ijk_Boring"
+        ],
+        [
+          6870,
+          "Ijk_Boring"
+        ],
+        [
+          6898,
+          "Ijk_Boring"
+        ],
+        [
+          6902,
+          "Ijk_Boring"
+        ],
+        [
+          7078,
+          "Ijk_Boring"
+        ],
+        [
+          7221,
+          "Ijk_Boring"
+        ],
+        [
+          7111,
+          "Ijk_Boring"
+        ],
+        [
+          7102,
+          "Ijk_Boring"
+        ],
+        [
+          7271,
+          "Ijk_Boring"
+        ],
+        [
+          7131,
+          "Ijk_Boring"
+        ],
+        [
+          7282,
+          "Ijk_Boring"
+        ],
+        [
+          7141,
+          "Ijk_Boring"
+        ],
+        [
+          7151,
+          "Ijk_Boring"
+        ],
+        [
+          7161,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4690": {
+      "addr": 4690,
+      "size": 28,
+      "name": "main+0x32",
+      "function_address": 4640,
+      "instructions": {
+        "4690": "rax, qword ptr [rsp + 8]",
+        "4695": "esi, word ptr [rax]",
+        "4698": "edx, word ptr [rax + 2]",
+        "4702": "rdi, [rip + 0x1d9f]",
+        "4709": "ebx, ebx",
+        "4711": "eax, eax",
+        "4713": "0x1070"
+      },
+      "successors": [
+        [
+          4208,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4678,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6887": {
+      "addr": 6887,
+      "size": 11,
+      "name": "load_png+0x77",
+      "function_address": 6768,
+      "instructions": {
+        "6887": "rdi, rbx",
+        "6890": "rsi, r13",
+        "6893": "0x14a0"
+      },
+      "successors": [
+        [
+          5280,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6870,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4192": {
+      "addr": 4192,
+      "size": 6,
+      "name": null,
+      "function_address": 4192,
+      "instructions": {
+        "4192": "qword ptr [rip + 0x3fca]"
+      },
+      "successors": [
+        [
+          1048608,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7985,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4208": {
+      "addr": 4208,
+      "size": 6,
+      "name": null,
+      "function_address": 4208,
+      "instructions": {
+        "4208": "qword ptr [rip + 0x3fc2]"
+      },
+      "successors": [
+        [
+          1048616,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4690,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "5280": {
+      "addr": 5280,
+      "size": 42,
+      "name": "read_png_chunk",
+      "function_address": 5280,
+      "instructions": {
+        "5280": "rbp",
+        "5281": "r15",
+        "5283": "r14",
+        "5285": "rbx",
+        "5286": "rax",
+        "5287": "rbx, rsi",
+        "5290": "r15, rdi",
+        "5293": "qword ptr [rsi + 8], 0",
+        "5301": "esi, 4",
+        "5306": "edx, 2",
+        "5311": "rdi, rbx",
+        "5314": "rcx, r15",
+        "5317": "0x1050"
+      },
+      "successors": [
+        [
+          4176,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7532,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "1048608": {
+      "addr": 1048608,
+      "size": null,
+      "name": "fclose",
+      "function_address": 1048608,
+      "instructions": [],
+      "successors": [
+        [
+          7993,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4192,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "1048616": {
+      "addr": 1048616,
+      "size": null,
+      "name": "printf",
+      "function_address": 1048616,
+      "instructions": [],
+      "successors": [
+        [
+          4718,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4208,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4718": {
+      "addr": 4718,
+      "size": 14,
+      "name": "main+0x4e",
+      "function_address": 4640,
+      "instructions": {
+        "4718": "rax, qword ptr [rsp + 8]",
+        "4723": "rdi, qword ptr [rax + 8]",
+        "4727": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048616,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "5322": {
+      "addr": 5322,
+      "size": 10,
+      "name": "read_png_chunk+0x2a",
+      "function_address": 5280,
+      "instructions": {
+        "5322": "rax, 2",
+        "5326": "0x156a"
+      },
+      "successors": [
+        [
+          5332,
+          "Ijk_Boring"
+        ],
+        [
+          5482,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "5332": {
+      "addr": 5332,
+      "size": 12,
+      "name": "read_png_chunk+0x34",
+      "function_address": 5280,
+      "instructions": {
+        "5332": "ecx, dword ptr [rbx]",
+        "5334": "eax, ecx",
+        "5336": "eax",
+        "5338": "dword ptr [rbx], eax",
+        "5340": "ecx, ecx",
+        "5342": "0x1511"
+      },
+      "successors": [
+        [
+          5393,
+          "Ijk_Boring"
+        ],
+        [
+          5344,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5322,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5482": {
+      "addr": 5482,
+      "size": 14,
+      "name": "read_png_chunk+0xca",
+      "function_address": 5280,
+      "instructions": {
+        "5482": "rdi, qword ptr [rbx + 8]",
+        "5486": "ebp, 1",
+        "5491": "rdi, rdi",
+        "5494": "0x157d"
+      },
+      "successors": [
+        [
+          5501,
+          "Ijk_Boring"
+        ],
+        [
+          5496,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5322,
+          "Ijk_Boring"
+        ],
+        [
+          5418,
+          "Ijk_Boring"
+        ],
+        [
+          5475,
+          "Ijk_Boring"
+        ],
+        [
+          5387,
+          "Ijk_Boring"
+        ],
+        [
+          5472,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4732": {
+      "addr": 4732,
+      "size": 10,
+      "name": "main+0x5c",
+      "function_address": 4640,
+      "instructions": {
+        "4732": "rdi, qword ptr [rsp + 8]",
+        "4737": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "5393": {
+      "addr": 5393,
+      "size": 25,
+      "name": "read_png_chunk+0x71",
+      "function_address": 5280,
+      "instructions": {
+        "5393": "r14, [rbx + 0x10]",
+        "5397": "esi, 4",
+        "5402": "edx, 1",
+        "5407": "rdi, r14",
+        "5410": "rcx, r15",
+        "5413": "0x1050"
+      },
+      "successors": [
+        [
+          4176,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5332,
+          "Ijk_Boring"
+        ],
+        [
+          5387,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5344": {
+      "addr": 5344,
+      "size": 11,
+      "name": "read_png_chunk+0x40",
+      "function_address": 5280,
+      "instructions": {
+        "5344": "r14d, eax",
+        "5347": "rdi, r14",
+        "5350": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5332,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5501": {
+      "addr": 5501,
+      "size": 13,
+      "name": "read_png_chunk+0xdd",
+      "function_address": 5280,
+      "instructions": {
+        "5501": "eax, ebp",
+        "5503": "rsp, 8",
+        "5507": "rbx",
+        "5508": "r14",
+        "5510": "r15",
+        "5512": "rbp",
+        "5513": ""
+      },
+      "successors": [
+        [
+          7546,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          5482,
+          "Ijk_Boring"
+        ],
+        [
+          5514,
+          "Ijk_Boring"
+        ],
+        [
+          5475,
+          "Ijk_Boring"
+        ],
+        [
+          5472,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5496": {
+      "addr": 5496,
+      "size": 5,
+      "name": "read_png_chunk+0xd8",
+      "function_address": 5280,
+      "instructions": {
+        "5496": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5482,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6898": {
+      "addr": 6898,
+      "size": 4,
+      "name": "load_png+0x82",
+      "function_address": 6768,
+      "instructions": {
+        "6898": "eax, eax",
+        "6900": "0x1b00"
+      },
+      "successors": [
+        [
+          6912,
+          "Ijk_Boring"
+        ],
+        [
+          6902,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5501,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6902": {
+      "addr": 6902,
+      "size": 10,
+      "name": "load_png+0x86",
+      "function_address": 6768,
+      "instructions": {
+        "6902": "dword ptr [r13 + 4], 0x52444849",
+        "6910": "0x1b58"
+      },
+      "successors": [
+        [
+          7000,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6898,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4742": {
+      "addr": 4742,
+      "size": 8,
+      "name": "main+0x66",
+      "function_address": 4640,
+      "instructions": {
+        "4742": "eax, ebx",
+        "4744": "rsp, 0x10",
+        "4748": "rbx",
+        "4749": ""
+      },
+      "successors": [
+        [
+          2101352,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "5418": {
+      "addr": 5418,
+      "size": 6,
+      "name": "read_png_chunk+0x8a",
+      "function_address": 5280,
+      "instructions": {
+        "5418": "rax, 1",
+        "5422": "0x156a"
+      },
+      "successors": [
+        [
+          5424,
+          "Ijk_Boring"
+        ],
+        [
+          5482,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "5355": {
+      "addr": 5355,
+      "size": 13,
+      "name": "read_png_chunk+0x4b",
+      "function_address": 5280,
+      "instructions": {
+        "5355": "qword ptr [rbx + 8], rax",
+        "5359": "rax, rax",
+        "5362": "0x158a"
+      },
+      "successors": [
+        [
+          5514,
+          "Ijk_Boring"
+        ],
+        [
+          5368,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "7000": {
+      "addr": 7000,
+      "size": 10,
+      "name": "load_png+0xe8",
+      "function_address": 6768,
+      "instructions": {
+        "7000": "dword ptr [r13 + 4], 0x52444849",
+        "7008": "0x1ba6"
+      },
+      "successors": [
+        [
+          7078,
+          "Ijk_Boring"
+        ],
+        [
+          7010,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6902,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5424": {
+      "addr": 5424,
+      "size": 22,
+      "name": "read_png_chunk+0x90",
+      "function_address": 5280,
+      "instructions": {
+        "5424": "eax, dword ptr [rbx + 0x10]",
+        "5427": "eax",
+        "5429": "dword ptr [rbx + 0x10], eax",
+        "5432": "rdi, [rbx + 4]",
+        "5436": "esi, 4",
+        "5441": "0x2e80"
+      },
+      "successors": [
+        [
+          11904,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5418,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5514": {
+      "addr": 5514,
+      "size": 7,
+      "name": "read_png_chunk+0xea",
+      "function_address": 5280,
+      "instructions": {
+        "5514": "ebp, 1",
+        "5519": "0x157d"
+      },
+      "successors": [
+        [
+          5501,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5355,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5368": {
+      "addr": 5368,
+      "size": 19,
+      "name": "read_png_chunk+0x58",
+      "function_address": 5280,
+      "instructions": {
+        "5368": "edx, 1",
+        "5373": "rdi, rax",
+        "5376": "rsi, r14",
+        "5379": "rcx, r15",
+        "5382": "0x1050"
+      },
+      "successors": [
+        [
+          4176,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5355,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7078": {
+      "addr": 7078,
+      "size": 11,
+      "name": "load_png+0x136",
+      "function_address": 6768,
+      "instructions": {
+        "7078": "dword ptr [r13], 0xd",
+        "7083": "0x1b00"
+      },
+      "successors": [
+        [
+          7089,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7000,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7010": {
+      "addr": 7010,
+      "size": 14,
+      "name": "load_png+0xf2",
+      "function_address": 6768,
+      "instructions": {
+        "7010": "dword ptr [r13 + 4], 0x45544c50",
+        "7018": "0x1c35"
+      },
+      "successors": [
+        [
+          7221,
+          "Ijk_Boring"
+        ],
+        [
+          7024,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7000,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11904": {
+      "addr": 11904,
+      "size": 21,
+      "name": "crc",
+      "function_address": 11904,
+      "instructions": {
+        "11904": "rbx",
+        "11905": "edx, esi",
+        "11907": "rsi, rdi",
+        "11910": "ebx, 0xffffffff",
+        "11915": "edi, 0xffffffff",
+        "11920": "0x2c60"
+      },
+      "successors": [
+        [
+          11360,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5424,
+          "Ijk_Call"
+        ],
+        [
+          5424,
+          "Ijk_Call"
+        ],
+        [
+          5424,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "7089": {
+      "addr": 7089,
+      "size": 13,
+      "name": "load_png+0x141",
+      "function_address": 6768,
+      "instructions": {
+        "7089": "rax, qword ptr [r13 + 8]",
+        "7093": "ecx, byte ptr [rax + 9]",
+        "7097": "ecx, 6",
+        "7100": "0x1bc7"
+      },
+      "successors": [
+        [
+          7111,
+          "Ijk_Boring"
+        ],
+        [
+          7102,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7078,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7221": {
+      "addr": 7221,
+      "size": 19,
+      "name": "load_png+0x1c5",
+      "function_address": 6768,
+      "instructions": {
+        "7221": "eax, dword ptr [r13], 0xaaaaaaab",
+        "7229": "eax, 0x55555556",
+        "7234": "0x1b00"
+      },
+      "successors": [
+        [
+          7240,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7010,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7024": {
+      "addr": 7024,
+      "size": 14,
+      "name": "load_png+0x100",
+      "function_address": 6768,
+      "instructions": {
+        "7024": "dword ptr [r13 + 4], 0x444e4549",
+        "7032": "0x1c67"
+      },
+      "successors": [
+        [
+          7271,
+          "Ijk_Boring"
+        ],
+        [
+          7038,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7010,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11360": {
+      "addr": 11360,
+      "size": 16,
+      "name": "update_crc",
+      "function_address": 11360,
+      "instructions": {
+        "11360": "rax, rdi",
+        "11363": "dword ptr [rip + 0x2446], 0",
+        "11370": "0x2e08"
+      },
+      "successors": [
+        [
+          11376,
+          "Ijk_Boring"
+        ],
+        [
+          11784,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5452,
+          "Ijk_Call"
+        ],
+        [
+          5452,
+          "Ijk_Call"
+        ],
+        [
+          5452,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "7111": {
+      "addr": 7111,
+      "size": 20,
+      "name": "load_png+0x157",
+      "function_address": 6768,
+      "instructions": {
+        "7111": "cl, 3",
+        "7114": "dl",
+        "7117": "cl, 6",
+        "7120": "cl",
+        "7123": "dl, cl",
+        "7125": "0x1b00"
+      },
+      "successors": [
+        [
+          7131,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7089,
+          "Ijk_Boring"
+        ],
+        [
+          7102,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7102": {
+      "addr": 7102,
+      "size": 9,
+      "name": "load_png+0x14e",
+      "function_address": 6768,
+      "instructions": {
+        "7102": "ecx, 3",
+        "7105": "0x1b00"
+      },
+      "successors": [
+        [
+          7111,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7089,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7240": {
+      "addr": 7240,
+      "size": 31,
+      "name": "load_png+0x1d8",
+      "function_address": 6768,
+      "instructions": {
+        "7240": "eax, eax",
+        "7242": "qword ptr [rsp + 0x28], rax",
+        "7247": "eax, eax",
+        "7249": "qword ptr [rsp + 0x18], rax",
+        "7254": "qword ptr [rsp + 8], r13",
+        "7259": "eax, eax",
+        "7261": "qword ptr [rsp + 0x10], rax",
+        "7266": "r15d, r15d",
+        "7269": "0x1cdf"
+      },
+      "successors": [
+        [
+          7391,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7221,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7271": {
+      "addr": 7271,
+      "size": 11,
+      "name": "load_png+0x1f7",
+      "function_address": 6768,
+      "instructions": {
+        "7271": "dword ptr [r13], 0",
+        "7276": "0x1b00"
+      },
+      "successors": [
+        [
+          7282,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7024,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7038": {
+      "addr": 7038,
+      "size": 14,
+      "name": "load_png+0x10e",
+      "function_address": 6768,
+      "instructions": {
+        "7038": "dword ptr [r13 + 4], 0x54414449",
+        "7046": "0x1c8e"
+      },
+      "successors": [
+        [
+          7310,
+          "Ijk_Boring"
+        ],
+        [
+          7052,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7024,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11376": {
+      "addr": 11376,
+      "size": 398,
+      "name": "update_crc+0x10",
+      "function_address": 11360,
+      "instructions": {
+        "11376": "xmm0, xmmword ptr [rip + 0x3d8]",
+        "11384": "ecx, ecx",
+        "11386": "xmm1, xmmword ptr [rip + 0x3de]",
+        "11394": "rdi, [rip + 0x2437]",
+        "11401": "xmm2, xmmword ptr [rip + 0x3df]",
+        "11409": "word ptr cs:[rax + rax]",
+        "11424": "xmm3, xmm0",
+        "11428": "xmm4, xmm0, 0xa0",
+        "11433": "xmm4, 0x1f",
+        "11438": "xmm4, 0x1f",
+        "11443": "xmm3, 1",
+        "11448": "xmm5, xmm4",
+        "11452": "xmm5, xmm3",
+        "11456": "xmm3, xmm1",
+        "11460": "xmm3, xmm4",
+        "11464": "xmm3, xmm5",
+        "11468": "xmm4, xmm3, 0xa0",
+        "11473": "xmm4, 0x1f",
+        "11478": "xmm3, 1",
+        "11483": "xmm4, 0x1f",
+        "11488": "xmm5, xmm4",
+        "11492": "xmm5, xmm3",
+        "11496": "xmm3, xmm1",
+        "11500": "xmm3, xmm4",
+        "11504": "xmm3, xmm5",
+        "11508": "xmm4, xmm3, 0xa0",
+        "11513": "xmm3, 1",
+        "11518": "xmm4, 0x1f",
+        "11523": "xmm4, 0x1f",
+        "11528": "xmm5, xmm4",
+        "11532": "xmm5, xmm3",
+        "11536": "xmm3, xmm1",
+        "11540": "xmm3, xmm4",
+        "11544": "xmm3, xmm5",
+        "11548": "xmm4, xmm3, 0xa0",
+        "11553": "xmm3, 1",
+        "11558": "xmm4, 0x1f",
+        "11563": "xmm4, 0x1f",
+        "11568": "xmm5, xmm4",
+        "11572": "xmm5, xmm3",
+        "11576": "xmm3, xmm1",
+        "11580": "xmm3, xmm4",
+        "11584": "xmm3, xmm5",
+        "11588": "xmm4, xmm3, 0xa0",
+        "11593": "xmm4, 0x1f",
+        "11598": "xmm4, 0x1f",
+        "11603": "xmm3, 1",
+        "11608": "xmm5, xmm4",
+        "11612": "xmm5, xmm3",
+        "11616": "xmm3, xmm1",
+        "11620": "xmm3, xmm4",
+        "11624": "xmm3, xmm5",
+        "11628": "xmm4, xmm3, 0xa0",
+        "11633": "xmm4, 0x1f",
+        "11638": "xmm3, 1",
+        "11643": "xmm4, 0x1f",
+        "11648": "xmm5, xmm4",
+        "11652": "xmm5, xmm3",
+        "11656": "xmm3, xmm1",
+        "11660": "xmm3, xmm4",
+        "11664": "xmm3, xmm5",
+        "11668": "xmm4, xmm3, 0xa0",
+        "11673": "xmm3, 1",
+        "11678": "xmm4, 0x1f",
+        "11683": "xmm4, 0x1f",
+        "11688": "xmm5, xmm4",
+        "11692": "xmm5, xmm3",
+        "11696": "xmm3, xmm1",
+        "11700": "xmm3, xmm4",
+        "11704": "xmm3, xmm5",
+        "11708": "xmm4, xmm3, 0xa0",
+        "11713": "xmm3, 1",
+        "11718": "xmm4, 0x1f",
+        "11723": "xmm4, 0x1f",
+        "11728": "xmm5, xmm4",
+        "11732": "xmm5, xmm3",
+        "11736": "xmm3, xmm1",
+        "11740": "xmm3, xmm4",
+        "11744": "xmm3, xmm5",
+        "11748": "xmmword ptr [rcx + rdi], xmm3",
+        "11753": "xmm0, xmm2",
+        "11757": "rcx, 0x10",
+        "11761": "rcx, 0x800",
+        "11768": "0x2ca0"
+      },
+      "successors": [
+        [
+          11424,
+          "Ijk_Boring"
+        ],
+        [
+          11774,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11360,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11784": {
+      "addr": 11784,
+      "size": 4,
+      "name": "update_crc+0x1a8",
+      "function_address": 11360,
+      "instructions": {
+        "11784": "edx, edx",
+        "11786": "0x2e7f"
+      },
+      "successors": [
+        [
+          11903,
+          "Ijk_Boring"
+        ],
+        [
+          11788,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11360,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5387": {
+      "addr": 5387,
+      "size": 6,
+      "name": "read_png_chunk+0x6b",
+      "function_address": 5280,
+      "instructions": {
+        "5387": "rax, 1",
+        "5391": "0x156a"
+      },
+      "successors": [
+        [
+          5393,
+          "Ijk_Boring"
+        ],
+        [
+          5482,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "7131": {
+      "addr": 7131,
+      "size": 10,
+      "name": "load_png+0x16b",
+      "function_address": 6768,
+      "instructions": {
+        "7131": "byte ptr [rax + 8], 8",
+        "7135": "0x1b00"
+      },
+      "successors": [
+        [
+          7141,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7111,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7391": {
+      "addr": 7391,
+      "size": 13,
+      "name": "load_png+0x26f",
+      "function_address": 6768,
+      "instructions": {
+        "7391": "r13d, r13d",
+        "7394": "edi, 0x14",
+        "7399": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7240,
+          "Ijk_Boring"
+        ],
+        [
+          7259,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7282": {
+      "addr": 7282,
+      "size": 11,
+      "name": "load_png+0x202",
+      "function_address": 6768,
+      "instructions": {
+        "7282": "qword ptr [r13 + 8], 0",
+        "7287": "0x1b00"
+      },
+      "successors": [
+        [
+          7293,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7271,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7310": {
+      "addr": 7310,
+      "size": 12,
+      "name": "load_png+0x21e",
+      "function_address": 6768,
+      "instructions": {
+        "7310": "r12d, dword ptr [r13]",
+        "7314": "rdi, r12",
+        "7317": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7038,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7052": {
+      "addr": 7052,
+      "size": 26,
+      "name": "load_png+0x11c",
+      "function_address": 6768,
+      "instructions": {
+        "7052": "eax, eax",
+        "7054": "qword ptr [rsp + 0x28], rax",
+        "7059": "eax, eax",
+        "7061": "qword ptr [rsp + 0x18], rax",
+        "7066": "eax, eax",
+        "7068": "qword ptr [rsp + 8], rax",
+        "7073": "0x1c5b"
+      },
+      "successors": [
+        [
+          7259,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7038,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11424": {
+      "addr": 11424,
+      "size": 350,
+      "name": "update_crc+0x40",
+      "function_address": 11360,
+      "instructions": {
+        "11424": "xmm3, xmm0",
+        "11428": "xmm4, xmm0, 0xa0",
+        "11433": "xmm4, 0x1f",
+        "11438": "xmm4, 0x1f",
+        "11443": "xmm3, 1",
+        "11448": "xmm5, xmm4",
+        "11452": "xmm5, xmm3",
+        "11456": "xmm3, xmm1",
+        "11460": "xmm3, xmm4",
+        "11464": "xmm3, xmm5",
+        "11468": "xmm4, xmm3, 0xa0",
+        "11473": "xmm4, 0x1f",
+        "11478": "xmm3, 1",
+        "11483": "xmm4, 0x1f",
+        "11488": "xmm5, xmm4",
+        "11492": "xmm5, xmm3",
+        "11496": "xmm3, xmm1",
+        "11500": "xmm3, xmm4",
+        "11504": "xmm3, xmm5",
+        "11508": "xmm4, xmm3, 0xa0",
+        "11513": "xmm3, 1",
+        "11518": "xmm4, 0x1f",
+        "11523": "xmm4, 0x1f",
+        "11528": "xmm5, xmm4",
+        "11532": "xmm5, xmm3",
+        "11536": "xmm3, xmm1",
+        "11540": "xmm3, xmm4",
+        "11544": "xmm3, xmm5",
+        "11548": "xmm4, xmm3, 0xa0",
+        "11553": "xmm3, 1",
+        "11558": "xmm4, 0x1f",
+        "11563": "xmm4, 0x1f",
+        "11568": "xmm5, xmm4",
+        "11572": "xmm5, xmm3",
+        "11576": "xmm3, xmm1",
+        "11580": "xmm3, xmm4",
+        "11584": "xmm3, xmm5",
+        "11588": "xmm4, xmm3, 0xa0",
+        "11593": "xmm4, 0x1f",
+        "11598": "xmm4, 0x1f",
+        "11603": "xmm3, 1",
+        "11608": "xmm5, xmm4",
+        "11612": "xmm5, xmm3",
+        "11616": "xmm3, xmm1",
+        "11620": "xmm3, xmm4",
+        "11624": "xmm3, xmm5",
+        "11628": "xmm4, xmm3, 0xa0",
+        "11633": "xmm4, 0x1f",
+        "11638": "xmm3, 1",
+        "11643": "xmm4, 0x1f",
+        "11648": "xmm5, xmm4",
+        "11652": "xmm5, xmm3",
+        "11656": "xmm3, xmm1",
+        "11660": "xmm3, xmm4",
+        "11664": "xmm3, xmm5",
+        "11668": "xmm4, xmm3, 0xa0",
+        "11673": "xmm3, 1",
+        "11678": "xmm4, 0x1f",
+        "11683": "xmm4, 0x1f",
+        "11688": "xmm5, xmm4",
+        "11692": "xmm5, xmm3",
+        "11696": "xmm3, xmm1",
+        "11700": "xmm3, xmm4",
+        "11704": "xmm3, xmm5",
+        "11708": "xmm4, xmm3, 0xa0",
+        "11713": "xmm3, 1",
+        "11718": "xmm4, 0x1f",
+        "11723": "xmm4, 0x1f",
+        "11728": "xmm5, xmm4",
+        "11732": "xmm5, xmm3",
+        "11736": "xmm3, xmm1",
+        "11740": "xmm3, xmm4",
+        "11744": "xmm3, xmm5",
+        "11748": "xmmword ptr [rcx + rdi], xmm3",
+        "11753": "xmm0, xmm2",
+        "11757": "rcx, 0x10",
+        "11761": "rcx, 0x800",
+        "11768": "0x2ca0"
+      },
+      "successors": [
+        [
+          11424,
+          "Ijk_Boring"
+        ],
+        [
+          11774,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11376,
+          "Ijk_Boring"
+        ],
+        [
+          11424,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11774": {
+      "addr": 11774,
+      "size": 14,
+      "name": "update_crc+0x19e",
+      "function_address": 11360,
+      "instructions": {
+        "11774": "dword ptr [rip + 0x22a8], 1",
+        "11784": "edx, edx",
+        "11786": "0x2e7f"
+      },
+      "successors": [
+        [
+          11903,
+          "Ijk_Boring"
+        ],
+        [
+          11788,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11376,
+          "Ijk_Boring"
+        ],
+        [
+          11424,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11788": {
+      "addr": 11788,
+      "size": 7,
+      "name": "update_crc+0x1ac",
+      "function_address": 11360,
+      "instructions": {
+        "11788": "ecx, edx",
+        "11790": "edx, 1",
+        "11793": "0x2e17"
+      },
+      "successors": [
+        [
+          11795,
+          "Ijk_Boring"
+        ],
+        [
+          11799,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11784,
+          "Ijk_Boring"
+        ],
+        [
+          11774,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11903": {
+      "addr": 11903,
+      "size": 1,
+      "name": "update_crc+0x21f",
+      "function_address": 11360,
+      "instructions": {
+        "11903": ""
+      },
+      "successors": [
+        [
+          5472,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          11784,
+          "Ijk_Boring"
+        ],
+        [
+          11774,
+          "Ijk_Boring"
+        ],
+        [
+          11874,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7141": {
+      "addr": 7141,
+      "size": 10,
+      "name": "load_png+0x175",
+      "function_address": 6768,
+      "instructions": {
+        "7141": "byte ptr [rax + 0xa], 0",
+        "7145": "0x1b00"
+      },
+      "successors": [
+        [
+          7151,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7131,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7293": {
+      "addr": 7293,
+      "size": 17,
+      "name": "load_png+0x20d",
+      "function_address": 6768,
+      "instructions": {
+        "7293": "eax, eax",
+        "7295": "qword ptr [rsp + 0x18], rax",
+        "7300": "qword ptr [rsp + 0x28], r13",
+        "7305": "0x1b9a"
+      },
+      "successors": [
+        [
+          7066,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7282,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7259": {
+      "addr": 7259,
+      "size": 12,
+      "name": "load_png+0x1eb",
+      "function_address": 6768,
+      "instructions": {
+        "7259": "eax, eax",
+        "7261": "qword ptr [rsp + 0x10], rax",
+        "7266": "r15d, r15d",
+        "7269": "0x1cdf"
+      },
+      "successors": [
+        [
+          7391,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7052,
+          "Ijk_Boring"
+        ],
+        [
+          7066,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11799": {
+      "addr": 11799,
+      "size": 75,
+      "name": "update_crc+0x1b7",
+      "function_address": 11360,
+      "instructions": {
+        "11799": "edi, ecx",
+        "11801": "edi, 0xfffffffe",
+        "11804": "edx, edx",
+        "11806": "r8, [rip + 0x229b]",
+        "11813": "word ptr cs:[rax + rax]",
+        "11824": "r9d, byte ptr [rsi + rdx]",
+        "11829": "r9b, al",
+        "11832": "r9d, r9b",
+        "11836": "rax, 8",
+        "11840": "rax, qword ptr [r8 + r9*8]",
+        "11844": "r9d, byte ptr [rsi + rdx + 1]",
+        "11850": "r9b, al",
+        "11853": "r9d, r9b",
+        "11857": "rax, 8",
+        "11861": "rax, qword ptr [r8 + r9*8]",
+        "11865": "rdx, 2",
+        "11869": "rdi, rdx",
+        "11872": "0x2e30"
+      },
+      "successors": [
+        [
+          11874,
+          "Ijk_Boring"
+        ],
+        [
+          11824,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11788,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11795": {
+      "addr": 11795,
+      "size": 4,
+      "name": "update_crc+0x1b3",
+      "function_address": 11360,
+      "instructions": {
+        "11795": "edx, edx",
+        "11797": "0x2e62"
+      },
+      "successors": [
+        [
+          11874,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11788,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11925": {
+      "addr": 11925,
+      "size": 5,
+      "name": "crc+0x15",
+      "function_address": 11904,
+      "instructions": {
+        "11925": "rax, rbx",
+        "11928": "rbx",
+        "11929": ""
+      },
+      "successors": [
+        [
+          5446,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          11903,
+          "Ijk_Ret"
+        ],
+        [
+          11879,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7151": {
+      "addr": 7151,
+      "size": 10,
+      "name": "load_png+0x17f",
+      "function_address": 6768,
+      "instructions": {
+        "7151": "byte ptr [rax + 0xb], 0",
+        "7155": "0x1b00"
+      },
+      "successors": [
+        [
+          7161,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7141,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7066": {
+      "addr": 7066,
+      "size": 12,
+      "name": "load_png+0x12a",
+      "function_address": 6768,
+      "instructions": {
+        "7066": "eax, eax",
+        "7068": "qword ptr [rsp + 8], rax",
+        "7073": "0x1c5b"
+      },
+      "successors": [
+        [
+          7259,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7293,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11824": {
+      "addr": 11824,
+      "size": 50,
+      "name": "update_crc+0x1d0",
+      "function_address": 11360,
+      "instructions": {
+        "11824": "r9d, byte ptr [rsi + rdx]",
+        "11829": "r9b, al",
+        "11832": "r9d, r9b",
+        "11836": "rax, 8",
+        "11840": "rax, qword ptr [r8 + r9*8]",
+        "11844": "r9d, byte ptr [rsi + rdx + 1]",
+        "11850": "r9b, al",
+        "11853": "r9d, r9b",
+        "11857": "rax, 8",
+        "11861": "rax, qword ptr [r8 + r9*8]",
+        "11865": "rdx, 2",
+        "11869": "rdi, rdx",
+        "11872": "0x2e30"
+      },
+      "successors": [
+        [
+          11874,
+          "Ijk_Boring"
+        ],
+        [
+          11824,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11799,
+          "Ijk_Boring"
+        ],
+        [
+          11824,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "11874": {
+      "addr": 11874,
+      "size": 5,
+      "name": "update_crc+0x202",
+      "function_address": 11360,
+      "instructions": {
+        "11874": "cl, 1",
+        "11877": "0x2e7f"
+      },
+      "successors": [
+        [
+          11903,
+          "Ijk_Boring"
+        ],
+        [
+          11879,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          11795,
+          "Ijk_Boring"
+        ],
+        [
+          11799,
+          "Ijk_Boring"
+        ],
+        [
+          11824,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5446": {
+      "addr": 5446,
+      "size": 6,
+      "name": "read_png_chunk+0xa6",
+      "function_address": 5280,
+      "instructions": {
+        "5446": "edx, dword ptr [rbx]",
+        "5448": "edx, edx",
+        "5450": "0x1563"
+      },
+      "successors": [
+        [
+          5475,
+          "Ijk_Boring"
+        ],
+        [
+          5452,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "7161": {
+      "addr": 7161,
+      "size": 10,
+      "name": "load_png+0x189",
+      "function_address": 6768,
+      "instructions": {
+        "7161": "byte ptr [rax + 0xc], 0",
+        "7165": "0x1b00"
+      },
+      "successors": [
+        [
+          7171,
+          "Ijk_Boring"
+        ],
+        [
+          6912,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7151,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7404": {
+      "addr": 7404,
+      "size": 14,
+      "name": "load_png+0x27c",
+      "function_address": 6768,
+      "instructions": {
+        "7404": "r12, rax",
+        "7407": "rdi, rbx",
+        "7410": "rsi, rax",
+        "7413": "0x14a0"
+      },
+      "successors": [
+        [
+          5280,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048656,
+          "Ijk_Ret"
+        ],
+        [
+          1048656,
+          "Ijk_Ret"
+        ],
+        [
+          1048656,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7322": {
+      "addr": 7322,
+      "size": 28,
+      "name": "load_png+0x22a",
+      "function_address": 6768,
+      "instructions": {
+        "7322": "r15, qword ptr [r13 + 8]",
+        "7326": "qword ptr [rsp + 0x10], rax",
+        "7331": "rdi, rax",
+        "7334": "rsi, r15",
+        "7337": "qword ptr [rsp + 0x18], r12",
+        "7342": "rdx, r12",
+        "7345": "0x10a0"
+      },
+      "successors": [
+        [
+          4256,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048656,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "11879": {
+      "addr": 11879,
+      "size": 25,
+      "name": "update_crc+0x207",
+      "function_address": 11360,
+      "instructions": {
+        "11879": "ecx, byte ptr [rsi + rdx]",
+        "11883": "cl, al",
+        "11885": "ecx, cl",
+        "11888": "rdx, [rip + 0x2249]",
+        "11895": "rax, 8",
+        "11899": "rax, qword ptr [rdx + rcx*8]",
+        "11903": ""
+      },
+      "successors": [
+        [
+          5472,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          11874,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5475": {
+      "addr": 5475,
+      "size": 7,
+      "name": "read_png_chunk+0xc3",
+      "function_address": 5280,
+      "instructions": {
+        "5475": "ebp, ebp",
+        "5477": "dword ptr [r14], eax",
+        "5480": "0x157d"
+      },
+      "successors": [
+        [
+          5501,
+          "Ijk_Boring"
+        ],
+        [
+          5482,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5446,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5452": {
+      "addr": 5452,
+      "size": 20,
+      "name": "read_png_chunk+0xac",
+      "function_address": 5280,
+      "instructions": {
+        "5452": "edi, eax",
+        "5454": "r15d, 0xffffffff",
+        "5460": "rdi, r15",
+        "5463": "rsi, qword ptr [rbx + 8]",
+        "5467": "0x2c60"
+      },
+      "successors": [
+        [
+          11360,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5446,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7171": {
+      "addr": 7171,
+      "size": 50,
+      "name": "load_png+0x193",
+      "function_address": 6768,
+      "instructions": {
+        "7171": "ecx, dword ptr [rax]",
+        "7173": "edx, dword ptr [rax + 4]",
+        "7176": "edx",
+        "7178": "dword ptr [rax + 4], edx",
+        "7181": "ecx",
+        "7183": "dword ptr [rax], ecx",
+        "7185": "eax, eax",
+        "7187": "qword ptr [rsp + 0x28], rax",
+        "7192": "eax, eax",
+        "7194": "qword ptr [rsp + 0x18], rax",
+        "7199": "eax, eax",
+        "7201": "qword ptr [rsp + 8], rax",
+        "7206": "eax, eax",
+        "7208": "qword ptr [rsp + 0x10], rax",
+        "7213": "r15d, r15d",
+        "7216": "0x1ce2"
+      },
+      "successors": [
+        [
+          7394,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7161,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4256": {
+      "addr": 4256,
+      "size": 6,
+      "name": null,
+      "function_address": 4256,
+      "instructions": {
+        "4256": "qword ptr [rip + 0x3faa]"
+      },
+      "successors": [
+        [
+          1048640,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5794,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "7394": {
+      "addr": 7394,
+      "size": 10,
+      "name": "load_png+0x272",
+      "function_address": 6768,
+      "instructions": {
+        "7394": "edi, 0x14",
+        "7399": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7171,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "1048640": {
+      "addr": 1048640,
+      "size": null,
+      "name": "memcpy",
+      "function_address": 1048640,
+      "instructions": [],
+      "successors": [
+        [
+          5814,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4256,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7350": {
+      "addr": 7350,
+      "size": 5,
+      "name": "load_png+0x246",
+      "function_address": 6768,
+      "instructions": {
+        "7350": "r15, r15",
+        "7353": "0x1cc3"
+      },
+      "successors": [
+        [
+          7363,
+          "Ijk_Boring"
+        ],
+        [
+          7355,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048640,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7363": {
+      "addr": 7363,
+      "size": 8,
+      "name": "load_png+0x253",
+      "function_address": 6768,
+      "instructions": {
+        "7363": "rdi, r13",
+        "7366": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7350,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7355": {
+      "addr": 7355,
+      "size": 8,
+      "name": "load_png+0x24b",
+      "function_address": 6768,
+      "instructions": {
+        "7355": "rdi, r15",
+        "7358": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7350,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5472": {
+      "addr": 5472,
+      "size": 10,
+      "name": "read_png_chunk+0xc0",
+      "function_address": 5280,
+      "instructions": {
+        "5472": "rax, r15",
+        "5475": "ebp, ebp",
+        "5477": "dword ptr [r14], eax",
+        "5480": "0x157d"
+      },
+      "successors": [
+        [
+          5501,
+          "Ijk_Boring"
+        ],
+        [
+          5482,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "7371": {
+      "addr": 7371,
+      "size": 33,
+      "name": "load_png+0x25b",
+      "function_address": 6768,
+      "instructions": {
+        "7371": "r15d, 1",
+        "7377": "eax, eax",
+        "7379": "qword ptr [rsp + 0x28], rax",
+        "7384": "eax, eax",
+        "7386": "qword ptr [rsp + 8], rax",
+        "7391": "r13d, r13d",
+        "7394": "edi, 0x14",
+        "7399": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7418": {
+      "addr": 7418,
+      "size": 7,
+      "name": "load_png+0x28a",
+      "function_address": 6768,
+      "instructions": {
+        "7418": "rbp, r13",
+        "7421": "eax, eax",
+        "7423": "0x1d40"
+      },
+      "successors": [
+        [
+          7488,
+          "Ijk_Boring"
+        ],
+        [
+          7425,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5501,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7488": {
+      "addr": 7488,
+      "size": 15,
+      "name": "load_png+0x2d0",
+      "function_address": 6768,
+      "instructions": {
+        "7488": "dword ptr [rsp + 0x24], 0",
+        "7496": "rcx, qword ptr [rsp + 0x28]",
+        "7501": "0x1d84"
+      },
+      "successors": [
+        [
+          7556,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7418,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7425": {
+      "addr": 7425,
+      "size": 14,
+      "name": "load_png+0x291",
+      "function_address": 6768,
+      "instructions": {
+        "7425": "rcx, qword ptr [rsp + 0x28]",
+        "7430": "rcx, rcx",
+        "7433": "0x1f81"
+      },
+      "successors": [
+        [
+          8065,
+          "Ijk_Boring"
+        ],
+        [
+          7439,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7418,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7556": {
+      "addr": 7556,
+      "size": 9,
+      "name": "load_png+0x314",
+      "function_address": 6768,
+      "instructions": {
+        "7556": "rcx, rcx",
+        "7559": "0x1f81"
+      },
+      "successors": [
+        [
+          7565,
+          "Ijk_Boring"
+        ],
+        [
+          8065,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7488,
+          "Ijk_Boring"
+        ],
+        [
+          7546,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8065": {
+      "addr": 8065,
+      "size": 13,
+      "name": "load_png+0x511",
+      "function_address": 6768,
+      "instructions": {
+        "8065": "r15, qword ptr [rsp + 8]",
+        "8070": "rdi, rbx",
+        "8073": "0x1060"
+      },
+      "successors": [
+        [
+          4192,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7425,
+          "Ijk_Boring"
+        ],
+        [
+          7556,
+          "Ijk_Boring"
+        ],
+        [
+          7740,
+          "Ijk_Boring"
+        ],
+        [
+          7924,
+          "Ijk_Boring"
+        ],
+        [
+          7658,
+          "Ijk_Boring"
+        ],
+        [
+          7430,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7439": {
+      "addr": 7439,
+      "size": 28,
+      "name": "load_png+0x29f",
+      "function_address": 6768,
+      "instructions": {
+        "7439": "rdx, [rsp + 0x38]",
+        "7444": "rcx, [rsp + 0x34]",
+        "7449": "r15, qword ptr [rsp + 0x10]",
+        "7454": "rdi, r15",
+        "7457": "rsi, qword ptr [rsp + 0x18]",
+        "7462": "0x1600"
+      },
+      "successors": [
+        [
+          5632,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7425,
+          "Ijk_Boring"
+        ],
+        [
+          7430,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7565": {
+      "addr": 7565,
+      "size": 8,
+      "name": "load_png+0x31d",
+      "function_address": 6768,
+      "instructions": {
+        "7565": "r13d, r13d",
+        "7568": "r15d, r15d",
+        "7571": "0x1db2"
+      },
+      "successors": [
+        [
+          7602,
+          "Ijk_Boring"
+        ],
+        [
+          7573,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7556,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5632": {
+      "addr": 5632,
+      "size": 78,
+      "name": "decompress_png_data",
+      "function_address": 5632,
+      "instructions": {
+        "5632": "rbp",
+        "5633": "r15",
+        "5635": "r14",
+        "5637": "r13",
+        "5639": "r12",
+        "5641": "rbx",
+        "5642": "rsp, 0x4098",
+        "5649": "r14, rcx",
+        "5652": "r12, rdx",
+        "5655": "r15, rdi",
+        "5658": "xmm0, xmm0",
+        "5661": "xmmword ptr [rsp + 0x60], xmm0",
+        "5666": "qword ptr [rsp + 0x70], 0",
+        "5675": "dword ptr [rsp + 0x28], esi",
+        "5679": "qword ptr [rsp + 0x20], 0",
+        "5688": "rsi, [rip + 0x19fd]",
+        "5695": "rdi, [rsp + 0x20]",
+        "5700": "edx, 0x70",
+        "5705": "0x10f0"
+      },
+      "successors": [
+        [
+          4336,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7439,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "7602": {
+      "addr": 7602,
+      "size": 11,
+      "name": "load_png+0x342",
+      "function_address": 6768,
+      "instructions": {
+        "7602": "dword ptr [r12 + 4], 0x52444849",
+        "7611": "0x1e3c"
+      },
+      "successors": [
+        [
+          7740,
+          "Ijk_Boring"
+        ],
+        [
+          7613,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7565,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7573": {
+      "addr": 7573,
+      "size": 40,
+      "name": "load_png+0x325",
+      "function_address": 6768,
+      "instructions": {
+        "7573": "dword ptr [r12 + 4], 0x54414449",
+        "7582": "r13b",
+        "7586": "eax, 1",
+        "7591": "ecx, dword ptr [rsp + 0x24]",
+        "7595": "ecx, eax",
+        "7598": "dword ptr [rsp + 0x24], ecx",
+        "7602": "dword ptr [r12 + 4], 0x52444849",
+        "7611": "0x1e3c"
+      },
+      "successors": [
+        [
+          7740,
+          "Ijk_Boring"
+        ],
+        [
+          7613,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7565,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4336": {
+      "addr": 4336,
+      "size": 6,
+      "name": null,
+      "function_address": 4336,
+      "instructions": {
+        "4336": "qword ptr [rip + 0x3f82]"
+      },
+      "successors": [
+        [
+          1048680,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5632,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "7740": {
+      "addr": 7740,
+      "size": 9,
+      "name": "load_png+0x3cc",
+      "function_address": 6768,
+      "instructions": {
+        "7740": "rbp, rbp",
+        "7743": "0x1f81"
+      },
+      "successors": [
+        [
+          7749,
+          "Ijk_Boring"
+        ],
+        [
+          8065,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7602,
+          "Ijk_Boring"
+        ],
+        [
+          7573,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7613": {
+      "addr": 7613,
+      "size": 15,
+      "name": "load_png+0x34d",
+      "function_address": 6768,
+      "instructions": {
+        "7613": "dword ptr [r12 + 4], 0x45544c50",
+        "7622": "0x1ebb"
+      },
+      "successors": [
+        [
+          7867,
+          "Ijk_Boring"
+        ],
+        [
+          7628,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7602,
+          "Ijk_Boring"
+        ],
+        [
+          7573,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8078": {
+      "addr": 8078,
+      "size": 10,
+      "name": "load_png+0x51e",
+      "function_address": 6768,
+      "instructions": {
+        "8078": "rdi, qword ptr [rsp + 0x10]",
+        "8083": "rdi, rdi",
+        "8086": "0x1f9d"
+      },
+      "successors": [
+        [
+          8093,
+          "Ijk_Boring"
+        ],
+        [
+          8088,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048608,
+          "Ijk_Ret"
+        ],
+        [
+          1048608,
+          "Ijk_Ret"
+        ],
+        [
+          1048608,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "1048680": {
+      "addr": 1048680,
+      "size": null,
+      "name": "inflateInit_",
+      "function_address": 1048680,
+      "instructions": [],
+      "successors": [
+        [
+          5710,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4336,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7749": {
+      "addr": 7749,
+      "size": 11,
+      "name": "load_png+0x3d5",
+      "function_address": 6768,
+      "instructions": {
+        "7749": "dword ptr [r12], 0xd",
+        "7754": "0x1f7f"
+      },
+      "successors": [
+        [
+          7760,
+          "Ijk_Boring"
+        ],
+        [
+          8063,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7740,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7867": {
+      "addr": 7867,
+      "size": 14,
+      "name": "load_png+0x44b",
+      "function_address": 6768,
+      "instructions": {
+        "7867": "r15, qword ptr [rsp + 8]",
+        "7872": "r15, r15",
+        "7875": "0x1f86"
+      },
+      "successors": [
+        [
+          7881,
+          "Ijk_Boring"
+        ],
+        [
+          8070,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7613,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7628": {
+      "addr": 7628,
+      "size": 15,
+      "name": "load_png+0x35c",
+      "function_address": 6768,
+      "instructions": {
+        "7628": "dword ptr [r12 + 4], 0x444e4549",
+        "7637": "0x1ef4"
+      },
+      "successors": [
+        [
+          7924,
+          "Ijk_Boring"
+        ],
+        [
+          7643,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7613,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8093": {
+      "addr": 8093,
+      "size": 12,
+      "name": "load_png+0x52d",
+      "function_address": 6768,
+      "instructions": {
+        "8093": "r13, r12",
+        "8096": "r13, r13",
+        "8099": "0x1b12"
+      },
+      "successors": [
+        [
+          8105,
+          "Ijk_Boring"
+        ],
+        [
+          6930,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          8078,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "8088": {
+      "addr": 8088,
+      "size": 5,
+      "name": "load_png+0x528",
+      "function_address": 6768,
+      "instructions": {
+        "8088": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          8078,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5710": {
+      "addr": 5710,
+      "size": 10,
+      "name": "decompress_png_data+0x4e",
+      "function_address": 5632,
+      "instructions": {
+        "5710": "ebx, eax",
+        "5712": "eax, eax",
+        "5714": "0x1705"
+      },
+      "successors": [
+        [
+          5720,
+          "Ijk_Boring"
+        ],
+        [
+          5893,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048680,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7760": {
+      "addr": 7760,
+      "size": 14,
+      "name": "load_png+0x3e0",
+      "function_address": 6768,
+      "instructions": {
+        "7760": "rax, qword ptr [r12 + 8]",
+        "7765": "ecx, byte ptr [rax + 9]",
+        "7769": "ecx, 6",
+        "7772": "0x1e67"
+      },
+      "successors": [
+        [
+          7783,
+          "Ijk_Boring"
+        ],
+        [
+          7774,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7749,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8063": {
+      "addr": 8063,
+      "size": 15,
+      "name": "load_png+0x50f",
+      "function_address": 6768,
+      "instructions": {
+        "8063": "ebp, ebp",
+        "8065": "r15, qword ptr [rsp + 8]",
+        "8070": "rdi, rbx",
+        "8073": "0x1060"
+      },
+      "successors": [
+        [
+          4192,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7749,
+          "Ijk_Boring"
+        ],
+        [
+          7783,
+          "Ijk_Boring"
+        ],
+        [
+          7774,
+          "Ijk_Boring"
+        ],
+        [
+          7803,
+          "Ijk_Boring"
+        ],
+        [
+          7813,
+          "Ijk_Boring"
+        ],
+        [
+          7823,
+          "Ijk_Boring"
+        ],
+        [
+          7833,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7881": {
+      "addr": 7881,
+      "size": 38,
+      "name": "load_png+0x459",
+      "function_address": 6768,
+      "instructions": {
+        "7881": "eax, dword ptr [r12], 0xaaaaaaab",
+        "7889": "edx, 0",
+        "7894": "rcx, r12",
+        "7897": "qword ptr [rsp + 8], r12",
+        "7902": "r15d, 0",
+        "7908": "eax, 0x55555556",
+        "7913": "0x1d5f"
+      },
+      "successors": [
+        [
+          7519,
+          "Ijk_Boring"
+        ],
+        [
+          7919,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7867,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8070": {
+      "addr": 8070,
+      "size": 8,
+      "name": "load_png+0x516",
+      "function_address": 6768,
+      "instructions": {
+        "8070": "rdi, rbx",
+        "8073": "0x1060"
+      },
+      "successors": [
+        [
+          4192,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7867,
+          "Ijk_Boring"
+        ],
+        [
+          7919,
+          "Ijk_Boring"
+        ],
+        [
+          7955,
+          "Ijk_Boring"
+        ],
+        [
+          7480,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7924": {
+      "addr": 7924,
+      "size": 11,
+      "name": "load_png+0x484",
+      "function_address": 6768,
+      "instructions": {
+        "7924": "dword ptr [r12], 0",
+        "7929": "0x1f81"
+      },
+      "successors": [
+        [
+          7935,
+          "Ijk_Boring"
+        ],
+        [
+          8065,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7628,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7643": {
+      "addr": 7643,
+      "size": 15,
+      "name": "load_png+0x36b",
+      "function_address": 6768,
+      "instructions": {
+        "7643": "dword ptr [r12 + 4], 0x54414449",
+        "7652": "0x1d5d"
+      },
+      "successors": [
+        [
+          7658,
+          "Ijk_Boring"
+        ],
+        [
+          7517,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7628,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8105": {
+      "addr": 8105,
+      "size": 5,
+      "name": "load_png+0x539",
+      "function_address": 6768,
+      "instructions": {
+        "8105": "0x1b28"
+      },
+      "successors": [
+        [
+          6952,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          8093,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5720": {
+      "addr": 5720,
+      "size": 31,
+      "name": "decompress_png_data+0x58",
+      "function_address": 5632,
+      "instructions": {
+        "5720": "qword ptr [rsp + 8], r12",
+        "5725": "qword ptr [rsp + 0x10], r14",
+        "5730": "qword ptr [rsp + 0x20], r15",
+        "5735": "r15d, r15d",
+        "5738": "rbp, [rsp + 0x90]",
+        "5746": "r13d, r13d",
+        "5749": "0x16be"
+      },
+      "successors": [
+        [
+          5822,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5710,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5893": {
+      "addr": 5893,
+      "size": 20,
+      "name": "decompress_png_data+0x105",
+      "function_address": 5632,
+      "instructions": {
+        "5893": "eax, ebx",
+        "5895": "rsp, 0x4098",
+        "5902": "rbx",
+        "5903": "r12",
+        "5905": "r13",
+        "5907": "r14",
+        "5909": "r15",
+        "5911": "rbp",
+        "5912": ""
+      },
+      "successors": [
+        [
+          7467,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          5710,
+          "Ijk_Boring"
+        ],
+        [
+          5875,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ],
+        [
+          5930,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7783": {
+      "addr": 7783,
+      "size": 20,
+      "name": "load_png+0x3f7",
+      "function_address": 6768,
+      "instructions": {
+        "7783": "cl, 3",
+        "7786": "dl",
+        "7789": "cl, 6",
+        "7792": "cl",
+        "7795": "dl, cl",
+        "7797": "0x1f7f"
+      },
+      "successors": [
+        [
+          7803,
+          "Ijk_Boring"
+        ],
+        [
+          8063,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7760,
+          "Ijk_Boring"
+        ],
+        [
+          7774,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7774": {
+      "addr": 7774,
+      "size": 9,
+      "name": "load_png+0x3ee",
+      "function_address": 6768,
+      "instructions": {
+        "7774": "ecx, 3",
+        "7777": "0x1f7f"
+      },
+      "successors": [
+        [
+          7783,
+          "Ijk_Boring"
+        ],
+        [
+          8063,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7760,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7519": {
+      "addr": 7519,
+      "size": 13,
+      "name": "load_png+0x2ef",
+      "function_address": 6768,
+      "instructions": {
+        "7519": "edi, 0x14",
+        "7524": "r15, rdx",
+        "7527": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7881,
+          "Ijk_Boring"
+        ],
+        [
+          7935,
+          "Ijk_Boring"
+        ],
+        [
+          7843,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7919": {
+      "addr": 7919,
+      "size": 5,
+      "name": "load_png+0x47f",
+      "function_address": 6768,
+      "instructions": {
+        "7919": "0x1f86"
+      },
+      "successors": [
+        [
+          8070,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7881,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7935": {
+      "addr": 7935,
+      "size": 20,
+      "name": "load_png+0x48f",
+      "function_address": 6768,
+      "instructions": {
+        "7935": "qword ptr [r12 + 8], 0",
+        "7941": "rdx, r12",
+        "7944": "r15, qword ptr [rsp + 8]",
+        "7949": "0x1d5f"
+      },
+      "successors": [
+        [
+          7519,
+          "Ijk_Boring"
+        ],
+        [
+          7955,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7924,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7658": {
+      "addr": 7658,
+      "size": 11,
+      "name": "load_png+0x37a",
+      "function_address": 6768,
+      "instructions": {
+        "7658": "dword ptr [rsp + 0x24], 0",
+        "7663": "0x1f81"
+      },
+      "successors": [
+        [
+          7669,
+          "Ijk_Boring"
+        ],
+        [
+          8065,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7643,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7517": {
+      "addr": 7517,
+      "size": 15,
+      "name": "load_png+0x2ed",
+      "function_address": 6768,
+      "instructions": {
+        "7517": "edx, edx",
+        "7519": "edi, 0x14",
+        "7524": "r15, rdx",
+        "7527": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7643,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5822": {
+      "addr": 5822,
+      "size": 25,
+      "name": "decompress_png_data+0xbe",
+      "function_address": 5632,
+      "instructions": {
+        "5822": "dword ptr [rsp + 0x40], 0x4000",
+        "5830": "qword ptr [rsp + 0x38], rbp",
+        "5835": "rdi, [rsp + 0x20]",
+        "5840": "esi, esi",
+        "5842": "0x1040"
+      },
+      "successors": [
+        [
+          4160,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5720,
+          "Ijk_Boring"
+        ],
+        [
+          5814,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7467": {
+      "addr": 7467,
+      "size": 13,
+      "name": "load_png+0x2bb",
+      "function_address": 6768,
+      "instructions": {
+        "7467": "eax, eax",
+        "7469": "r13, qword ptr [rsp + 8]",
+        "7474": "0x1f15"
+      },
+      "successors": [
+        [
+          7957,
+          "Ijk_Boring"
+        ],
+        [
+          7480,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5893,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7803": {
+      "addr": 7803,
+      "size": 10,
+      "name": "load_png+0x40b",
+      "function_address": 6768,
+      "instructions": {
+        "7803": "byte ptr [rax + 8], 8",
+        "7807": "0x1f7f"
+      },
+      "successors": [
+        [
+          7813,
+          "Ijk_Boring"
+        ],
+        [
+          8063,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7783,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7955": {
+      "addr": 7955,
+      "size": 2,
+      "name": "load_png+0x4a3",
+      "function_address": 6768,
+      "instructions": {
+        "7955": "0x1f86"
+      },
+      "successors": [
+        [
+          8070,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7935,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7669": {
+      "addr": 7669,
+      "size": 24,
+      "name": "load_png+0x385",
+      "function_address": 6768,
+      "instructions": {
+        "7669": "rsi, qword ptr [rsp + 0x18]",
+        "7674": "esi, dword ptr [r12]",
+        "7678": "rdi, qword ptr [rsp + 0x10]",
+        "7683": "qword ptr [rsp + 0x18], rsi",
+        "7688": "0x10e0"
+      },
+      "successors": [
+        [
+          4320,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7658,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4160": {
+      "addr": 4160,
+      "size": 6,
+      "name": null,
+      "function_address": 4160,
+      "instructions": {
+        "4160": "qword ptr [rip + 0x3fda]"
+      },
+      "successors": [
+        [
+          1048592,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5822,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "7957": {
+      "addr": 7957,
+      "size": 16,
+      "name": "load_png+0x4a5",
+      "function_address": 6768,
+      "instructions": {
+        "7957": "rdx, qword ptr [rsp + 0x38]",
+        "7962": "rdi, rbp",
+        "7965": "rsi, r13",
+        "7968": "0x1a40"
+      },
+      "successors": [
+        [
+          6720,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7467,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7480": {
+      "addr": 7480,
+      "size": 8,
+      "name": "load_png+0x2c8",
+      "function_address": 6768,
+      "instructions": {
+        "7480": "r15, r13",
+        "7483": "0x1f86"
+      },
+      "successors": [
+        [
+          8070,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7467,
+          "Ijk_Boring"
+        ],
+        [
+          7973,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7813": {
+      "addr": 7813,
+      "size": 10,
+      "name": "load_png+0x415",
+      "function_address": 6768,
+      "instructions": {
+        "7813": "byte ptr [rax + 0xa], 0",
+        "7817": "0x1f7f"
+      },
+      "successors": [
+        [
+          7823,
+          "Ijk_Boring"
+        ],
+        [
+          8063,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7803,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4320": {
+      "addr": 4320,
+      "size": 6,
+      "name": null,
+      "function_address": 4320,
+      "instructions": {
+        "4320": "qword ptr [rip + 0x3f8a]"
+      },
+      "successors": [
+        [
+          1048672,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5760,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "1048592": {
+      "addr": 1048592,
+      "size": null,
+      "name": "inflate",
+      "function_address": 1048592,
+      "instructions": [],
+      "successors": [
+        [
+          5847,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4160,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6720": {
+      "addr": 6720,
+      "size": 5,
+      "name": "parse_png",
+      "function_address": 6720,
+      "instructions": {
+        "6720": "rdi, rdi",
+        "6723": "0x1a4f"
+      },
+      "successors": [
+        [
+          6735,
+          "Ijk_Boring"
+        ],
+        [
+          6725,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7957,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "7823": {
+      "addr": 7823,
+      "size": 10,
+      "name": "load_png+0x41f",
+      "function_address": 6768,
+      "instructions": {
+        "7823": "byte ptr [rax + 0xb], 0",
+        "7827": "0x1f7f"
+      },
+      "successors": [
+        [
+          7833,
+          "Ijk_Boring"
+        ],
+        [
+          8063,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7813,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7532": {
+      "addr": 7532,
+      "size": 14,
+      "name": "load_png+0x2fc",
+      "function_address": 6768,
+      "instructions": {
+        "7532": "r12, rax",
+        "7535": "rdi, rbx",
+        "7538": "rsi, rax",
+        "7541": "0x14a0"
+      },
+      "successors": [
+        [
+          5280,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048656,
+          "Ijk_Ret"
+        ],
+        [
+          1048656,
+          "Ijk_Ret"
+        ],
+        [
+          1048656,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "1048672": {
+      "addr": 1048672,
+      "size": null,
+      "name": "realloc",
+      "function_address": 1048672,
+      "instructions": [],
+      "successors": [
+        [
+          5794,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4320,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5847": {
+      "addr": 5847,
+      "size": 8,
+      "name": "decompress_png_data+0xd7",
+      "function_address": 5632,
+      "instructions": {
+        "5847": "edx, [rax + 4]",
+        "5850": "edx, 6",
+        "5853": "0x1680"
+      },
+      "successors": [
+        [
+          5855,
+          "Ijk_Boring"
+        ],
+        [
+          5760,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048592,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6735": {
+      "addr": 6735,
+      "size": 3,
+      "name": "parse_png+0xf",
+      "function_address": 6720,
+      "instructions": {
+        "6735": "eax, eax",
+        "6737": ""
+      },
+      "successors": [
+        [
+          7973,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          6720,
+          "Ijk_Boring"
+        ],
+        [
+          6725,
+          "Ijk_Boring"
+        ],
+        [
+          6747,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6725": {
+      "addr": 6725,
+      "size": 10,
+      "name": "parse_png+0x5",
+      "function_address": 6720,
+      "instructions": {
+        "6725": "rax, qword ptr [rdi + 8]",
+        "6729": "byte ptr [rax + 0xc], 0",
+        "6733": "0x1a52"
+      },
+      "successors": [
+        [
+          6738,
+          "Ijk_Boring"
+        ],
+        [
+          6735,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6720,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7833": {
+      "addr": 7833,
+      "size": 10,
+      "name": "load_png+0x429",
+      "function_address": 6768,
+      "instructions": {
+        "7833": "byte ptr [rax + 0xc], 0",
+        "7837": "0x1f7f"
+      },
+      "successors": [
+        [
+          7843,
+          "Ijk_Boring"
+        ],
+        [
+          8063,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7823,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7693": {
+      "addr": 7693,
+      "size": 25,
+      "name": "load_png+0x39d",
+      "function_address": 6768,
+      "instructions": {
+        "7693": "r15, qword ptr [r12 + 8]",
+        "7698": "edx, dword ptr [r12]",
+        "7702": "qword ptr [rsp + 0x10], rax",
+        "7707": "rdi, rax",
+        "7710": "rsi, r15",
+        "7713": "0x10a0"
+      },
+      "successors": [
+        [
+          4256,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048672,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "5855": {
+      "addr": 5855,
+      "size": 10,
+      "name": "decompress_png_data+0xdf",
+      "function_address": 5632,
+      "instructions": {
+        "5855": "ecx, 0x47",
+        "5860": "ecx, edx",
+        "5863": "0x1680"
+      },
+      "successors": [
+        [
+          5865,
+          "Ijk_Boring"
+        ],
+        [
+          5760,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5847,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5760": {
+      "addr": 5760,
+      "size": 34,
+      "name": "decompress_png_data+0x80",
+      "function_address": 5632,
+      "instructions": {
+        "5760": "qword ptr [rsp + 0x18], rax",
+        "5765": "r12d, dword ptr [rsp + 0x40]",
+        "5770": "r14d, 0x4000",
+        "5776": "r14d, r12d",
+        "5779": "ebx, [r14 + r13]",
+        "5783": "rdi, r15",
+        "5786": "rsi, rbx",
+        "5789": "0x10e0"
+      },
+      "successors": [
+        [
+          4320,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5847,
+          "Ijk_Boring"
+        ],
+        [
+          5855,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7973": {
+      "addr": 7973,
+      "size": 12,
+      "name": "load_png+0x4b5",
+      "function_address": 6768,
+      "instructions": {
+        "7973": "qword ptr [r14], rax",
+        "7976": "rax, rax",
+        "7979": "0x1d38"
+      },
+      "successors": [
+        [
+          7480,
+          "Ijk_Boring"
+        ],
+        [
+          7985,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6735,
+          "Ijk_Ret"
+        ],
+        [
+          6578,
+          "Ijk_Ret"
+        ],
+        [
+          6235,
+          "Ijk_Ret"
+        ],
+        [
+          6233,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6738": {
+      "addr": 6738,
+      "size": 9,
+      "name": "parse_png+0x12",
+      "function_address": 6720,
+      "instructions": {
+        "6738": "eax, byte ptr [rax + 9]",
+        "6742": "eax, 6",
+        "6745": "0x1a65"
+      },
+      "successors": [
+        [
+          6747,
+          "Ijk_Boring"
+        ],
+        [
+          6757,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6725,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7843": {
+      "addr": 7843,
+      "size": 24,
+      "name": "load_png+0x433",
+      "function_address": 6768,
+      "instructions": {
+        "7843": "ecx, dword ptr [rax]",
+        "7845": "edx, dword ptr [rax + 4]",
+        "7848": "edx",
+        "7850": "dword ptr [rax + 4], edx",
+        "7853": "ecx",
+        "7855": "dword ptr [rax], ecx",
+        "7857": "edx, edx",
+        "7859": "rbp, r12",
+        "7862": "0x1d5f"
+      },
+      "successors": [
+        [
+          7519,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7833,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5865": {
+      "addr": 5865,
+      "size": 10,
+      "name": "decompress_png_data+0xe9",
+      "function_address": 5632,
+      "instructions": {
+        "5865": "rdi, [rsp + 0x20]",
+        "5870": "0x10b0"
+      },
+      "successors": [
+        [
+          4272,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5855,
+          "Ijk_Boring"
+        ],
+        [
+          5913,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7985": {
+      "addr": 7985,
+      "size": 8,
+      "name": "load_png+0x4c1",
+      "function_address": 6768,
+      "instructions": {
+        "7985": "rdi, rbx",
+        "7988": "0x1060"
+      },
+      "successors": [
+        [
+          4192,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7973,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6747": {
+      "addr": 6747,
+      "size": 5,
+      "name": "parse_png+0x1b",
+      "function_address": 6720,
+      "instructions": {
+        "6747": "eax, 3",
+        "6750": "0x1a4f"
+      },
+      "successors": [
+        [
+          6735,
+          "Ijk_Boring"
+        ],
+        [
+          6752,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6738,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6757": {
+      "addr": 6757,
+      "size": 8,
+      "name": "parse_png+0x25",
+      "function_address": 6720,
+      "instructions": {
+        "6757": "rsi, rdx",
+        "6760": "0x1870"
+      },
+      "successors": [
+        [
+          6256,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6738,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4272": {
+      "addr": 4272,
+      "size": 6,
+      "name": null,
+      "function_address": 4272,
+      "instructions": {
+        "4272": "qword ptr [rip + 0x3fa2]"
+      },
+      "successors": [
+        [
+          1048648,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5920,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "6752": {
+      "addr": 6752,
+      "size": 5,
+      "name": "parse_png+0x20",
+      "function_address": 6720,
+      "instructions": {
+        "6752": "0x1740"
+      },
+      "successors": [
+        [
+          5952,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6747,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6256": {
+      "addr": 6256,
+      "size": 38,
+      "name": "convert_rgb_alpha_to_image",
+      "function_address": 6256,
+      "instructions": {
+        "6256": "rbp",
+        "6257": "r15",
+        "6259": "r14",
+        "6261": "r13",
+        "6263": "r12",
+        "6265": "rbx",
+        "6266": "rsp, 0x18",
+        "6270": "r14, rsi",
+        "6273": "rax, qword ptr [rdi + 8]",
+        "6277": "r12d, dword ptr [rax]",
+        "6280": "r15d, dword ptr [rax + 4]",
+        "6284": "edi, 0x10",
+        "6289": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6757,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7718": {
+      "addr": 7718,
+      "size": 9,
+      "name": "load_png+0x3b6",
+      "function_address": 6768,
+      "instructions": {
+        "7718": "r15, r15",
+        "7721": "0x1d4f"
+      },
+      "successors": [
+        [
+          7503,
+          "Ijk_Boring"
+        ],
+        [
+          7727,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048640,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "1048648": {
+      "addr": 1048648,
+      "size": null,
+      "name": "inflateEnd",
+      "function_address": 1048648,
+      "instructions": [],
+      "successors": [
+        [
+          5930,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4272,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5794": {
+      "addr": 5794,
+      "size": 20,
+      "name": "decompress_png_data+0xa2",
+      "function_address": 5632,
+      "instructions": {
+        "5794": "edi, r13d",
+        "5797": "r15, rax",
+        "5800": "rdi, rax",
+        "5803": "rsi, rbp",
+        "5806": "rdx, r14",
+        "5809": "0x10a0"
+      },
+      "successors": [
+        [
+          4256,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048672,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "5952": {
+      "addr": 5952,
+      "size": 42,
+      "name": "convert_color_palette_to_image",
+      "function_address": 5952,
+      "instructions": {
+        "5952": "rbp",
+        "5953": "r15",
+        "5955": "r14",
+        "5957": "r13",
+        "5959": "r12",
+        "5961": "rbx",
+        "5962": "rsp, 0x18",
+        "5966": "r14, rdx",
+        "5969": "rax, qword ptr [rdi + 8]",
+        "5973": "r13d, dword ptr [rax]",
+        "5976": "r15d, dword ptr [rax + 4]",
+        "5980": "r12, qword ptr [rsi + 8]",
+        "5984": "edi, 0x10",
+        "5989": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6752,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7503": {
+      "addr": 7503,
+      "size": 8,
+      "name": "load_png+0x2df",
+      "function_address": 6768,
+      "instructions": {
+        "7503": "rdi, r12",
+        "7506": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7718,
+          "Ijk_Boring"
+        ],
+        [
+          7735,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7727": {
+      "addr": 7727,
+      "size": 8,
+      "name": "load_png+0x3bf",
+      "function_address": 6768,
+      "instructions": {
+        "7727": "rdi, r15",
+        "7730": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7718,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5875": {
+      "addr": 5875,
+      "size": 10,
+      "name": "decompress_png_data+0xf3",
+      "function_address": 5632,
+      "instructions": {
+        "5875": "ebx, 1",
+        "5880": "r15, r15",
+        "5883": "0x1705"
+      },
+      "successors": [
+        [
+          5893,
+          "Ijk_Boring"
+        ],
+        [
+          5885,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048648,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7993": {
+      "addr": 7993,
+      "size": 5,
+      "name": "load_png+0x4c9",
+      "function_address": 6768,
+      "instructions": {
+        "7993": "r15, r15",
+        "7996": "0x1f46"
+      },
+      "successors": [
+        [
+          8006,
+          "Ijk_Boring"
+        ],
+        [
+          7998,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048608,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "5885": {
+      "addr": 5885,
+      "size": 8,
+      "name": "decompress_png_data+0xfd",
+      "function_address": 5632,
+      "instructions": {
+        "5885": "rdi, r15",
+        "5888": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5875,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8006": {
+      "addr": 8006,
+      "size": 5,
+      "name": "load_png+0x4d6",
+      "function_address": 6768,
+      "instructions": {
+        "8006": "r12, r12",
+        "8009": "0x1f62"
+      },
+      "successors": [
+        [
+          8034,
+          "Ijk_Boring"
+        ],
+        [
+          8011,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7993,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7998": {
+      "addr": 7998,
+      "size": 8,
+      "name": "load_png+0x4ce",
+      "function_address": 6768,
+      "instructions": {
+        "7998": "rdi, r15",
+        "8001": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          7993,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6294": {
+      "addr": 6294,
+      "size": 12,
+      "name": "convert_rgb_alpha_to_image+0x26",
+      "function_address": 6256,
+      "instructions": {
+        "6294": "rbx, rax",
+        "6297": "rax, rax",
+        "6300": "0x19b2"
+      },
+      "successors": [
+        [
+          6578,
+          "Ijk_Boring"
+        ],
+        [
+          6306,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048656,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "5814": {
+      "addr": 5814,
+      "size": 8,
+      "name": "decompress_png_data+0xb6",
+      "function_address": 5632,
+      "instructions": {
+        "5814": "r13d, ebx",
+        "5817": "r12d, r12d",
+        "5820": "0x1719"
+      },
+      "successors": [
+        [
+          5913,
+          "Ijk_Boring"
+        ],
+        [
+          5822,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048640,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "8034": {
+      "addr": 8034,
+      "size": 5,
+      "name": "load_png+0x4f2",
+      "function_address": 6768,
+      "instructions": {
+        "8034": "r13, r13",
+        "8037": "0x1f6f"
+      },
+      "successors": [
+        [
+          8047,
+          "Ijk_Boring"
+        ],
+        [
+          8039,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          8006,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "8011": {
+      "addr": 8011,
+      "size": 10,
+      "name": "load_png+0x4db",
+      "function_address": 6768,
+      "instructions": {
+        "8011": "rdi, qword ptr [r12 + 8]",
+        "8016": "rdi, rdi",
+        "8019": "0x1f5a"
+      },
+      "successors": [
+        [
+          8026,
+          "Ijk_Boring"
+        ],
+        [
+          8021,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          8006,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5994": {
+      "addr": 5994,
+      "size": 32,
+      "name": "convert_color_palette_to_image+0x2a",
+      "function_address": 5952,
+      "instructions": {
+        "5994": "rbx, rax",
+        "5997": "word ptr [rax + 2], r15w",
+        "6002": "word ptr [rax], r13w",
+        "6006": "eax, r13w",
+        "6010": "eax, 2",
+        "6013": "edi, r15w",
+        "6017": "rdi, rax",
+        "6021": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048656,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6578": {
+      "addr": 6578,
+      "size": 18,
+      "name": "convert_rgb_alpha_to_image+0x142",
+      "function_address": 6256,
+      "instructions": {
+        "6578": "rax, rbx",
+        "6581": "rsp, 0x18",
+        "6585": "rbx",
+        "6586": "r12",
+        "6588": "r13",
+        "6590": "r14",
+        "6592": "r15",
+        "6594": "rbp",
+        "6595": ""
+      },
+      "successors": [
+        [
+          7973,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          6294,
+          "Ijk_Boring"
+        ],
+        [
+          6356,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ],
+        [
+          6560,
+          "Ijk_Boring"
+        ],
+        [
+          6529,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6306": {
+      "addr": 6306,
+      "size": 37,
+      "name": "convert_rgb_alpha_to_image+0x32",
+      "function_address": 6256,
+      "instructions": {
+        "6306": "word ptr [rbx + 2], r15w",
+        "6311": "word ptr [rbx], r12w",
+        "6315": "ebp, [r12*4]",
+        "6323": "eax, ebp",
+        "6325": "eax, 0x3fffc",
+        "6330": "edi, r15w",
+        "6334": "rdi, rax",
+        "6338": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6294,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "7511": {
+      "addr": 7511,
+      "size": 21,
+      "name": "load_png+0x2e7",
+      "function_address": 6768,
+      "instructions": {
+        "7511": "r13d, 1",
+        "7517": "edx, edx",
+        "7519": "edi, 0x14",
+        "7524": "r15, rdx",
+        "7527": "0x10c0"
+      },
+      "successors": [
+        [
+          4288,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7735": {
+      "addr": 7735,
+      "size": 5,
+      "name": "load_png+0x3c7",
+      "function_address": 6768,
+      "instructions": {
+        "7735": "0x1d4f"
+      },
+      "successors": [
+        [
+          7503,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "5913": {
+      "addr": 5913,
+      "size": 7,
+      "name": "decompress_png_data+0x119",
+      "function_address": 5632,
+      "instructions": {
+        "5913": "dword ptr [rsp + 0x18], 1",
+        "5918": "0x16e9"
+      },
+      "successors": [
+        [
+          5920,
+          "Ijk_Boring"
+        ],
+        [
+          5865,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5814,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8047": {
+      "addr": 8047,
+      "size": 11,
+      "name": "load_png+0x4ff",
+      "function_address": 6768,
+      "instructions": {
+        "8047": "ebx, ebx",
+        "8049": "rbp, rbp",
+        "8052": "0x1b3f"
+      },
+      "successors": [
+        [
+          8058,
+          "Ijk_Boring"
+        ],
+        [
+          6975,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          8034,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "8039": {
+      "addr": 8039,
+      "size": 8,
+      "name": "load_png+0x4f7",
+      "function_address": 6768,
+      "instructions": {
+        "8039": "rdi, r13",
+        "8042": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          8034,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8026": {
+      "addr": 8026,
+      "size": 8,
+      "name": "load_png+0x4ea",
+      "function_address": 6768,
+      "instructions": {
+        "8026": "rdi, r12",
+        "8029": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          8011,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "8021": {
+      "addr": 8021,
+      "size": 5,
+      "name": "load_png+0x4e5",
+      "function_address": 6768,
+      "instructions": {
+        "8021": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          8011,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5920": {
+      "addr": 5920,
+      "size": 10,
+      "name": "decompress_png_data+0x120",
+      "function_address": 5632,
+      "instructions": {
+        "5920": "rdi, [rsp + 0x20]",
+        "5925": "0x10b0"
+      },
+      "successors": [
+        [
+          4272,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          5913,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "8058": {
+      "addr": 8058,
+      "size": 5,
+      "name": "load_png+0x50a",
+      "function_address": 6768,
+      "instructions": {
+        "8058": "0x1b47"
+      },
+      "successors": [
+        [
+          6983,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          8047,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6026": {
+      "addr": 6026,
+      "size": 13,
+      "name": "convert_color_palette_to_image+0x4a",
+      "function_address": 5952,
+      "instructions": {
+        "6026": "qword ptr [rbx + 8], rax",
+        "6030": "r15, r15",
+        "6033": "0x185b"
+      },
+      "successors": [
+        [
+          6039,
+          "Ijk_Boring"
+        ],
+        [
+          6235,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048656,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6343": {
+      "addr": 6343,
+      "size": 13,
+      "name": "convert_rgb_alpha_to_image+0x57",
+      "function_address": 6256,
+      "instructions": {
+        "6343": "qword ptr [rbx + 8], rax",
+        "6347": "rax, rax",
+        "6350": "0x19aa"
+      },
+      "successors": [
+        [
+          6570,
+          "Ijk_Boring"
+        ],
+        [
+          6356,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048656,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6039": {
+      "addr": 6039,
+      "size": 18,
+      "name": "convert_color_palette_to_image+0x57",
+      "function_address": 5952,
+      "instructions": {
+        "6039": "qword ptr [rsp + 8], rbx",
+        "6044": "ecx, [r13 + 1]",
+        "6048": "r13d, r13d",
+        "6051": "0x182b"
+      },
+      "successors": [
+        [
+          6057,
+          "Ijk_Boring"
+        ],
+        [
+          6187,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6026,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6235": {
+      "addr": 6235,
+      "size": 18,
+      "name": "convert_color_palette_to_image+0x11b",
+      "function_address": 5952,
+      "instructions": {
+        "6235": "rax, rbx",
+        "6238": "rsp, 0x18",
+        "6242": "rbx",
+        "6243": "r12",
+        "6245": "r13",
+        "6247": "r14",
+        "6249": "r15",
+        "6251": "rbp",
+        "6252": ""
+      },
+      "successors": [
+        [
+          7973,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          6026,
+          "Ijk_Boring"
+        ],
+        [
+          6208,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6570": {
+      "addr": 6570,
+      "size": 8,
+      "name": "convert_rgb_alpha_to_image+0x13a",
+      "function_address": 6256,
+      "instructions": {
+        "6570": "rdi, rbx",
+        "6573": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6343,
+          "Ijk_Boring"
+        ],
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6356": {
+      "addr": 6356,
+      "size": 9,
+      "name": "convert_rgb_alpha_to_image+0x64",
+      "function_address": 6256,
+      "instructions": {
+        "6356": "r15, r15",
+        "6359": "0x19b2"
+      },
+      "successors": [
+        [
+          6365,
+          "Ijk_Boring"
+        ],
+        [
+          6578,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6343,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "5930": {
+      "addr": 5930,
+      "size": 19,
+      "name": "decompress_png_data+0x12a",
+      "function_address": 5632,
+      "instructions": {
+        "5930": "rax, qword ptr [rsp + 8]",
+        "5935": "qword ptr [rax], r15",
+        "5938": "rax, qword ptr [rsp + 0x10]",
+        "5943": "dword ptr [rax], ebx",
+        "5945": "ebx, ebx",
+        "5947": "0x1705"
+      },
+      "successors": [
+        [
+          5893,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048648,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6057": {
+      "addr": 6057,
+      "size": 45,
+      "name": "convert_color_palette_to_image+0x69",
+      "function_address": 5952,
+      "instructions": {
+        "6057": "edx, r13w",
+        "6061": "dword ptr [rsp + 0x14], edx",
+        "6065": "esi, r13d",
+        "6068": "edi, edi",
+        "6070": "r8d, 1",
+        "6076": "r9d, r9d",
+        "6079": "",
+        "6080": "r10d, ecx",
+        "6083": "r10d, r9d",
+        "6087": "byte ptr [r14 + r10], 0",
+        "6092": "r10, rsi",
+        "6095": "r11d, r8d",
+        "6098": "ebp, edi",
+        "6100": "0x1847"
+      },
+      "successors": [
+        [
+          6215,
+          "Ijk_Boring"
+        ],
+        [
+          6102,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6039,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6187": {
+      "addr": 6187,
+      "size": 14,
+      "name": "convert_color_palette_to_image+0xeb",
+      "function_address": 5952,
+      "instructions": {
+        "6187": "edx, edx",
+        "6189": "dword ptr [rax]",
+        "6192": "esi, edx",
+        "6194": "byte ptr [r14 + rsi], 0",
+        "6199": "0x1847"
+      },
+      "successors": [
+        [
+          6215,
+          "Ijk_Boring"
+        ],
+        [
+          6201,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6039,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6365": {
+      "addr": 6365,
+      "size": 12,
+      "name": "convert_rgb_alpha_to_image+0x6d",
+      "function_address": 6256,
+      "instructions": {
+        "6365": "ebp, 1",
+        "6368": "r12d, r12d",
+        "6371": "0x1983"
+      },
+      "successors": [
+        [
+          6377,
+          "Ijk_Boring"
+        ],
+        [
+          6531,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6356,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6215": {
+      "addr": 6215,
+      "size": 8,
+      "name": "convert_color_palette_to_image+0x107",
+      "function_address": 5952,
+      "instructions": {
+        "6215": "rdi, rax",
+        "6218": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6057,
+          "Ijk_Boring"
+        ],
+        [
+          6187,
+          "Ijk_Boring"
+        ],
+        [
+          6192,
+          "Ijk_Boring"
+        ],
+        [
+          6080,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6102": {
+      "addr": 6102,
+      "size": 68,
+      "name": "convert_color_palette_to_image+0x96",
+      "function_address": 5952,
+      "instructions": {
+        "6102": "word ptr cs:[rax + rax]",
+        "6112": "r13d, r11d",
+        "6115": "r13d, byte ptr [r14 + r13]",
+        "6120": "r13, [r13 + r13*2]",
+        "6125": "ebx, byte ptr [r12 + r13]",
+        "6130": "edx, ebp",
+        "6132": "byte ptr [rax + rdx*4], bl",
+        "6135": "ebx, byte ptr [r12 + r13 + 1]",
+        "6141": "byte ptr [rax + rdx*4 + 1], bl",
+        "6145": "ebx, byte ptr [r12 + r13 + 2]",
+        "6151": "byte ptr [rax + rdx*4 + 2], bl",
+        "6155": "byte ptr [rax + rdx*4 + 3], 0xff",
+        "6160": "ebp",
+        "6162": "r11d",
+        "6165": "r10",
+        "6168": "0x17e0"
+      },
+      "successors": [
+        [
+          6170,
+          "Ijk_Boring"
+        ],
+        [
+          6112,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6057,
+          "Ijk_Boring"
+        ],
+        [
+          6080,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6201": {
+      "addr": 6201,
+      "size": 7,
+      "name": "convert_color_palette_to_image+0xf9",
+      "function_address": 5952,
+      "instructions": {
+        "6201": "edx, ecx",
+        "6203": "r15",
+        "6206": "0x1830"
+      },
+      "successors": [
+        [
+          6208,
+          "Ijk_Boring"
+        ],
+        [
+          6192,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6187,
+          "Ijk_Boring"
+        ],
+        [
+          6192,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6377": {
+      "addr": 6377,
+      "size": 64,
+      "name": "convert_rgb_alpha_to_image+0x79",
+      "function_address": 6256,
+      "instructions": {
+        "6377": "ecx, r12w",
+        "6381": "dword ptr [rsp + 0xc], ecx",
+        "6385": "ecx, r12d",
+        "6388": "qword ptr [rsp + 0x10], rcx",
+        "6393": "esi, esi",
+        "6395": "edi, 4",
+        "6400": "r8d, r8d",
+        "6403": "word ptr cs:[rax + rax]",
+        "6416": "r9d, ebp",
+        "6419": "r9d, r8d",
+        "6423": "byte ptr [r14 + r9], 0",
+        "6428": "r9, qword ptr [rsp + 0x10]",
+        "6433": "r10d, edi",
+        "6436": "r11d, esi",
+        "6439": "0x19a2"
+      },
+      "successors": [
+        [
+          6562,
+          "Ijk_Boring"
+        ],
+        [
+          6441,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6365,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6531": {
+      "addr": 6531,
+      "size": 22,
+      "name": "convert_rgb_alpha_to_image+0x113",
+      "function_address": 6256,
+      "instructions": {
+        "6531": "ecx, ecx",
+        "6533": "word ptr cs:[rax + rax]",
+        "6544": "edx, ecx",
+        "6546": "byte ptr [r14 + rdx], 0",
+        "6551": "0x19a2"
+      },
+      "successors": [
+        [
+          6562,
+          "Ijk_Boring"
+        ],
+        [
+          6553,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6365,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6170": {
+      "addr": 6170,
+      "size": 15,
+      "name": "convert_color_palette_to_image+0xda",
+      "function_address": 5952,
+      "instructions": {
+        "6170": "r9",
+        "6173": "edi, dword ptr [rsp + 0x14]",
+        "6177": "r8d, ecx",
+        "6180": "r9, r15",
+        "6183": "0x17c0"
+      },
+      "successors": [
+        [
+          6080,
+          "Ijk_Boring"
+        ],
+        [
+          6185,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6102,
+          "Ijk_Boring"
+        ],
+        [
+          6112,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6112": {
+      "addr": 6112,
+      "size": 58,
+      "name": "convert_color_palette_to_image+0xa0",
+      "function_address": 5952,
+      "instructions": {
+        "6112": "r13d, r11d",
+        "6115": "r13d, byte ptr [r14 + r13]",
+        "6120": "r13, [r13 + r13*2]",
+        "6125": "ebx, byte ptr [r12 + r13]",
+        "6130": "edx, ebp",
+        "6132": "byte ptr [rax + rdx*4], bl",
+        "6135": "ebx, byte ptr [r12 + r13 + 1]",
+        "6141": "byte ptr [rax + rdx*4 + 1], bl",
+        "6145": "ebx, byte ptr [r12 + r13 + 2]",
+        "6151": "byte ptr [rax + rdx*4 + 2], bl",
+        "6155": "byte ptr [rax + rdx*4 + 3], 0xff",
+        "6160": "ebp",
+        "6162": "r11d",
+        "6165": "r10",
+        "6168": "0x17e0"
+      },
+      "successors": [
+        [
+          6170,
+          "Ijk_Boring"
+        ],
+        [
+          6112,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6102,
+          "Ijk_Boring"
+        ],
+        [
+          6112,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6208": {
+      "addr": 6208,
+      "size": 7,
+      "name": "convert_color_palette_to_image+0x100",
+      "function_address": 5952,
+      "instructions": {
+        "6208": "rbx, qword ptr [rsp + 8]",
+        "6213": "0x185b"
+      },
+      "successors": [
+        [
+          6235,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6201,
+          "Ijk_Boring"
+        ],
+        [
+          6185,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6192": {
+      "addr": 6192,
+      "size": 9,
+      "name": "convert_color_palette_to_image+0xf0",
+      "function_address": 5952,
+      "instructions": {
+        "6192": "esi, edx",
+        "6194": "byte ptr [r14 + rsi], 0",
+        "6199": "0x1847"
+      },
+      "successors": [
+        [
+          6201,
+          "Ijk_Boring"
+        ],
+        [
+          6215,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6201,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6562": {
+      "addr": 6562,
+      "size": 8,
+      "name": "convert_rgb_alpha_to_image+0x132",
+      "function_address": 6256,
+      "instructions": {
+        "6562": "rdi, rax",
+        "6565": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          6377,
+          "Ijk_Boring"
+        ],
+        [
+          6531,
+          "Ijk_Boring"
+        ],
+        [
+          6544,
+          "Ijk_Boring"
+        ],
+        [
+          6416,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6441": {
+      "addr": 6441,
+      "size": 74,
+      "name": "convert_rgb_alpha_to_image+0xb9",
+      "function_address": 6256,
+      "instructions": {
+        "6441": "dword ptr [rax]",
+        "6448": "r12d, [r10 - 3]",
+        "6452": "r13d, [r10 - 2]",
+        "6456": "ecx, [r10 - 1]",
+        "6460": "r12d, byte ptr [r14 + r12]",
+        "6465": "edx, r11d",
+        "6468": "byte ptr [rax + rdx*4], r12b",
+        "6472": "r12d, byte ptr [r14 + r13]",
+        "6477": "byte ptr [rax + rdx*4 + 1], r12b",
+        "6482": "ecx, byte ptr [r14 + rcx]",
+        "6487": "byte ptr [rax + rdx*4 + 2], cl",
+        "6491": "ecx, r10d",
+        "6494": "ecx, byte ptr [r14 + rcx]",
+        "6499": "byte ptr [rax + rdx*4 + 3], cl",
+        "6503": "r11d",
+        "6506": "r10d, 4",
+        "6510": "r9",
+        "6513": "0x1930"
+      },
+      "successors": [
+        [
+          6515,
+          "Ijk_Boring"
+        ],
+        [
+          6448,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6377,
+          "Ijk_Boring"
+        ],
+        [
+          6416,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6553": {
+      "addr": 6553,
+      "size": 7,
+      "name": "convert_rgb_alpha_to_image+0x129",
+      "function_address": 6256,
+      "instructions": {
+        "6553": "ecx, ebp",
+        "6555": "r15",
+        "6558": "0x1990"
+      },
+      "successors": [
+        [
+          6560,
+          "Ijk_Boring"
+        ],
+        [
+          6544,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6531,
+          "Ijk_Boring"
+        ],
+        [
+          6544,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6080": {
+      "addr": 6080,
+      "size": 22,
+      "name": "convert_color_palette_to_image+0x80",
+      "function_address": 5952,
+      "instructions": {
+        "6080": "r10d, ecx",
+        "6083": "r10d, r9d",
+        "6087": "byte ptr [r14 + r10], 0",
+        "6092": "r10, rsi",
+        "6095": "r11d, r8d",
+        "6098": "ebp, edi",
+        "6100": "0x1847"
+      },
+      "successors": [
+        [
+          6102,
+          "Ijk_Boring"
+        ],
+        [
+          6215,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6170,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6185": {
+      "addr": 6185,
+      "size": 2,
+      "name": "convert_color_palette_to_image+0xe9",
+      "function_address": 5952,
+      "instructions": {
+        "6185": "0x1840"
+      },
+      "successors": [
+        [
+          6208,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6170,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6515": {
+      "addr": 6515,
+      "size": 14,
+      "name": "convert_rgb_alpha_to_image+0x103",
+      "function_address": 6256,
+      "instructions": {
+        "6515": "r8",
+        "6518": "esi, dword ptr [rsp + 0xc]",
+        "6522": "edi, ebp",
+        "6524": "r8, r15",
+        "6527": "0x1910"
+      },
+      "successors": [
+        [
+          6416,
+          "Ijk_Boring"
+        ],
+        [
+          6529,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6441,
+          "Ijk_Boring"
+        ],
+        [
+          6448,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6448": {
+      "addr": 6448,
+      "size": 67,
+      "name": "convert_rgb_alpha_to_image+0xc0",
+      "function_address": 6256,
+      "instructions": {
+        "6448": "r12d, [r10 - 3]",
+        "6452": "r13d, [r10 - 2]",
+        "6456": "ecx, [r10 - 1]",
+        "6460": "r12d, byte ptr [r14 + r12]",
+        "6465": "edx, r11d",
+        "6468": "byte ptr [rax + rdx*4], r12b",
+        "6472": "r12d, byte ptr [r14 + r13]",
+        "6477": "byte ptr [rax + rdx*4 + 1], r12b",
+        "6482": "ecx, byte ptr [r14 + rcx]",
+        "6487": "byte ptr [rax + rdx*4 + 2], cl",
+        "6491": "ecx, r10d",
+        "6494": "ecx, byte ptr [r14 + rcx]",
+        "6499": "byte ptr [rax + rdx*4 + 3], cl",
+        "6503": "r11d",
+        "6506": "r10d, 4",
+        "6510": "r9",
+        "6513": "0x1930"
+      },
+      "successors": [
+        [
+          6515,
+          "Ijk_Boring"
+        ],
+        [
+          6448,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6441,
+          "Ijk_Boring"
+        ],
+        [
+          6448,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6560": {
+      "addr": 6560,
+      "size": 2,
+      "name": "convert_rgb_alpha_to_image+0x130",
+      "function_address": 6256,
+      "instructions": {
+        "6560": "0x19b2"
+      },
+      "successors": [
+        [
+          6578,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6553,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6544": {
+      "addr": 6544,
+      "size": 9,
+      "name": "convert_rgb_alpha_to_image+0x120",
+      "function_address": 6256,
+      "instructions": {
+        "6544": "edx, ecx",
+        "6546": "byte ptr [r14 + rdx], 0",
+        "6551": "0x19a2"
+      },
+      "successors": [
+        [
+          6553,
+          "Ijk_Boring"
+        ],
+        [
+          6562,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6553,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6223": {
+      "addr": 6223,
+      "size": 10,
+      "name": "convert_color_palette_to_image+0x10f",
+      "function_address": 5952,
+      "instructions": {
+        "6223": "rdi, qword ptr [rsp + 8]",
+        "6228": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "6416": {
+      "addr": 6416,
+      "size": 25,
+      "name": "convert_rgb_alpha_to_image+0xa0",
+      "function_address": 6256,
+      "instructions": {
+        "6416": "r9d, ebp",
+        "6419": "r9d, r8d",
+        "6423": "byte ptr [r14 + r9], 0",
+        "6428": "r9, qword ptr [rsp + 0x10]",
+        "6433": "r10d, edi",
+        "6436": "r11d, esi",
+        "6439": "0x19a2"
+      },
+      "successors": [
+        [
+          6441,
+          "Ijk_Boring"
+        ],
+        [
+          6562,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6515,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6529": {
+      "addr": 6529,
+      "size": 2,
+      "name": "convert_rgb_alpha_to_image+0x111",
+      "function_address": 6256,
+      "instructions": {
+        "6529": "0x19b2"
+      },
+      "successors": [
+        [
+          6578,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          6515,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "6233": {
+      "addr": 6233,
+      "size": 20,
+      "name": "convert_color_palette_to_image+0x119",
+      "function_address": 5952,
+      "instructions": {
+        "6233": "ebx, ebx",
+        "6235": "rax, rbx",
+        "6238": "rsp, 0x18",
+        "6242": "rbx",
+        "6243": "r12",
+        "6245": "r13",
+        "6247": "r14",
+        "6249": "r15",
+        "6251": "rbp",
+        "6252": ""
+      },
+      "successors": [
+        [
+          7973,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7546": {
+      "addr": 7546,
+      "size": 10,
+      "name": "load_png+0x30a",
+      "function_address": 6768,
+      "instructions": {
+        "7546": "rcx, r15",
+        "7549": "eax, eax",
+        "7551": "r15d, r13d",
+        "7554": "0x1d06"
+      },
+      "successors": [
+        [
+          7556,
+          "Ijk_Boring"
+        ],
+        [
+          7430,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          5501,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "7430": {
+      "addr": 7430,
+      "size": 9,
+      "name": "load_png+0x296",
+      "function_address": 6768,
+      "instructions": {
+        "7430": "rcx, rcx",
+        "7433": "0x1f81"
+      },
+      "successors": [
+        [
+          8065,
+          "Ijk_Boring"
+        ],
+        [
+          7439,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          7546,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4437": {
+      "addr": 4437,
+      "size": null,
+      "name": "PathTerminator",
+      "function_address": 2101352,
+      "instructions": [],
+      "successors": [],
+      "predecessors": [
+        [
+          2101352,
+          "Ijk_Ret"
+        ]
+      ]
+    }
+  },
+  "call_graph_edges": [
+    [
+      4448,
+      2101328,
+      "transition"
+    ],
+    [
+      4496,
+      2101328,
+      "transition"
+    ],
+    [
+      4096,
+      2101336,
+      "call"
+    ],
+    [
+      4140,
+      4144,
+      "transition"
+    ],
+    [
+      4140,
+      1048584,
+      "transition"
+    ],
+    [
+      4144,
+      1048584,
+      "transition"
+    ],
+    [
+      4160,
+      1048592,
+      "transition"
+    ],
+    [
+      4176,
+      1048600,
+      "transition"
+    ],
+    [
+      4192,
+      1048608,
+      "transition"
+    ],
+    [
+      4208,
+      1048616,
+      "transition"
+    ],
+    [
+      4224,
+      1048624,
+      "transition"
+    ],
+    [
+      4240,
+      1048632,
+      "transition"
+    ],
+    [
+      4256,
+      1048640,
+      "transition"
+    ],
+    [
+      4272,
+      1048648,
+      "transition"
+    ],
+    [
+      4288,
+      1048656,
+      "transition"
+    ],
+    [
+      4304,
+      1048664,
+      "transition"
+    ],
+    [
+      4320,
+      1048672,
+      "transition"
+    ],
+    [
+      4336,
+      1048680,
+      "transition"
+    ],
+    [
+      4352,
+      1048688,
+      "transition"
+    ],
+    [
+      4368,
+      1048696,
+      "transition"
+    ],
+    [
+      4400,
+      1048576,
+      "call"
+    ],
+    [
+      1048576,
+      4640,
+      "call"
+    ],
+    [
+      4438,
+      4448,
+      "transition"
+    ],
+    [
+      4489,
+      4496,
+      "transition"
+    ],
+    [
+      4553,
+      4560,
+      "transition"
+    ],
+    [
+      4553,
+      4448,
+      "call"
+    ],
+    [
+      4553,
+      4384,
+      "call"
+    ],
+    [
+      4560,
+      4448,
+      "call"
+    ],
+    [
+      4560,
+      4384,
+      "call"
+    ],
+    [
+      4613,
+      4560,
+      "transition"
+    ],
+    [
+      4617,
+      4624,
+      "transition"
+    ],
+    [
+      4617,
+      4496,
+      "transition"
+    ],
+    [
+      4624,
+      4496,
+      "transition"
+    ],
+    [
+      4633,
+      4640,
+      "transition"
+    ],
+    [
+      4633,
+      6768,
+      "call"
+    ],
+    [
+      4633,
+      4208,
+      "call"
+    ],
+    [
+      4633,
+      4144,
+      "call"
+    ],
+    [
+      4640,
+      6768,
+      "call"
+    ],
+    [
+      4640,
+      4208,
+      "call"
+    ],
+    [
+      4640,
+      4144,
+      "call"
+    ],
+    [
+      6768,
+      4288,
+      "call"
+    ],
+    [
+      6768,
+      4352,
+      "call"
+    ],
+    [
+      6768,
+      4176,
+      "call"
+    ],
+    [
+      6768,
+      4144,
+      "call"
+    ],
+    [
+      6768,
+      4192,
+      "call"
+    ],
+    [
+      6768,
+      5280,
+      "call"
+    ],
+    [
+      6768,
+      4256,
+      "call"
+    ],
+    [
+      6768,
+      5632,
+      "call"
+    ],
+    [
+      6768,
+      6720,
+      "call"
+    ],
+    [
+      6768,
+      4320,
+      "call"
+    ],
+    [
+      4750,
+      4752,
+      "transition"
+    ],
+    [
+      4757,
+      4768,
+      "transition"
+    ],
+    [
+      4786,
+      4800,
+      "transition"
+    ],
+    [
+      4827,
+      4832,
+      "transition"
+    ],
+    [
+      4840,
+      4848,
+      "transition"
+    ],
+    [
+      4856,
+      4864,
+      "transition"
+    ],
+    [
+      4872,
+      4880,
+      "transition"
+    ],
+    [
+      4888,
+      4896,
+      "transition"
+    ],
+    [
+      4957,
+      4960,
+      "transition"
+    ],
+    [
+      4973,
+      4976,
+      "transition"
+    ],
+    [
+      5071,
+      5072,
+      "transition"
+    ],
+    [
+      5085,
+      5088,
+      "transition"
+    ],
+    [
+      5120,
+      4176,
+      "call"
+    ],
+    [
+      5158,
+      5168,
+      "transition"
+    ],
+    [
+      5187,
+      5200,
+      "transition"
+    ],
+    [
+      5187,
+      11904,
+      "call"
+    ],
+    [
+      5187,
+      11360,
+      "call"
+    ],
+    [
+      5200,
+      11904,
+      "call"
+    ],
+    [
+      5200,
+      11360,
+      "call"
+    ],
+    [
+      11904,
+      11360,
+      "call"
+    ],
+    [
+      5268,
+      5280,
+      "transition"
+    ],
+    [
+      5268,
+      4176,
+      "call"
+    ],
+    [
+      5268,
+      4288,
+      "call"
+    ],
+    [
+      5268,
+      4144,
+      "call"
+    ],
+    [
+      5268,
+      11904,
+      "call"
+    ],
+    [
+      5268,
+      11360,
+      "call"
+    ],
+    [
+      5280,
+      4176,
+      "call"
+    ],
+    [
+      5280,
+      4288,
+      "call"
+    ],
+    [
+      5280,
+      4144,
+      "call"
+    ],
+    [
+      5280,
+      11904,
+      "call"
+    ],
+    [
+      5280,
+      11360,
+      "call"
+    ],
+    [
+      5521,
+      5536,
+      "transition"
+    ],
+    [
+      5549,
+      5552,
+      "transition"
+    ],
+    [
+      5583,
+      5584,
+      "transition"
+    ],
+    [
+      5597,
+      5600,
+      "transition"
+    ],
+    [
+      5609,
+      5616,
+      "transition"
+    ],
+    [
+      5630,
+      5632,
+      "transition"
+    ],
+    [
+      5630,
+      4336,
+      "call"
+    ],
+    [
+      5630,
+      4160,
+      "call"
+    ],
+    [
+      5630,
+      4320,
+      "call"
+    ],
+    [
+      5630,
+      4272,
+      "call"
+    ],
+    [
+      5630,
+      4256,
+      "call"
+    ],
+    [
+      5630,
+      4144,
+      "call"
+    ],
+    [
+      5632,
+      4336,
+      "call"
+    ],
+    [
+      5632,
+      4160,
+      "call"
+    ],
+    [
+      5632,
+      4320,
+      "call"
+    ],
+    [
+      5632,
+      4272,
+      "call"
+    ],
+    [
+      5632,
+      4256,
+      "call"
+    ],
+    [
+      5632,
+      4144,
+      "call"
+    ],
+    [
+      5751,
+      5632,
+      "transition"
+    ],
+    [
+      5751,
+      4320,
+      "call"
+    ],
+    [
+      5751,
+      4256,
+      "call"
+    ],
+    [
+      5751,
+      4160,
+      "call"
+    ],
+    [
+      5751,
+      4272,
+      "call"
+    ],
+    [
+      5751,
+      4144,
+      "call"
+    ],
+    [
+      5949,
+      5952,
+      "transition"
+    ],
+    [
+      5949,
+      4288,
+      "call"
+    ],
+    [
+      5949,
+      4144,
+      "call"
+    ],
+    [
+      5952,
+      4288,
+      "call"
+    ],
+    [
+      5952,
+      4144,
+      "call"
+    ],
+    [
+      6253,
+      6256,
+      "transition"
+    ],
+    [
+      6253,
+      4288,
+      "call"
+    ],
+    [
+      6253,
+      4144,
+      "call"
+    ],
+    [
+      6256,
+      4288,
+      "call"
+    ],
+    [
+      6256,
+      4144,
+      "call"
+    ],
+    [
+      6596,
+      6608,
+      "transition"
+    ],
+    [
+      6609,
+      6624,
+      "transition"
+    ],
+    [
+      6609,
+      6256,
+      "transition"
+    ],
+    [
+      6609,
+      5952,
+      "transition"
+    ],
+    [
+      6624,
+      6256,
+      "transition"
+    ],
+    [
+      6624,
+      5952,
+      "transition"
+    ],
+    [
+      6658,
+      6672,
+      "transition"
+    ],
+    [
+      6658,
+      6256,
+      "transition"
+    ],
+    [
+      6658,
+      5952,
+      "transition"
+    ],
+    [
+      6672,
+      6256,
+      "transition"
+    ],
+    [
+      6672,
+      5952,
+      "transition"
+    ],
+    [
+      6706,
+      6720,
+      "transition"
+    ],
+    [
+      6706,
+      6256,
+      "transition"
+    ],
+    [
+      6706,
+      5952,
+      "transition"
+    ],
+    [
+      6720,
+      6256,
+      "transition"
+    ],
+    [
+      6720,
+      5952,
+      "transition"
+    ],
+    [
+      6765,
+      6768,
+      "transition"
+    ],
+    [
+      6765,
+      4288,
+      "call"
+    ],
+    [
+      6765,
+      4352,
+      "call"
+    ],
+    [
+      6765,
+      4176,
+      "call"
+    ],
+    [
+      6765,
+      4144,
+      "call"
+    ],
+    [
+      6765,
+      4192,
+      "call"
+    ],
+    [
+      6765,
+      5280,
+      "call"
+    ],
+    [
+      6765,
+      4256,
+      "call"
+    ],
+    [
+      6765,
+      5632,
+      "call"
+    ],
+    [
+      6765,
+      4320,
+      "call"
+    ],
+    [
+      6765,
+      6720,
+      "call"
+    ],
+    [
+      8110,
+      8112,
+      "transition"
+    ],
+    [
+      8110,
+      4368,
+      "call"
+    ],
+    [
+      8112,
+      4368,
+      "call"
+    ],
+    [
+      8151,
+      8160,
+      "transition"
+    ],
+    [
+      8183,
+      8192,
+      "transition"
+    ],
+    [
+      8215,
+      8224,
+      "transition"
+    ],
+    [
+      8215,
+      11904,
+      "call"
+    ],
+    [
+      8215,
+      11360,
+      "call"
+    ],
+    [
+      8224,
+      11904,
+      "call"
+    ],
+    [
+      8224,
+      11360,
+      "call"
+    ],
+    [
+      8284,
+      8288,
+      "transition"
+    ],
+    [
+      8284,
+      11904,
+      "call"
+    ],
+    [
+      8284,
+      11360,
+      "call"
+    ],
+    [
+      8288,
+      11904,
+      "call"
+    ],
+    [
+      8288,
+      11360,
+      "call"
+    ],
+    [
+      8368,
+      4368,
+      "call"
+    ],
+    [
+      8368,
+      4368,
+      "transition"
+    ],
+    [
+      8368,
+      1048696,
+      "transition"
+    ],
+    [
+      8474,
+      8480,
+      "transition"
+    ],
+    [
+      8474,
+      11904,
+      "call"
+    ],
+    [
+      8474,
+      11360,
+      "call"
+    ],
+    [
+      8474,
+      4368,
+      "call"
+    ],
+    [
+      8480,
+      11904,
+      "call"
+    ],
+    [
+      8480,
+      11360,
+      "call"
+    ],
+    [
+      8480,
+      4368,
+      "call"
+    ],
+    [
+      8725,
+      8736,
+      "transition"
+    ],
+    [
+      8725,
+      11904,
+      "call"
+    ],
+    [
+      8725,
+      11360,
+      "call"
+    ],
+    [
+      8725,
+      4368,
+      "call"
+    ],
+    [
+      8736,
+      11904,
+      "call"
+    ],
+    [
+      8736,
+      11360,
+      "call"
+    ],
+    [
+      8736,
+      4368,
+      "call"
+    ],
+    [
+      8981,
+      8992,
+      "transition"
+    ],
+    [
+      8981,
+      4240,
+      "call"
+    ],
+    [
+      8981,
+      4224,
+      "call"
+    ],
+    [
+      8981,
+      4320,
+      "call"
+    ],
+    [
+      8981,
+      4144,
+      "call"
+    ],
+    [
+      8981,
+      4256,
+      "call"
+    ],
+    [
+      8981,
+      4304,
+      "call"
+    ],
+    [
+      8992,
+      4240,
+      "call"
+    ],
+    [
+      8992,
+      4224,
+      "call"
+    ],
+    [
+      8992,
+      4320,
+      "call"
+    ],
+    [
+      8992,
+      4256,
+      "call"
+    ],
+    [
+      8992,
+      4144,
+      "call"
+    ],
+    [
+      8992,
+      4304,
+      "call"
+    ],
+    [
+      9266,
+      9280,
+      "transition"
+    ],
+    [
+      9266,
+      11904,
+      "call"
+    ],
+    [
+      9266,
+      11360,
+      "call"
+    ],
+    [
+      9280,
+      11904,
+      "call"
+    ],
+    [
+      9280,
+      11360,
+      "call"
+    ],
+    [
+      9356,
+      9360,
+      "transition"
+    ],
+    [
+      9356,
+      4288,
+      "call"
+    ],
+    [
+      9356,
+      8992,
+      "call"
+    ],
+    [
+      9356,
+      11904,
+      "call"
+    ],
+    [
+      9356,
+      4368,
+      "call"
+    ],
+    [
+      9356,
+      11360,
+      "call"
+    ],
+    [
+      9360,
+      4288,
+      "call"
+    ],
+    [
+      9360,
+      8992,
+      "call"
+    ],
+    [
+      9360,
+      11904,
+      "call"
+    ],
+    [
+      9360,
+      11360,
+      "call"
+    ],
+    [
+      9360,
+      4368,
+      "call"
+    ],
+    [
+      9927,
+      9936,
+      "transition"
+    ],
+    [
+      9955,
+      9936,
+      "transition"
+    ],
+    [
+      10008,
+      10016,
+      "transition"
+    ],
+    [
+      10008,
+      4288,
+      "call"
+    ],
+    [
+      10008,
+      8992,
+      "call"
+    ],
+    [
+      10008,
+      11904,
+      "call"
+    ],
+    [
+      10008,
+      4368,
+      "call"
+    ],
+    [
+      10008,
+      11360,
+      "call"
+    ],
+    [
+      10016,
+      4288,
+      "call"
+    ],
+    [
+      10016,
+      8992,
+      "call"
+    ],
+    [
+      10016,
+      11904,
+      "call"
+    ],
+    [
+      10016,
+      11360,
+      "call"
+    ],
+    [
+      10016,
+      4368,
+      "call"
+    ],
+    [
+      10079,
+      10016,
+      "transition"
+    ],
+    [
+      10079,
+      8992,
+      "call"
+    ],
+    [
+      10079,
+      11904,
+      "call"
+    ],
+    [
+      10079,
+      4368,
+      "call"
+    ],
+    [
+      10079,
+      11360,
+      "call"
+    ],
+    [
+      10142,
+      10016,
+      "transition"
+    ],
+    [
+      10142,
+      8992,
+      "call"
+    ],
+    [
+      10142,
+      11904,
+      "call"
+    ],
+    [
+      10142,
+      4368,
+      "call"
+    ],
+    [
+      10142,
+      11360,
+      "call"
+    ],
+    [
+      10430,
+      10432,
+      "transition"
+    ],
+    [
+      10430,
+      8480,
+      "call"
+    ],
+    [
+      10430,
+      9360,
+      "transition"
+    ],
+    [
+      10432,
+      8480,
+      "call"
+    ],
+    [
+      10432,
+      9360,
+      "transition"
+    ],
+    [
+      10465,
+      10480,
+      "transition"
+    ],
+    [
+      10465,
+      11904,
+      "call"
+    ],
+    [
+      10465,
+      11360,
+      "call"
+    ],
+    [
+      10480,
+      11904,
+      "call"
+    ],
+    [
+      10480,
+      11360,
+      "call"
+    ],
+    [
+      10559,
+      10560,
+      "transition"
+    ],
+    [
+      10559,
+      11904,
+      "call"
+    ],
+    [
+      10559,
+      4368,
+      "call"
+    ],
+    [
+      10559,
+      11360,
+      "call"
+    ],
+    [
+      10560,
+      11904,
+      "call"
+    ],
+    [
+      10560,
+      11360,
+      "call"
+    ],
+    [
+      10560,
+      4368,
+      "call"
+    ],
+    [
+      10912,
+      8736,
+      "call"
+    ],
+    [
+      10912,
+      10560,
+      "call"
+    ],
+    [
+      10912,
+      10016,
+      "transition"
+    ],
+    [
+      10976,
+      11904,
+      "call"
+    ],
+    [
+      10976,
+      11360,
+      "call"
+    ],
+    [
+      10976,
+      4368,
+      "call"
+    ],
+    [
+      11174,
+      11184,
+      "transition"
+    ],
+    [
+      11174,
+      4352,
+      "call"
+    ],
+    [
+      11174,
+      4368,
+      "call"
+    ],
+    [
+      11174,
+      8480,
+      "call"
+    ],
+    [
+      11174,
+      8736,
+      "call"
+    ],
+    [
+      11174,
+      9360,
+      "call"
+    ],
+    [
+      11174,
+      10560,
+      "call"
+    ],
+    [
+      11174,
+      10976,
+      "call"
+    ],
+    [
+      11174,
+      10016,
+      "call"
+    ],
+    [
+      11174,
+      4192,
+      "call"
+    ],
+    [
+      11184,
+      4352,
+      "call"
+    ],
+    [
+      11184,
+      4368,
+      "call"
+    ],
+    [
+      11184,
+      8480,
+      "call"
+    ],
+    [
+      11184,
+      8736,
+      "call"
+    ],
+    [
+      11184,
+      9360,
+      "call"
+    ],
+    [
+      11184,
+      10560,
+      "call"
+    ],
+    [
+      11184,
+      10976,
+      "call"
+    ],
+    [
+      11184,
+      10016,
+      "call"
+    ],
+    [
+      11184,
+      4192,
+      "call"
+    ],
+    [
+      11353,
+      11360,
+      "transition"
+    ]
+  ]
+}

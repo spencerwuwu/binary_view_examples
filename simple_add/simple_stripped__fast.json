@@ -1,0 +1,1124 @@
+{
+  "all_nodes": {
+    "4176": {
+      "addr": 4176,
+      "size": 37,
+      "name": null,
+      "function_address": 4176,
+      "instructions": {
+        "4176": "",
+        "4180": "ebp, ebp",
+        "4182": "r9, rdx",
+        "4185": "rsi",
+        "4186": "rdx, rsp",
+        "4189": "rsp, 0xfffffffffffffff0",
+        "4193": "rax",
+        "4194": "rsp",
+        "4195": "r8d, r8d",
+        "4198": "ecx, ecx",
+        "4200": "rdi, [rip + 0xd1]",
+        "4207": "qword ptr [rip + 0x2f63]"
+      },
+      "successors": [
+        [
+          1048576,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": []
+    },
+    "1048576": {
+      "addr": 1048576,
+      "size": 0,
+      "name": "__libc_start_main",
+      "function_address": 1048576,
+      "instructions": [],
+      "successors": [
+        [
+          4416,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4176,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4416": {
+      "addr": 4416,
+      "size": 20,
+      "name": null,
+      "function_address": 4416,
+      "instructions": {
+        "4416": "rbp",
+        "4417": "rbp, rsp",
+        "4420": "rsp, 0x10",
+        "4424": "dword ptr [rbp - 4], 0",
+        "4431": "0x11b0"
+      },
+      "successors": [
+        [
+          4528,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048576,
+          "Ijk_Call"
+        ],
+        [
+          4409,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4528": {
+      "addr": 4528,
+      "size": 18,
+      "name": null,
+      "function_address": 4528,
+      "instructions": {
+        "4528": "rbp",
+        "4529": "rbp, rsp",
+        "4532": "rdi, [rip + 0xe65]",
+        "4539": "al, 0",
+        "4541": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4416,
+          "Ijk_Call"
+        ],
+        [
+          4514,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4144": {
+      "addr": 4144,
+      "size": 6,
+      "name": null,
+      "function_address": 4144,
+      "instructions": {
+        "4144": "qword ptr [rip + 0x2fe2]"
+      },
+      "successors": [
+        [
+          1048584,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4528,
+          "Ijk_Call"
+        ],
+        [
+          4461,
+          "Ijk_Call"
+        ],
+        [
+          4140,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "1048584": {
+      "addr": 1048584,
+      "size": 0,
+      "name": "printf",
+      "function_address": 1048584,
+      "instructions": [],
+      "successors": [
+        [
+          4546,
+          "Ijk_Ret"
+        ],
+        [
+          4487,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4144,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4546": {
+      "addr": 4546,
+      "size": 2,
+      "name": null,
+      "function_address": 4528,
+      "instructions": {
+        "4546": "rbp",
+        "4547": ""
+      },
+      "successors": [
+        [
+          4436,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4436": {
+      "addr": 4436,
+      "size": 25,
+      "name": null,
+      "function_address": 4416,
+      "instructions": {
+        "4436": "dword ptr [rbp - 8], 0xa",
+        "4443": "dword ptr [rbp - 0xc], 0x14",
+        "4450": "edi, dword ptr [rbp - 8]",
+        "4453": "esi, dword ptr [rbp - 0xc]",
+        "4456": "0x1190"
+      },
+      "successors": [
+        [
+          4496,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4546,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4496": {
+      "addr": 4496,
+      "size": 18,
+      "name": null,
+      "function_address": 4496,
+      "instructions": {
+        "4496": "rbp",
+        "4497": "rbp, rsp",
+        "4500": "dword ptr [rbp - 4], edi",
+        "4503": "dword ptr [rbp - 8], esi",
+        "4506": "eax, dword ptr [rbp - 4]",
+        "4509": "eax, dword ptr [rbp - 8]",
+        "4512": "rbp",
+        "4513": ""
+      },
+      "successors": [
+        [
+          4461,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4436,
+          "Ijk_Call"
+        ],
+        [
+          4495,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4461": {
+      "addr": 4461,
+      "size": 26,
+      "name": null,
+      "function_address": 4416,
+      "instructions": {
+        "4461": "dword ptr [rbp - 0x10], eax",
+        "4464": "esi, dword ptr [rbp - 8]",
+        "4467": "edx, dword ptr [rbp - 0xc]",
+        "4470": "ecx, dword ptr [rbp - 0x10]",
+        "4473": "rdi, [rip + 0xe84]",
+        "4480": "al, 0",
+        "4482": "0x1030"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4496,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4487": {
+      "addr": 4487,
+      "size": 8,
+      "name": null,
+      "function_address": 4416,
+      "instructions": {
+        "4487": "eax, eax",
+        "4489": "rsp, 0x10",
+        "4493": "rbp",
+        "4494": ""
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          1048584,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4096": {
+      "addr": 4096,
+      "size": 20,
+      "name": null,
+      "function_address": 4096,
+      "instructions": {
+        "4096": "",
+        "4100": "rsp, 8",
+        "4104": "rax, qword ptr [rip + 0x2fd9]",
+        "4111": "rax, rax",
+        "4114": "0x1016"
+      },
+      "successors": [
+        [
+          4118,
+          "Ijk_Boring"
+        ],
+        [
+          4116,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4118": {
+      "addr": 4118,
+      "size": 5,
+      "name": null,
+      "function_address": 4096,
+      "instructions": {
+        "4118": "rsp, 8",
+        "4122": ""
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          4096,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4116": {
+      "addr": 4116,
+      "size": 2,
+      "name": null,
+      "function_address": 4096,
+      "instructions": {
+        "4116": "rax"
+      },
+      "successors": [
+        [
+          2101336,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4096,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "2101336": {
+      "addr": 2101336,
+      "size": 0,
+      "name": "UnresolvableCallTarget",
+      "function_address": 2101336,
+      "instructions": [],
+      "successors": [],
+      "predecessors": [
+        [
+          4116,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4548": {
+      "addr": 4548,
+      "size": 13,
+      "name": null,
+      "function_address": 4548,
+      "instructions": {
+        "4548": "",
+        "4552": "rsp, 8",
+        "4556": "rsp, 8",
+        "4560": ""
+      },
+      "successors": [],
+      "predecessors": []
+    },
+    "4128": {
+      "addr": 4128,
+      "size": 12,
+      "name": null,
+      "function_address": 4128,
+      "instructions": {
+        "4128": "qword ptr [rip + 0x2fe2]",
+        "4134": "qword ptr [rip + 0x2fe4]"
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          4150,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4140": {
+      "addr": 4140,
+      "size": 4,
+      "name": null,
+      "function_address": 4140,
+      "instructions": {
+        "4140": "dword ptr [rax]"
+      },
+      "successors": [
+        [
+          4144,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4150": {
+      "addr": 4150,
+      "size": 10,
+      "name": null,
+      "function_address": 4150,
+      "instructions": {
+        "4150": "0",
+        "4155": "0x1020"
+      },
+      "successors": [
+        [
+          4128,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4160": {
+      "addr": 4160,
+      "size": 6,
+      "name": null,
+      "function_address": 4160,
+      "instructions": {
+        "4160": "qword ptr [rip + 0x2fb2]"
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          4363,
+          "Ijk_Call"
+        ]
+      ]
+    },
+    "4166": {
+      "addr": 4166,
+      "size": 2,
+      "name": null,
+      "function_address": 4166,
+      "instructions": {
+        "4166": ""
+      },
+      "successors": [],
+      "predecessors": []
+    },
+    "4213": {
+      "addr": 4213,
+      "size": 1,
+      "name": null,
+      "function_address": 4213,
+      "instructions": {
+        "4213": ""
+      },
+      "successors": [],
+      "predecessors": []
+    },
+    "4264": {
+      "addr": 4264,
+      "size": 1,
+      "name": null,
+      "function_address": 4224,
+      "instructions": {
+        "4264": ""
+      },
+      "successors": [
+        [
+          4380,
+          "Ijk_Ret"
+        ]
+      ],
+      "predecessors": [
+        [
+          4243,
+          "Ijk_Boring"
+        ],
+        [
+          4224,
+          "Ijk_Boring"
+        ],
+        [
+          4257,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4243": {
+      "addr": 4243,
+      "size": 12,
+      "name": null,
+      "function_address": 4224,
+      "instructions": {
+        "4243": "rax, qword ptr [rip + 0x2f46]",
+        "4250": "rax, rax",
+        "4253": "0x10a8"
+      },
+      "successors": [
+        [
+          4264,
+          "Ijk_Boring"
+        ],
+        [
+          4255,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4224,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4255": {
+      "addr": 4255,
+      "size": 2,
+      "name": null,
+      "function_address": 4224,
+      "instructions": {
+        "4255": "rax"
+      },
+      "successors": [
+        [
+          2101328,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4243,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "2101328": {
+      "addr": 2101328,
+      "size": 0,
+      "name": "UnresolvableJumpTarget",
+      "function_address": 2101328,
+      "instructions": [],
+      "successors": [],
+      "predecessors": [
+        [
+          4255,
+          "Ijk_Boring"
+        ],
+        [
+          4320,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4328": {
+      "addr": 4328,
+      "size": 1,
+      "name": null,
+      "function_address": 4265,
+      "instructions": {
+        "4328": ""
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          4308,
+          "Ijk_Boring"
+        ],
+        [
+          4272,
+          "Ijk_Boring"
+        ],
+        [
+          4322,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4308": {
+      "addr": 4308,
+      "size": 12,
+      "name": null,
+      "function_address": 4265,
+      "instructions": {
+        "4308": "rax, qword ptr [rip + 0x2f15]",
+        "4315": "rax, rax",
+        "4318": "0x10e8"
+      },
+      "successors": [
+        [
+          4328,
+          "Ijk_Boring"
+        ],
+        [
+          4320,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4272,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4320": {
+      "addr": 4320,
+      "size": 2,
+      "name": null,
+      "function_address": 4265,
+      "instructions": {
+        "4320": "rax"
+      },
+      "successors": [
+        [
+          2101328,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4308,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4349": {
+      "addr": 4349,
+      "size": 14,
+      "name": null,
+      "function_address": 4336,
+      "instructions": {
+        "4349": "rbp",
+        "4350": "qword ptr [rip + 0x2ef2], 0",
+        "4358": "rbp, rsp",
+        "4361": "0x1117"
+      },
+      "successors": [
+        [
+          4375,
+          "Ijk_Boring"
+        ],
+        [
+          4363,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4336,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4392": {
+      "addr": 4392,
+      "size": 1,
+      "name": null,
+      "function_address": 4336,
+      "instructions": {
+        "4392": ""
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          4389,
+          "Ijk_Boring"
+        ],
+        [
+          4336,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4375": {
+      "addr": 4375,
+      "size": 5,
+      "name": null,
+      "function_address": 4336,
+      "instructions": {
+        "4375": "0x1080"
+      },
+      "successors": [
+        [
+          4224,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4349,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4363": {
+      "addr": 4363,
+      "size": 12,
+      "name": null,
+      "function_address": 4336,
+      "instructions": {
+        "4363": "rdi, qword ptr [rip + 0x2f16]",
+        "4370": "0x1040"
+      },
+      "successors": [
+        [
+          4160,
+          "Ijk_Call"
+        ]
+      ],
+      "predecessors": [
+        [
+          4349,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4224": {
+      "addr": 4224,
+      "size": 19,
+      "name": null,
+      "function_address": 4224,
+      "instructions": {
+        "4224": "rdi, [rip + 0x2fa9]",
+        "4231": "rax, [rip + 0x2fa2]",
+        "4238": "rax, rdi",
+        "4241": "0x10a8"
+      },
+      "successors": [
+        [
+          4264,
+          "Ijk_Boring"
+        ],
+        [
+          4243,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4375,
+          "Ijk_Call"
+        ],
+        [
+          4214,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4380": {
+      "addr": 4380,
+      "size": 9,
+      "name": null,
+      "function_address": 4336,
+      "instructions": {
+        "4380": "byte ptr [rip + 0x2f0d], 1",
+        "4387": "rbp",
+        "4388": ""
+      },
+      "successors": [],
+      "predecessors": [
+        [
+          4264,
+          "Ijk_Ret"
+        ]
+      ]
+    },
+    "4272": {
+      "addr": 4272,
+      "size": 36,
+      "name": null,
+      "function_address": 4265,
+      "instructions": {
+        "4272": "rdi, [rip + 0x2f79]",
+        "4279": "rsi, [rip + 0x2f72]",
+        "4286": "rsi, rdi",
+        "4289": "rax, rsi",
+        "4292": "rsi, 0x3f",
+        "4296": "rax, 3",
+        "4300": "rsi, rax",
+        "4303": "rsi, 1",
+        "4306": "0x10e8"
+      },
+      "successors": [
+        [
+          4328,
+          "Ijk_Boring"
+        ],
+        [
+          4308,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4265,
+          "Ijk_Boring"
+        ],
+        [
+          4400,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4409": {
+      "addr": 4409,
+      "size": 7,
+      "name": null,
+      "function_address": 4409,
+      "instructions": {
+        "4409": "dword ptr [rax]"
+      },
+      "successors": [
+        [
+          4416,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4495": {
+      "addr": 4495,
+      "size": 1,
+      "name": null,
+      "function_address": 4495,
+      "instructions": {
+        "4495": ""
+      },
+      "successors": [
+        [
+          4496,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4514": {
+      "addr": 4514,
+      "size": 14,
+      "name": null,
+      "function_address": 4514,
+      "instructions": {
+        "4514": "word ptr cs:[rax + rax]"
+      },
+      "successors": [
+        [
+          4528,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4214": {
+      "addr": 4214,
+      "size": 10,
+      "name": null,
+      "function_address": 4214,
+      "instructions": {
+        "4214": "word ptr cs:[rax + rax]"
+      },
+      "successors": [
+        [
+          4224,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4257": {
+      "addr": 4257,
+      "size": 7,
+      "name": null,
+      "function_address": 4214,
+      "instructions": {
+        "4257": "dword ptr [rax]"
+      },
+      "successors": [
+        [
+          4264,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4265": {
+      "addr": 4265,
+      "size": 7,
+      "name": null,
+      "function_address": 4265,
+      "instructions": {
+        "4265": "dword ptr [rax]"
+      },
+      "successors": [
+        [
+          4272,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4322": {
+      "addr": 4322,
+      "size": 6,
+      "name": null,
+      "function_address": 4265,
+      "instructions": {
+        "4322": "word ptr [rax + rax]"
+      },
+      "successors": [
+        [
+          4328,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4389": {
+      "addr": 4389,
+      "size": 3,
+      "name": null,
+      "function_address": 4389,
+      "instructions": {
+        "4389": "dword ptr [rax]"
+      },
+      "successors": [
+        [
+          4392,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4336": {
+      "addr": 4336,
+      "size": 13,
+      "name": null,
+      "function_address": 4336,
+      "instructions": {
+        "4336": "",
+        "4340": "byte ptr [rip + 0x2f35], 0",
+        "4347": "0x1128"
+      },
+      "successors": [
+        [
+          4349,
+          "Ijk_Boring"
+        ],
+        [
+          4392,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4329,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4400": {
+      "addr": 4400,
+      "size": 9,
+      "name": null,
+      "function_address": 4400,
+      "instructions": {
+        "4400": "",
+        "4404": "0x10b0"
+      },
+      "successors": [
+        [
+          4272,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": [
+        [
+          4393,
+          "Ijk_Boring"
+        ]
+      ]
+    },
+    "4329": {
+      "addr": 4329,
+      "size": 7,
+      "name": null,
+      "function_address": 4329,
+      "instructions": {
+        "4329": "dword ptr [rax]"
+      },
+      "successors": [
+        [
+          4336,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    },
+    "4393": {
+      "addr": 4393,
+      "size": 7,
+      "name": null,
+      "function_address": 4393,
+      "instructions": {
+        "4393": "dword ptr [rax]"
+      },
+      "successors": [
+        [
+          4400,
+          "Ijk_Boring"
+        ]
+      ],
+      "predecessors": []
+    }
+  },
+  "call_graph_edges": [
+    [
+      4214,
+      4224,
+      "transition"
+    ],
+    [
+      4265,
+      2101328,
+      "transition"
+    ],
+    [
+      4096,
+      2101336,
+      "call"
+    ],
+    [
+      4140,
+      4144,
+      "transition"
+    ],
+    [
+      4144,
+      1048584,
+      "transition"
+    ],
+    [
+      4176,
+      1048576,
+      "call"
+    ],
+    [
+      1048576,
+      4416,
+      "call"
+    ],
+    [
+      4224,
+      2101328,
+      "transition"
+    ],
+    [
+      4329,
+      4336,
+      "transition"
+    ],
+    [
+      4336,
+      4224,
+      "call"
+    ],
+    [
+      4336,
+      4160,
+      "call"
+    ],
+    [
+      4389,
+      4336,
+      "transition"
+    ],
+    [
+      4393,
+      4400,
+      "transition"
+    ],
+    [
+      4400,
+      4265,
+      "transition"
+    ],
+    [
+      4409,
+      4416,
+      "transition"
+    ],
+    [
+      4416,
+      4528,
+      "call"
+    ],
+    [
+      4416,
+      4496,
+      "call"
+    ],
+    [
+      4416,
+      4144,
+      "call"
+    ],
+    [
+      4528,
+      4144,
+      "call"
+    ],
+    [
+      4495,
+      4496,
+      "transition"
+    ],
+    [
+      4514,
+      4528,
+      "transition"
+    ]
+  ]
+}
